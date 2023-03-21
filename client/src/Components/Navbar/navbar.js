@@ -24,9 +24,19 @@ const Navbar = () => {
                 <div className="text-center">
                     <img src="/Users/vaarty/Desktop/dentistry/client/src/IMG/Новый проект-2.png" />
                 </div>
-                <span className="navbar-text">
-                    Navbar text with an inline element
-                </span>
+
+
+                <ul className="navbarText">
+                    <li className="nav-item">
+                        <a className="nav-link active" aria-current="page" href="#">Услуги</a>
+                    </li>
+                    <li className="nav-item">
+                        <a className="nav-link" href="#">Цены</a>
+                    </li>
+                    <li className="nav-item">
+                        <a className="nav-link" href="#">О нас</a>
+                    </li>
+                </ul>
 
             </div>
 

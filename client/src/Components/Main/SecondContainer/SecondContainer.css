@@ -1,0 +1,53 @@
+.secondContainer {
+    background-color: rgb(156, 187, 190);
+    height: 1000px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    margin-bottom: 0px;
+}
+
+.leftContainer {
+    margin: 250px 20px 0px 60px;
+}
+
+.leftContainer h1{
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.leftContainer p{
+    text-align: left;
+    margin-top: 20px;
+}
+
+.photoContainer_first{
+    width: 90%;
+    height: 400px;
+    margin: 20px 10px 0px 10px;
+    background-size: cover;
+    background-image: url("../../../IMG/young-handsome-physician-in-a-medical-robe-with-stethoscope.jpg");
+}
+
+.photoContainer_second{
+    width: 90%;
+    height: 400px;
+    margin: 60px 10px 0px 10px;
+    background-size: cover;
+    background-image: url("../../../IMG/young-handsome-physician-in-a-medical-robe-with-stethoscope.jpg");
+}
+.photoContainer_fourth{
+    width: 90%;
+    height: 400px;
+    margin: -50px 10px 0px 10px;
+    background-size: cover;
+    background-image: url("../../../IMG/young-handsome-physician-in-a-medical-robe-with-stethoscope.jpg");
+}
+
+.photoContainer_fifth{
+    width: 90%;
+    height: 400px;
+    margin: -10px 10px 0px 10px;
+    background-size: cover;
+    background-image: url("../../../IMG/young-handsome-physician-in-a-medical-robe-with-stethoscope.jpg");
+}

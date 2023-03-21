@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import KebabMenu from './kebabmenu';
-
+import './navbar.css'
 const Navbar = () => {
     const [isOpen, setMenuIsOpen] = useState(false);
 

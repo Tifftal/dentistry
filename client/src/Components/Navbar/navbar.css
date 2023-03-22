@@ -1,9 +1,9 @@
 .NB {
-    background-color: rgb(156, 187, 190);
+    /* background-color: rgb(156, 187, 190); */
+    background-color: whitesmoke;
     width: 100%;
     display: flex;
     text-align: left;
-    /* height: 500px; */
     flex-direction: row;
     margin: 0;
     padding: 0;

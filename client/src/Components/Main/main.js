@@ -1,6 +1,7 @@
 import React from "react";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './main.css'
 import FirstContainer from "./FirstContainer/FirstContainer";
 import SecondContainer from "./SecondContainer/SecondContainer";
 import ThirdContainer from "./ThirdContainer/ThirdContainer";
@@ -10,7 +11,7 @@ import SixthContainer from "./SixthContainer/SixthContainer";
 
 const Main = () => {
     return (
-        <div className="container">
+        <div className="containerMain">
             <FirstContainer />
             <SecondContainer />
             <ThirdContainer />

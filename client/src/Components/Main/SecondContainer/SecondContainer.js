@@ -28,6 +28,9 @@ const SecondContainer = () => {
                 </h1>
             </div>
             <div className="photoContainer_third">
+                <h1>
+                    Наши специалисты
+                </h1>
             </div>
             <div className="photoContainer_fourth">
                 <h1>

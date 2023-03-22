@@ -83,15 +83,15 @@
 }
 
 .social-icons .social-icon-whatsapp::before {
-    background-image: url("/Users/vaarty/Desktop/dentistry/client/src/IMG/icons8-whatsapp-48.png");
+    background-image: url("../../IMG/icons8-whatsapp-48.png");
 }
 
 .social-icons .social-icon-vk::before {
-    background-image: url("https://vk.com/im?peers=409551839");
+    background-image: url("#");
 }
 
 .social-icons .social-icon-telegram::before {
-    background-image: url("https://vk.com/im?peers=409551839");
+    background-image: url("#");
 }
 
 .Form {

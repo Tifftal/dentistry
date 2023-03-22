@@ -1,46 +1,51 @@
 import React, { useState } from "react";
 
+const Advantage = ({ title, content, onClick, isOpen }) => (
+  <div className="adv">
+    <p onClick={onClick}>{title}</p>
+    {isOpen && <p>{content}</p>}
+  </div>
+);
+
 const FifthContainer = () => {
-    const [openDropDown1, setOpenDropDown1] = useState(false);
-    const [openDropDown2, setOpenDropDown2] = useState(false);
-    const [openDropDown3, setOpenDropDown3] = useState(false);
-    const toggleMenu1 = () => {
-        setOpenDropDown1(!openDropDown1)
-    }
-    
-    const toggleMenu2 = () => {
-        setOpenDropDown2(!openDropDown2)
-    }
+  const [isOpen, setIsOpen] = useState({
+    1: false,
+    2: false,
+    3: false,
+  });
 
-    const toggleMenu3 = () => {
-        setOpenDropDown3(!openDropDown3)
-    }
+  const toggleMenu = (index) => {
+    setIsOpen({
+      ...isOpen,
+      [index]: !isOpen[index],
+    });
+  };
 
-    return (
-        <div className="fifthContainer">
-            <h1>Наши преимущества</h1>
-            <div className="advantagesContainer">
-                <div className="adv">
-                    <p onClick={toggleMenu1}>Комплексные методы лечения</p>
-                    {openDropDown1 && (
-                        <p>Наши менеджеры - профессионалы своего дела. Они организованы на отлично и знают свое дело.</p>
-                    )}
-                </div>
-                <div className="adv">
-                    <p onClick={toggleMenu2}>Только высококвалифицированные врачи</p>
-                    {openDropDown2 && (
-                    <p>Мы неоднократно занимали престижные призовые места на медицинских конкурсах, и гордимся этим.</p>
-                    )}
-                </div>
-                <div className="adv">
-                    <p onClick={toggleMenu3}>Контроль за качеством лекарств</p>
-                    {openDropDown3 && (
-                    <p>Мы знаем все тайные тропки тех далеких мест, где вы живете, и первыми доставим вам товар.</p>
-                    )}
-                </div>
-            </div>
-        </div>
-    )
-}
+  return (
+    <div className="fifthContainer">
+      <h1>Наши преимущества</h1>
+      <div className="advantagesContainer">
+        <Advantage
+          title="В чем особенность съемной каппы?"
+          content="Под съемную каппу, после гигиены зубов, на ночь можно наносить укрепляющий крем toothmousse или гель rocs реминерализирующий или восстанавливающий крем от #biorepair Средства длительное время не будут смываться слюной, а значит могут напитывать ваши зубы полезными веществами достаточно продолжительное время."
+          onClick={() => toggleMenu(1)}
+          isOpen={isOpen[1]}
+        />
+        <Advantage
+          title="Что делают после снятия брекетов?"
+          content="Обязательным условием является фиксация несъёмного ретейнера на нижнюю и верхнюю челюсть за передними зубами, а также второй вид ретейнера — съемная каппа на ночь."
+          onClick={() => toggleMenu(2)}
+          isOpen={isOpen[2]}
+        />
+        <Advantage
+          title="Для чего в лечении применяется фото проткол?"
+          content="Фото протокол позволяет провести анализ лица и зубного ряда, отследить ситуацию до, в процессе лечения и после. Убедиться в полученном результате и запротоколировать все этапы лечения."
+          onClick={() => toggleMenu(3)}
+          isOpen={isOpen[3]}
+        />
+      </div>
+    </div>
+  );
+};
 
 export default FifthContainer;

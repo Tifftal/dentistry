@@ -4,7 +4,7 @@ import "./SecondContainer.css"
 const SecondContainer = () => {
     return (
         <div className="secondContainer">
-            <div className="leftContainer">
+            <div class="box1">
                 <h1>
                     Наши специалисты
                 </h1>
@@ -17,27 +17,22 @@ const SecondContainer = () => {
                     Подробнее о команде {">>"}
                 </button>
             </div>
-            <div className="photoContainer_first">
+            <div class="box2">
                 <h1>
                     Наши специалисты
                 </h1>
             </div>
-            <div className="photoContainer_second">
+            <div class="box3">
                 <h1>
                     Наши специалисты
                 </h1>
             </div>
-            <div className="photoContainer_third">
+            <div class="box4">
                 <h1>
                     Наши специалисты
                 </h1>
             </div>
-            <div className="photoContainer_fourth">
-                <h1>
-                    Наши специалисты
-                </h1>
-            </div>
-            <div className="photoContainer_fifth">
+            <div class="box5">
                 <h1>
                     Наши специалисты
                 </h1>

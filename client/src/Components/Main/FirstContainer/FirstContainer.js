@@ -1,11 +1,14 @@
 import React from "react";
-
+import "./FirstContainer.css"
 const FirstContainer = () => {
     return (
     <div className="firstComponent">
         <div className="WelcomeContainer">
             <h1>
-                Формула Улыбки
+            Мы дарим вам бесплатную
+            </h1>
+            <h1>
+            чистку зубов
             </h1>
             <p>
                 Наши врачи - профессионалы своего дела

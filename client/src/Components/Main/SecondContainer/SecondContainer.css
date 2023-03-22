@@ -1,39 +1,64 @@
 .secondContainer {
     display: grid;
     grid-template-columns: 500px 400px 400px;
-    /* grid-auto-rows: 100px; */
     grid-template-rows: 400px 400px;
-    background-color: rgb(255, 0, 0);
-    height: 920px;
+    background-color: rgb(156, 187, 190);
     grid-column-gap: 10px;
-   grid-row-gap: 1em;
+    grid-row-gap: 1em;
 }
 
 .box1 {
-    background-color:aquamarine;
+    text-align: center;
+    margin: 150px 100px 100px 100px;
     grid-column-start: 1;
     grid-row-start: 1;
     grid-row-end: 3;
-    /* margin: 10px;
-    height: 500px; */
+}
+
+.box1 h1{
+    font-weight: bold;
+}
+
+.box1 p{
+    text-align: left;
 }
 
 .box2 {
-    background-color:rgb(185, 127, 255);
-    /* height: 350px; */
+    margin: 30px 20px 30px 20px;
+    border-radius: 7%;
+    box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
 }
 
 .box3 {
-    background-color:rgb(255, 127, 212);
-    /* height: 350px; */
+    margin: 60px 20px 0px 20px;
+    border-radius: 7%;
+    box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
 }
 
 .box4 {
-    background-color:rgb(127, 255, 163);
-    /* height: 350px; */
+    margin: 0px 20px 60px 20px;
+    border-radius: 7%;
+    box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
 }
 
 .box5 {
-    background-color:rgb(255, 133, 127);
-    /* height: 350px; */
+    margin: 30px 20px 30px 20px;
+    border-radius: 7%;
+    box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+}
+
+.box2, .box3, .box4, .box5 {
+   background-color: rgb(255, 255, 255);
+}
+
+.box2 p, .box3 p, .box4 p, .box5 p{
+    font-size: 15px;
+    text-align: center;
+}
+
+.box2 h3, .box3 h3, .box4 h3, .box5 h3{
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 250px;
 }

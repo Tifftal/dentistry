@@ -1,51 +1,43 @@
-import React, { useState } from "react";
-
-const Advantage = ({ title, content, onClick, isOpen }) => (
-  <div className="adv">
-    <p onClick={onClick}>{title}</p>
-    {isOpen && <p>{content}</p>}
-  </div>
-);
-
+import React from "react";
+import "./FifthContainer.css"
 const FifthContainer = () => {
-  const [isOpen, setIsOpen] = useState({
-    1: false,
-    2: false,
-    3: false,
-  });
-
-  const toggleMenu = (index) => {
-    setIsOpen({
-      ...isOpen,
-      [index]: !isOpen[index],
-    });
-  };
-
   return (
     <div className="fifthContainer">
+      <div className="triangle"></div>
       <h1>Наши преимущества</h1>
-      <div className="advantagesContainer">
-        <Advantage
-          title="В чем особенность съемной каппы?"
-          content="Под съемную каппу, после гигиены зубов, на ночь можно наносить укрепляющий крем toothmousse или гель rocs реминерализирующий или восстанавливающий крем от #biorepair Средства длительное время не будут смываться слюной, а значит могут напитывать ваши зубы полезными веществами достаточно продолжительное время."
-          onClick={() => toggleMenu(1)}
-          isOpen={isOpen[1]}
-        />
-        <Advantage
-          title="Что делают после снятия брекетов?"
-          content="Обязательным условием является фиксация несъёмного ретейнера на нижнюю и верхнюю челюсть за передними зубами, а также второй вид ретейнера — съемная каппа на ночь."
-          onClick={() => toggleMenu(2)}
-          isOpen={isOpen[2]}
-        />
-        <Advantage
-          title="Для чего в лечении применяется фото проткол?"
-          content="Фото протокол позволяет провести анализ лица и зубного ряда, отследить ситуацию до, в процессе лечения и после. Убедиться в полученном результате и запротоколировать все этапы лечения."
-          onClick={() => toggleMenu(3)}
-          isOpen={isOpen[3]}
-        />
+      <div className="advCards">
+        <div className="picContainer">
+        </div>
+        <div className="picContainer">
+        </div>
+        <div className="picContainer">
+        </div>
+        <div className="titleContainer">
+          <p>Комплексные методы</p>
+          <p>лечения</p>
+
+        </div>
+        <div className="titleContainer">
+          <p>Только</p>
+          <p>высококвалифицированные</p>
+          <p>врачи</p>
+        </div>
+        <div className="titleContainer">
+          <p>Контроль за качеством</p>
+          <p>лекарств</p>
+        </div>
+        <div className="contectContainer">
+          Наши менеджеры - профессионалы своего дела. Они организованы на отлично и знают свое дело.
+        </div>
+        <div className="contectContainer">
+          Мы неоднократно занимали престижные призовые места на медицинских конкурсах, и гордимся этим.
+        </div>
+        <div className="contectContainer">
+          Мы знаем все тайные тропки тех далеких мест, где вы живете, и первыми доставим вам товар.
+        </div>
       </div>
     </div>
   );
-};
+}
 
 export default FifthContainer;

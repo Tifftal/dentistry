@@ -1,0 +1,52 @@
+.sixthContainer {
+    background: linear-gradient(rgb(156, 187, 190), white);
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: minmax(55px, auto);
+}
+
+.titleSixthContainer h1 {
+    padding-top: 5%;
+    padding-bottom: 1%;
+    font-size: 45px;
+    font-weight: bold;
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+}
+
+.advantagesContainer {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: minmax(55px, auto);
+    justify-self: center;
+    width: 100%;
+}
+
+.adv {
+    background-color: rgb(255, 255, 255);
+    justify-self: center;
+    width: 80%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.2);
+}
+
+.adv h1{
+    font-size: 20px;
+    padding-top: 1%;
+    padding-bottom: 0.5%;
+    text-align: left;
+    padding-left: 2%;
+}
+
+.adv p{
+    /* border: 2px solid black; */
+    border-top: 1px solid rgb(206, 206, 206);
+    font-size: 15px;
+    text-align: left;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+

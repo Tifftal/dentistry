@@ -1,0 +1,46 @@
+.fifthContainer {
+    background-color: rgb(156, 187, 190);
+}
+
+.fifthContainer h1 {
+    font-size: 45px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.triangle {
+    width: 100%;
+    height: 70px;
+    border-left: 720px solid transparent;
+    border-right: 720px solid transparent;
+    border-top: 60px solid #ffffff;
+}
+
+.advCards {
+    display: grid;
+    grid-template-columns: 350px 350px 350px;
+    grid-template-rows: 175px 90px 100px;
+    grid-column-gap: 1em;
+    margin: 0px 150px 0px 180px;
+}
+
+.picContainer {
+    display: flex;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("../../../IMG/free-icon-font-heart.png");
+    background-position: center;
+}
+
+
+.titleContainer p{
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+}
+
+.contectContainer {
+    font-size: 16px;
+}

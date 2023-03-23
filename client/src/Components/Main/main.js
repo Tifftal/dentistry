@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './main.css'
@@ -10,6 +10,7 @@ import FifthContainer from "./FifthContainer/FifthContainer";
 import SixthContainer from "./SixthContainer/SixthContainer";
 
 const Main = () => {
+
     return (
         <div className="containerMain">
             <FirstContainer />

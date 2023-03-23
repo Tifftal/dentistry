@@ -3,6 +3,7 @@
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-auto-rows: minmax(55px, auto);
+    margin-bottom: 5%;
 }
 
 .titleSixthContainer h1 {

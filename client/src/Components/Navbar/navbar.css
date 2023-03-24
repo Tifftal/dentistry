@@ -1,12 +1,10 @@
-.NB {
-    /* background-color: rgb(156, 187, 190); */
+/* .NB {
+    background-color: rgb(156, 187, 190);
     background-color: whitesmoke;
     width: 100%;
     display: flex;
     text-align: left;
     flex-direction: row;
-    margin: 0;
-    padding: 0;
 }
 
 div, .navbar {
@@ -23,4 +21,68 @@ div, .navbar {
 tr {
     display: flex;
     flex-direction: row;
+    padding: auto;
+} */
+
+.navigationBar {
+    width: 100%;
+    padding: 1%;
+    background-color: whitesmoke;
+}
+
+.navbarContent {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    width: 100%;
+}
+
+button {
+    margin: auto;
+}
+
+.NavBarLinks {
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    margin-top: auto;
+    margin-bottom: auto; 
+}
+
+.NavBarLinks a {
+    margin-left: 5%;
+}
+
+.brandNameNavbar {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
+
+.brandNameNavbar img {
+    width: 15%;
+    height: auto;
+    margin-left: 10%;
+}
+
+.brandNameNavbar h1 {
+    margin: auto 5% auto;
+}
+
+.contactInfoNavbar {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    width: 30%;
+}
+
+.contactBar1 {
+    display: flex;
+    flex-direction: column;
+    margin-right: 5%;
+}
+
+.contactBar2 {
+    display: flex;
+    flex-direction: column;
 }

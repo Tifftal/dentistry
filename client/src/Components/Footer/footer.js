@@ -10,10 +10,10 @@ const Footer = () => {
                 <div>
                     <p className="footer_left">
                         О возможных противопоказаниях проконсультируйтесь с нашими специалистами</p>
-                    <ul class="social-icons">
-                        <li><a class="social-icon-whatsapp" href="https://vk.com/im?peers=409551839" title="..." target="_blank" rel="noopener"></a></li>
-                        <li><a class="social-icon-vk" href="#" title="..." target="_blank" rel="noopener"></a></li>
-                        <li><a class="social-icon-telegram" href="#" title="..." target="_blank" rel="noopener"></a></li>
+                    <ul className="social-icons">
+                        <li><a className="social-icon-whatsapp" href="https://vk.com/im?peers=409551839" title="..." target="_blank" rel="noopener"></a></li>
+                        <li><a className="social-icon-vk" href="#" title="..." target="_blank" rel="noopener"></a></li>
+                        <li><a className="social-icon-telegram" href="#" title="..." target="_blank" rel="noopener"></a></li>
                     </ul>
                 </div>
 
@@ -48,9 +48,9 @@ const Footer = () => {
                 </div>
                 <div className='left_information'>
                     <p> +7 929 123 45 67</p>
-                    <button type="button" class="btn btn-link">Заказать обратный звонок</button>
+                    <button type="button" className="btn btn-link">Заказать обратный звонок</button>
                     <p>Московская, 11</p>
-                    <button type="button" class="btn btn-link">Изменить клинику</button>
+                    <button type="button" className="btn btn-link">Изменить клинику</button>
 
                 </div>
             </article>

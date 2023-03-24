@@ -1,27 +1,15 @@
-import React from "react";
+import React from 'react';
+import './Note.css'
 
-const Note = (props) => {
-    const handleClick = () => {
-        props.onClose()
-    }
-    return props.isOpen ? (
-        <div className="popup-menu">
-            <div className="popup-menu-head">
-                <button onClick={handleClick}>Закрыть</button>
-            </div>
-            <div className="popup-menu-body">
-                <form>
-                    <input placeholder="Имя" />
-                    <input placeholder="Фамилия" />
-                    <input placeholder="Номер" />
-                    <button type="submit">Записаться</button>
-                </form>
-            </div>
-            <div className="popup-menu-footer">
-
-            </div>
-        </div>
-    ) : null;
+function Modal(props) {
+  return (
+    <div className="modal">
+      <div className="modal-content">
+        <span className="close" onClick={props.onClose}>&times;</span>
+        <p>Modal content goes here</p>
+      </div>
+    </div>
+  );
 }
 
-export default Note;
+export default Modal;

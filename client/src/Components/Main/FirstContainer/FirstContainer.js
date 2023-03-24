@@ -1,23 +1,22 @@
 import React from "react";
 import { useState } from "react";
-import PortalReactDOM from 'react-dom'
+
 import Note from "../../Popup/Note/Note";
 import "./FirstContainer.css"
 const FirstContainer = () => {
-    const [isOpen, setIsOpen] = useState('false');
+    const [isOpen, setIsOpen] = useState(false);
 
     const HandleOpenNote = () => {
-        setIsOpen(!isOpen)
+        setIsOpen(true)
     }
 
     const HandleCloseNote = () => {
-        setIsOpen(!isOpen)
+        setIsOpen(false)
     }
     return (
         <div className="firstComponent">
-            {PortalReactDOM.createPortal(
-                <Note isOpen={isOpen} onClose={HandleCloseNote} />,
-                document.body
+            {isOpen && (
+                <Note onClose={HandleCloseNote} />
             )}
             <div className="WelcomeContainer">
                 <h1>

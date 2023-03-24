@@ -1,33 +1,10 @@
-/* .NB {
-    background-color: rgb(156, 187, 190);
-    background-color: whitesmoke;
-    width: 100%;
-    display: flex;
-    text-align: left;
-    flex-direction: row;
-}
-
-div, .navbar {
-    margin: 0;
-    padding: 0;
-}
-
-.LeftInf {
-    display: flex;
-    flex-direction: row;
-
-}
-
-tr {
-    display: flex;
-    flex-direction: row;
-    padding: auto;
-} */
-
 .navigationBar {
     width: 100%;
     padding: 1%;
-    background-color: whitesmoke;
+    background-color: rgba(245, 245, 245, 0.64);
+    box-shadow: 0.3em 0.3em 3em rgba(1, 85, 71, 0.429);
+    position: sticky;
+    top: 0;
 }
 
 .navbarContent {
@@ -46,27 +23,41 @@ button {
     display: flex;
     flex-direction: row;
     margin-top: auto;
-    margin-bottom: auto; 
+    margin-bottom: auto;
 }
 
 .NavBarLinks a {
-    margin-left: 5%;
+    /* background-color: yellowgreen; */
+    padding-left: 10%;
+    text-decoration: none;
+    font-size: 23px;
+    font-weight: 400;
+    color: black;
+    transition: 0.3s;
+}
+
+.NavBarLinks a:hover {
+    color: rgb(88, 175, 183);
 }
 
 .brandNameNavbar {
+    width: 45%;
+    /* background-color: red; */
     display: flex;
     flex-direction: row;
-    margin: auto;
+    margin-left: 2%;
 }
 
 .brandNameNavbar img {
     width: 15%;
     height: auto;
-    margin-left: 10%;
 }
 
 .brandNameNavbar h1 {
-    margin: auto 5% auto;
+    text-align: center;
+    margin: auto 0 auto 0;
+    font-size: 50px;
+    font-weight: 700;
 }
 
 .contactInfoNavbar {
@@ -85,4 +76,42 @@ button {
 .contactBar2 {
     display: flex;
     flex-direction: column;
+}
+
+.openSideMenuButton {
+    margin-left: 2%;
+    background: none;
+    border: none;
+    outline: none;
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("../../IMG/free-icon-font-menu-burger-3917762.png");
+    transition: 0.3s;
+}
+
+.openSideMenuButton:hover {
+    background-image: url("../../IMG/free-icon-font-menu-burger.png");
+}
+
+.contactInfoNavbar button {
+    text-decoration: none;
+    border: none;
+    outline: none;
+    background: none;
+    margin-top: 2%;
+    color: rgb(88, 175, 183);
+    transition: 0.1s;
+    font-size: 16px;
+}
+
+.contactInfoNavbar p {
+    margin: 0;
+    font-size: 16px;
+    
+}
+
+.contactInfoNavbar button:hover {
+    color: rgb(68, 134, 140);
 }

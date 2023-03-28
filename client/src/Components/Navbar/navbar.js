@@ -18,7 +18,7 @@ const Navbar = () => {
             )}
             <div className='kebabMenu'>
                 <div id="menuToggle">
-                    <input type="checkbox" defaultChecked/>
+                    <input  type="checkbox" defaultChecked/>
                     <span></span>
                     <span></span>
                     <span></span>

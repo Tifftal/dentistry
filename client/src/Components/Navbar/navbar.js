@@ -35,7 +35,9 @@ const Navbar = () => {
                         <a href="#"><li>Контакты</li></a>
                         <a href="#"><li>Онлайн-консультация</li></a>
                         <div>
-                            <button>Записаться на прием {">>"}</button>
+                            <div className='priem'>
+                                <button>Записаться на прием {">>"}</button>
+                            </div>
                             <p>+7 123 456 78 90</p>
                             <p>Москва, Московская, 11</p>
                             <button>Задать вопрос доктору</button>
@@ -48,6 +50,7 @@ const Navbar = () => {
                     </ul>
                 </div>
             </div>
+            
             <div className="navbarContent">
                 {/* <button className="openSideMenuButton" onClick={toggleMenu}></button> */}
                 <div className="NavBarLinks">

@@ -23,11 +23,28 @@ const Navbar = () => {
                     <span></span>
                     <span></span>
                     <ul id="menu">
-                        <a href="#"><li>Примеры дизайна</li></a>
-                        <a href="#"><li>Горизонтальное меню</li></a>
-                        <a href="#"><li>Как сделать меню сайта</li></a>
-                        <a href="#"><li>Дизайн меню сайта</li></a>
-                        <a href="#" target="_blank"><li>Коллекция потрясающих</li></a>
+                        <a href="#"><li>Команда</li></a>
+                        <a href="#"><li>Портфолио</li></a>
+                        <a href="#"><li>Услуги</li></a>
+                        <a href="#"><li>Стоматология Детям</li></a>
+                        <a href="#"><li>О компании</li></a>
+                        <a href="#"><li>Блог</li></a>
+                        <a href="#"><li>FAQ</li></a>
+                        <a href="#"><li>Анкета пациента</li></a>
+                        <a href="#"><li>Документы</li></a>
+                        <a href="#"><li>Контакты</li></a>
+                        <a href="#"><li>Онлайн-консультация</li></a>
+                        <div>
+                            <button>Записаться на прием {">>"}</button>
+                            <p>+7 123 456 78 90</p>
+                            <p>Москва, Московская, 11</p>
+                            <button>Задать вопрос доктору</button>
+                        </div>
+                        <div>
+                            <img href="#" alt="Twitter" />
+                            <img href="#" alt="VK" />
+                            <img href="#" alt="Facebook" />
+                        </div>
                     </ul>
                 </div>
             </div>

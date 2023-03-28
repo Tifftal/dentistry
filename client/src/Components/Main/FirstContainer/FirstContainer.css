@@ -17,3 +17,22 @@
 .WelcomeContainer p {
     font-size: 20px;
 }
+
+.WelcomeContainer button {
+    background-color: rgb(0, 75, 133);
+    border: none;
+    outline: none;
+    text-decoration: none;
+    width: 50%;
+    height: 15%;
+    border-radius: 10px;
+    box-shadow: 0.3em 0.3em 0.6em rgb(49, 109, 103);
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    font-weight: 500;
+    transition: 0.5s;
+}
+
+.WelcomeContainer button:hover {
+    filter: brightness(1.2);
+}

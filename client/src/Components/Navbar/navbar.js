@@ -16,15 +16,30 @@ const Navbar = () => {
             {isOpen && (
                 <KebabMenu toggleMenu={toggleMenu} />
             )}
+            <div className='kebabMenu'>
+                <div id="menuToggle">
+                    <input type="checkbox" />
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <ul id="menu">
+                        <a href="#"><li>Примеры дизайна</li></a>
+                        <a href="#"><li>Горизонтальное меню</li></a>
+                        <a href="#"><li>Как сделать меню сайта</li></a>
+                        <a href="#"><li>Дизайн меню сайта</li></a>
+                        <a href="#" target="_blank"><li>Коллекция потрясающих</li></a>
+                    </ul>
+                </div>
+            </div>
             <div className="navbarContent">
-                <button className="openSideMenuButton" onClick={toggleMenu}></button>
+                {/* <button className="openSideMenuButton" onClick={toggleMenu}></button> */}
                 <div className="NavBarLinks">
                     <a href="#">Услуги</a>
                     <a href="#">Цены</a>
                     <a href="#">О нас</a>
                 </div>
                 <div className="brandNameNavbar">
-                    <img src="../IMG/logo.png" alt="логотип"/>
+                    <img src="../IMG/logo.png" alt="логотип" />
                     <h1>Формула улыбки</h1>
                 </div>
                 <div className="contactInfoNavbar">

@@ -11,7 +11,7 @@ const Footer = () => {
                     <p className="footer_left">
                         О возможных противопоказаниях проконсультируйтесь с нашими специалистами</p>
                     <ul className="social-icons">
-                        <li><a className="social-icon-whatsapp" href="https://vk.com/im?peers=409551839" title="..." target="_blank" rel="noopener"></a></li>
+                        <li><a className="social-icon-whatsapp" href="#" title="..." target="_blank" rel="noopener"></a></li>
                         <li><a className="social-icon-vk" href="#" title="..." target="_blank" rel="noopener"></a></li>
                         <li><a className="social-icon-telegram" href="#" title="..." target="_blank" rel="noopener"></a></li>
                     </ul>

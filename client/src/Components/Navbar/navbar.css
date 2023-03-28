@@ -19,11 +19,13 @@ button {
 }
 
 .NavBarLinks {
-    width: 20%;
+    width: 35%;
     display: flex;
     flex-direction: row;
     margin-top: auto;
     margin-bottom: auto;
+    margin-left: 5%;
+    /* background-color: #08b341; */
 }
 
 .NavBarLinks a {
@@ -34,6 +36,8 @@ button {
     font-weight: 400;
     color: black;
     transition: 0.3s;
+    margin-left: 2%;
+    white-space: nowrap;
 }
 
 .NavBarLinks a:hover {
@@ -44,7 +48,8 @@ button {
     width: 45%;
     display: flex;
     flex-direction: row;
-    margin-left: 2%;
+    margin-left: 0%;
+    /* background-color: aquamarine; */
 }
 
 .brandNameNavbar img {
@@ -77,23 +82,6 @@ button {
     flex-direction: column;
 }
 
-.openSideMenuButton {
-    margin-left: 2%;
-    background: none;
-    border: none;
-    outline: none;
-    width: 50px;
-    height: 50px;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-image: url("../../IMG/free-icon-font-menu-burger-3917762.png");
-    transition: 0.3s;
-}
-
-.openSideMenuButton:hover {
-    background-image: url("../../IMG/free-icon-font-menu-burger.png");
-}
-
 .contactInfoNavbar button {
     text-decoration: none;
     border: none;
@@ -103,6 +91,7 @@ button {
     color: rgb(88, 175, 183);
     transition: 0.1s;
     font-size: 16px;
+    white-space: nowrap;
 }
 
 .contactInfoNavbar p {
@@ -116,17 +105,17 @@ button {
 }
 
 .kebabMenu {
-    background: #08b341;
-    color: #ff0000;
+    color: #ffffff;
+    text-align: left;
 }
 
 .kebabMenu a {
-    color: #232323;
+    color: #ffffff;
     transition: color 0.3s ease;
 }
 
 .kebabMenu a:hover {
-    color: tomato;
+    color: rgb(92, 160, 165);
 }
 
 #menuToggle {
@@ -134,7 +123,7 @@ button {
     position: absolute;
     top: 50px;
     left: 50px;
-    z-index: 1;
+    z-index: 10;
     -webkit-user-select: none;
     user-select: none;
 }
@@ -148,7 +137,7 @@ button {
     right: -5px;
     cursor: pointer;
     opacity: 0;
-    z-index: 2;
+    z-index: 10;
     -webkit-touch-callout: none;
 }
 
@@ -161,7 +150,7 @@ button {
     position: relative;
     background: #cdcdcd;
     border-radius: 3px;
-    z-index: 1;
+    z-index: 10;
     transform-origin: 4px 0px;
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
         background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.55s ease;
@@ -201,12 +190,12 @@ button {
 #menu {
     height: 1000px;
     position: absolute;
-    width: 300px;
-    margin: -100px 0 0 0;
+    width: 600px;
+    margin: -120px 0 0 0;
     padding: 50px;
     padding-top: 125px;
     right: 100px;
-    background: #9c3535;
+    background: rgb(156, 187, 190);
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
     transform-origin: 0% 0%;
@@ -214,19 +203,103 @@ button {
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
 }
 
+#menu a {
+    text-decoration: none;
+}
 
+#menu li {
+    margin: 0px 55px;
+    padding: 7px 10px;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    border-left: 3px solid rgb(92, 160, 165);
+}
 
 #menuToggle input:checked~ul {
     transform: scale(1.0, 1.0);
     opacity: 1;
 }
 
+.priem {
+    text-align: right;
+}
+
 .priem button {
+    margin: 2% 0;
+    font-size: 25px;
+    font-weight: 700;
     border: none;
-    color: #08b341;
+    color: rgb(92, 160, 165);
     background: none;
+    transition: all 0.5s ease-out;
+}
+
+.priem button:hover {
+    transform: translate(5%, 0);
+    filter: brightness(0.8);
+}
+
+.infBar {
+    display: grid;
+    grid-template-columns: 30px 250px;
+    grid-template-rows: 20px 20px;
+    grid-gap: 15px;
+    color: rgb(255, 255, 255);
+    margin: 0px 65px 20px 65px;
 }
 
 
+.iconBar img {
+    width: 90%;
+    height: auto;
+}
 
+.textBar {
+    padding-top: 1%;
+    font-size: 15px;
+    font-weight: 500;
+}
 
+.lastInf {
+    display: grid;
+    grid-template-columns: 55% 45%;
+    grid-template-rows: 60px;
+    color: rgb(255, 255, 255);
+    margin: 20px -30px 0px 65px;
+}
+
+.lastInf button {
+    border: none;
+    background-color: rgb(92, 160, 165);
+    height: 100%;
+    width: 100%;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 30px;
+    transition: 0.5s;
+}
+
+.lastInf button:hover {
+    filter: brightness(0.8);
+    color: #ffffff;
+}
+
+.socialBar {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 50px;
+    margin-left: 15px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.scBtn {
+    filter: invert(1);
+    transition: 0.1s;
+}
+
+.scBtn:hover{
+    filter: invert(0.9);
+}

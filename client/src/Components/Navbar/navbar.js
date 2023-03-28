@@ -3,26 +3,32 @@ import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import KebabMenu from './kebabmenu';
 import './navbar.css'
+import Note from "../Popup/Note/Note";
 
 const Navbar = () => {
-    const [isOpen, setMenuIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
 
-    const toggleMenu = () => {
-        setMenuIsOpen(!isOpen)
+    const HandleOpenNote = () => {
+        setIsOpen(true)
+    }
+
+    const HandleCloseNote = () => {
+        setIsOpen(false)
     }
 
     return (
         <div className="navigationBar">
             {isOpen && (
-                <KebabMenu toggleMenu={toggleMenu} />
+                <Note onClose={HandleCloseNote} />
             )}
             <div className='kebabMenu'>
                 <div id="menuToggle">
-                    <input  type="checkbox" defaultChecked/>
+                    <input type="checkbox" defaultChecked />
                     <span></span>
                     <span></span>
                     <span></span>
-                    <ul id="menu">
+                    <ul id="menu" >
+                        {/* <img src='../IMG/2023-02-26 02.05.17.jpg'/> */}
                         <a href="#"><li>Команда</li></a>
                         <a href="#"><li>Портфолио</li></a>
                         <a href="#"><li>Услуги</li></a>
@@ -36,21 +42,43 @@ const Navbar = () => {
                         <a href="#"><li>Онлайн-консультация</li></a>
                         <div>
                             <div className='priem'>
-                                <button>Записаться на прием {">>"}</button>
+                                <button onClick={HandleOpenNote}>Записаться на прием {">>"}</button>
                             </div>
-                            <p>+7 123 456 78 90</p>
-                            <p>Москва, Московская, 11</p>
-                            <button>Задать вопрос доктору</button>
+                            <div className='infBar'>
+                                <div className='iconBar'>
+                                    <img src="../IMG/phone-call.png" />
+                                </div>
+                                <div className='textBar'>
+                                    <p>+7 123 456 78 90</p>
+                                </div>
+                                <div className='iconBar'>
+                                    <img src="../IMG/placeholder.png" />
+                                </div>
+                                <div className='textBar'>
+                                    <p>Москва, Московская, 11</p>
+                                </div>
+                            </div>
+
                         </div>
-                        <div>
-                            <img href="#" alt="Twitter" />
-                            <img href="#" alt="VK" />
-                            <img href="#" alt="Facebook" />
+                        <div className='lastInf'>
+                            <button onClick={HandleOpenNote}>Задать вопрос доктору</button>
+                            <div className='socialBar'>
+                                <div></div>
+                                <div className='scBtn'>
+                                    <a href="#"><img src="../IMG/free-icon-whatsapp-3670302.png" width="90%" height="90%" /></a>
+                                </div>
+                                <div className='scBtn'>
+                                    <a href="#"><img src="../IMG/free-icon-vkontakte-4494490.png" width="90%" height="90%" /></a>
+                                </div>
+                                <div className='scBtn'>
+                                    <a href="#"><img src="../IMG/free-icon-telegram-2111710.png" width="90%" height="90%" /></a>
+                                </div>
+                            </div>
                         </div>
                     </ul>
                 </div>
-            </div>
-            
+            </div >
+
             <div className="navbarContent">
                 {/* <button className="openSideMenuButton" onClick={toggleMenu}></button> */}
                 <div className="NavBarLinks">
@@ -73,7 +101,7 @@ const Navbar = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     );
 }
 

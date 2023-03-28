@@ -54,6 +54,7 @@
 }
 
 .social-icons a {
+    z-index: 0;
     position: relative;
     background-color: #eee;
     display: block;

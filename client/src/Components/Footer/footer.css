@@ -99,30 +99,59 @@
     width: 400px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    background-color: rgba(156, 187, 190, 0.267);
 }
 
 .Form input {
-    margin: 10px 10px 10px 40px;
-    width: 90%
+    margin-top: 3%;
+    height: 30px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    padding-left: 5%;
+    width: 90%;
+    margin-left: 30px;
 }
 
 .FormDiv {
     text-align: left;
-    width: 90%;
+    width: 100%;
     display: flex;
     flex-direction: row;
 }
 
 .FormDiv input {
     text-align: left;
-    width: auto;
     display: flex;
     flex-direction: row;
+    margin-top: 3%;
+}
+
+.FormDiv label {
+    margin-top: 3%;
+    margin-left: -10%;
+    margin-bottom: 2%;
 }
 
 .Form button {
     margin: 10px 10px 10px 40px;
-    width: 90%
+    width: 90%;
+    text-decoration: none;
+    border: none;
+    background-color: rgb(64, 87, 141);
+    outline: none;
+    text-decoration: none;
+    height: 50px;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+.Form button:hover {
+    filter: brightness(1.2);
 }
 
 .left_information {
@@ -138,4 +167,23 @@
 .left_information p {
     margin: 11px;
     margin-bottom: 0;
+}
+
+
+.socialBarFooter {
+    display: grid;
+    grid-template-columns: 50px 50px 50px;
+    grid-template-rows: 50px;
+    margin-left: 18%;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.scBtnFooter {
+    filter: invert(1);
+    transition: 0.1s;
+}
+
+.scBtnFooter:hover{
+    filter: invert(0.9);
 }

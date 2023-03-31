@@ -13,6 +13,7 @@ const FourthContainer = () => {
                 <div className="informationContainer">
                     <div className="servicesContainer">
                         <div className="icon">
+                            <img src="../../IMG/tick-mark.png" />
                         </div>
                         <div className="text">
                             <p>Коррекция зубов</p>
@@ -20,6 +21,7 @@ const FourthContainer = () => {
                     </div>
                     <div className="servicesContainer">
                         <div className="icon">
+                            <img src="../../IMG/tick-mark.png" />
                         </div>
                         <div className="text">
                             <p>Терапевтическое лечение</p>
@@ -28,6 +30,7 @@ const FourthContainer = () => {
                     </div>
                     <div className="servicesContainer">
                         <div className="icon">
+                            <img src="../../IMG/tick-mark.png" />
                         </div>
                         <div className="text">
                             <p>Коррекция прикуса</p>
@@ -36,6 +39,7 @@ const FourthContainer = () => {
                     </div>
                     <div className="servicesContainer">
                         <div className="icon">
+                            <img src="../../IMG/tick-mark.png" />
                         </div>
                         <div className="text">
                             <p>Зубопротезирование</p>
@@ -44,6 +48,7 @@ const FourthContainer = () => {
                     </div>
                     <div className="servicesContainer">
                         <div className="icon">
+                            <img src="../../IMG/tick-mark.png" />
                         </div>
                         <div className="text">
                             <p>Отбеливание зубов</p>
@@ -52,6 +57,7 @@ const FourthContainer = () => {
                     </div>
                     <div className="servicesContainer">
                         <div className="icon">
+                            <img src="../../IMG/tick-mark.png" />
                         </div>
                         <div className="text">
                             <p>Детская стоматология</p>
@@ -60,7 +66,7 @@ const FourthContainer = () => {
                     </div>
                 </div>
             </div>
-            
+
         </div>
     )
 }

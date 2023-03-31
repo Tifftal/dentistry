@@ -1,13 +1,87 @@
 .navigationBar {
-    width: 100%;
-    padding: 1%;
+    display: grid;
+    grid-template-columns: 7% 21% 40% 32%;
     background-color: rgba(245, 245, 245, 0.64);
     box-shadow: 0.3em 0.3em 3em rgba(1, 85, 71, 0.429);
     position: sticky;
     top: 0;
 }
 
-.navbarContent {
+.NavBarLinks {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-self: center;
+}
+
+.NavBarLinks a {
+    text-decoration: none;
+    font-size: 23px;
+    font-weight: 400;
+    color: black;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+.NavBarLinks a:hover {
+    color: rgb(88, 175, 183);
+}
+
+.brandNameNavbar {
+    display: grid;
+    grid-template-columns: 17% 83%;
+    text-align: center;
+}
+
+.brandNameNavbar h1 {
+    margin-top: 2.5%;
+    font-size: 55px;
+    font-weight: 600;
+    padding-right: 3%;
+}
+
+.brandNameNavbar img {
+    width: 100%;
+    height: auto;
+}
+
+.contactInfoNavbar {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-self: center;
+}
+
+.contactBar1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.contactBar2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.contactInfoNavbar button {
+    text-decoration: none;
+    border: none;
+    outline: none;
+    background: none;
+    color: rgb(88, 175, 183);
+    transition: 0.1s;
+    font-size: 16px;
+    white-space: nowrap;
+    margin: 0;
+}
+
+.contactInfoNavbar p {
+    font-size: 16px;
+    margin: 2%;
+}
+
+.contactInfoNavbar button:hover {
+    color: rgb(68, 134, 140);
+} 
+
+/* .navbarContent {
     display: flex;
     flex-direction: row;
     margin: auto;
@@ -16,20 +90,18 @@
 
 button {
     margin: auto;
-}
+} */
 
-.NavBarLinks {
+/* .NavBarLinks {
     width: 35%;
     display: flex;
     flex-direction: row;
     margin-top: auto;
     margin-bottom: auto;
     margin-left: 5%;
-    /* background-color: #08b341; */
 }
 
 .NavBarLinks a {
-    /* background-color: yellowgreen; */
     padding-left: 10%;
     text-decoration: none;
     font-size: 23px;
@@ -42,14 +114,13 @@ button {
 
 .NavBarLinks a:hover {
     color: rgb(88, 175, 183);
-}
-
+} */
+/* 
 .brandNameNavbar {
     width: 45%;
     display: flex;
     flex-direction: row;
     margin-left: 0%;
-    /* background-color: aquamarine; */
 }
 
 .brandNameNavbar img {
@@ -62,8 +133,8 @@ button {
     margin: auto 0 auto 0;
     font-size: 50px;
     font-weight: 700;
-}
-
+} */
+/* 
 .contactInfoNavbar {
     display: flex;
     flex-direction: row;
@@ -102,7 +173,7 @@ button {
 
 .contactInfoNavbar button:hover {
     color: rgb(68, 134, 140);
-}
+} */
 
 .kebabMenu {
     color: #ffffff;
@@ -121,8 +192,8 @@ button {
 #menuToggle {
     display: block;
     position: absolute;
-    top: 50px;
-    left: 50px;
+    top: 40px;
+    left: 40px;
     z-index: 10;
     -webkit-user-select: none;
     user-select: none;
@@ -300,6 +371,6 @@ button {
     transition: 0.1s;
 }
 
-.scBtn:hover{
+.scBtn:hover {
     filter: invert(0.9);
 }

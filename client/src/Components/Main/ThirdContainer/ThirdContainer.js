@@ -5,6 +5,7 @@ const ThirdContainer = () => {
     return (
         <div className="thirdContainer">
             <div className="leftContainer">
+                <img src="../../IMG/DSC02774.png"/>
             </div>
             <div className="rightContainer">
                 <h1>Основатель клиники</h1>
@@ -17,10 +18,10 @@ const ThirdContainer = () => {
                     Приглашаем вас в нашу клинику, чтобы лично убедиться в главном:
                     профессиональное лечение зубов без боли — современная реальность!
                 </p>
-                <button>
+                <button className="oneBtn">
                     Подробнее о компании
                 </button>
-                <button>
+                <button className="twoBtn">
                     Наши пациенты
                 </button>
 

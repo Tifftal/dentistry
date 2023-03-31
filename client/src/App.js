@@ -11,8 +11,8 @@ import Doctors from './Components/Doctors/doctors';
 function App() {
   return (
     <div className="App">
-      <Navbar />
       <BrowserRouter>
+        <Navbar />
         <Routes>
           <Route exact path="/" element={<Main />}></Route>
           <Route path="/about" element={<About />}></Route>
@@ -20,8 +20,8 @@ function App() {
           <Route path="/services" element={<Services />}></Route>
           <Route path="/doctors" element={<Doctors />}></Route>
         </Routes>
+        <Footer />
       </BrowserRouter>
-      <Footer />
     </div>
   );
 }

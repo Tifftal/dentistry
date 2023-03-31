@@ -29,17 +29,17 @@ const Navbar = () => {
                     <span></span>
                     <ul id="menu" >
                         {/* <img src='../IMG/2023-02-26 02.05.17.jpg'/> */}
-                        <a href="#"><li>Команда</li></a>
-                        <a href="#"><li>Портфолио</li></a>
-                        <a href="#"><li>Услуги</li></a>
-                        <a href="#"><li>Стоматология Детям</li></a>
-                        <a href="#"><li>О компании</li></a>
-                        <a href="#"><li>Блог</li></a>
-                        <a href="#"><li>FAQ</li></a>
-                        <a href="#"><li>Анкета пациента</li></a>
-                        <a href="#"><li>Документы</li></a>
-                        <a href="#"><li>Контакты</li></a>
-                        <a href="#"><li>Онлайн-консультация</li></a>
+                        <a href="/about"><li>Команда</li></a>
+                        <a href="/about"><li>Портфолио</li></a>
+                        <a href="/services"><li>Услуги</li></a>
+                        <a href="/services"><li>Стоматология Детям</li></a>
+                        <a href="/about"><li>О компании</li></a>
+                        <a href="/about"><li>Блог</li></a>
+                        <a href="/about"><li>FAQ</li></a>
+                        <a href="/about"><li>Анкета пациента</li></a>
+                        <a href="/about"><li>Документы</li></a>
+                        <a href="/about"><li>Контакты</li></a>
+                        {/* <a href="/"><li>Онлайн-консультация</li></a> */}
                         <div>
                             <div className='priem'>
                                 <button onClick={HandleOpenNote}>Записаться на прием {">>"}</button>
@@ -82,9 +82,9 @@ const Navbar = () => {
             <div className="navbarContent">
                 {/* <button className="openSideMenuButton" onClick={toggleMenu}></button> */}
                 <div className="NavBarLinks">
-                    <a href="#">Услуги</a>
-                    <a href="#">Цены</a>
-                    <a href="#">О нас</a>
+                    <a href="/services">Услуги</a>
+                    <a href="/price">Цены</a>
+                    <a href="/about">О нас</a>
                 </div>
                 <div className="brandNameNavbar">
                     <img src="../IMG/logo.png" alt="логотип" />

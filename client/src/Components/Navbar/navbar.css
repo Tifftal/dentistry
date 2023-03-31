@@ -25,7 +25,6 @@ button {
     margin-top: auto;
     margin-bottom: auto;
     margin-left: 5%;
-    /* background-color: #08b341; */
 }
 
 .NavBarLinks a {
@@ -49,7 +48,6 @@ button {
     display: flex;
     flex-direction: row;
     margin-left: 0%;
-    /* background-color: aquamarine; */
 }
 
 .brandNameNavbar img {

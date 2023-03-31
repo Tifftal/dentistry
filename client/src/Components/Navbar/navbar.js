@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 import KebabMenu from './kebabmenu';
 import './navbar.css'
@@ -58,7 +57,6 @@ const Navbar = () => {
                                     <p>Москва, Московская, 11</p>
                                 </div>
                             </div>
-
                         </div>
                         <div className='lastInf'>
                             <button onClick={HandleOpenNote}>Задать вопрос доктору</button>
@@ -79,29 +77,33 @@ const Navbar = () => {
                 </div>
             </div >
 
-            <div className="navbarContent">
-                {/* <button className="openSideMenuButton" onClick={toggleMenu}></button> */}
-                <div className="NavBarLinks">
-                    <a href="/services">Услуги</a>
-                    <a href="/price">Цены</a>
-                    <a href="/about">О нас</a>
-                </div>
-                <div className="brandNameNavbar">
+
+            {/* <button className="openSideMenuButton" onClick={toggleMenu}></button> */}
+            <div className="NavBarLinks">
+                <div><a href="/services">Услуги</a></div>
+                <div><a href="/price">Цены</a></div>
+                <div><a href="/about">О нас</a></div>
+            </div>
+            <div className="brandNameNavbar">
+                <div>
                     <img src="../IMG/logo.png" alt="логотип" />
+                </div>
+                <div>
                     <h1>Формула улыбки</h1>
                 </div>
-                <div className="contactInfoNavbar">
-                    <div className="contactBar1">
-                        <p>+7 929 123 45 67</p>
-                        <button>Заказать обратный звонок</button>
-                    </div>
-                    <div className="contactBar2">
-                        <p>Московская, 11</p>
-                        <button>Изменить клинику</button>
-                    </div>
+            </div>
+            <div className="contactInfoNavbar">
+                <div className="contactBar1">
+                    <p>+7 929 123 45 67</p>
+                    <button>Заказать обратный звонок</button>
+                </div>
+                <div className="contactBar2">
+                    <p>Московская, 11</p>
+                    <button>Изменить клинику</button>
                 </div>
             </div>
-        </div >
+        </div>
+
     );
 }
 

@@ -7,15 +7,17 @@ const FifthContainer = () => {
       <h1>Наши преимущества</h1>
       <div className="advCards">
         <div className="picContainer">
+          <img src="../../IMG/DSC02613-2.jpg" />
         </div>
         <div className="picContainer">
+          <img src="../../IMG/DSC02660-2.jpg" />
         </div>
         <div className="picContainer">
+          <img src="../../IMG/DSC02655-2.jpg" />
         </div>
         <div className="titleContainer">
           <p>Комплексные методы</p>
           <p>лечения</p>
-
         </div>
         <div className="titleContainer">
           <p>Только</p>

@@ -15,12 +15,26 @@
     grid-row-end: 3;
 }
 
-.box1 h1{
+.box1 h1 {
     font-weight: bold;
 }
 
-.box1 p{
+.box1 p {
     text-align: left;
+}
+
+.box1 button {
+    font-size: 22px;
+    font-weight: 700;
+    border: none;
+    color: rgb(58, 79, 128);
+    background: none;
+    transition: all 0.5s ease-out;
+}
+
+.box1 button:hover {
+    transform: translate(5%, 0);
+    filter: brightness(0.8);
 }
 
 .box2 {
@@ -28,6 +42,22 @@
     border-radius: 7%;
     box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
 }
+
+.secondContainer img {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 60%;
+    height: auto;
+    border-radius: 100%;
+}
+
+/* .box2 img {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 60%;
+    height: auto;
+    border-radius: 100%;
+} */
 
 .box3 {
     margin: 60px 20px 0px 20px;
@@ -47,18 +77,27 @@
     box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
 }
 
-.box2, .box3, .box4, .box5 {
-   background-color: rgb(255, 255, 255);
+.box2,
+.box3,
+.box4,
+.box5 {
+    background-color: rgb(255, 255, 255);
 }
 
-.box2 p, .box3 p, .box4 p, .box5 p{
+.box2 p,
+.box3 p,
+.box4 p,
+.box5 p {
     font-size: 15px;
     text-align: center;
 }
 
-.box2 h3, .box3 h3, .box4 h3, .box5 h3{
+.box2 h3,
+.box3 h3,
+.box4 h3,
+.box5 h3 {
     font-size: 25px;
     font-weight: bold;
     text-align: center;
-    margin-top: 250px;
+    /* margin-top: 250px; */
 }

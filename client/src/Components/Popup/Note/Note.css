@@ -25,6 +25,9 @@
   font-size: 38px;
   font-weight: bold;
   background-color: rgba(156, 187, 190, 0.267);
+  text-align: right;
+  padding-right: 5%;
+  
 }
 
 .close:hover,

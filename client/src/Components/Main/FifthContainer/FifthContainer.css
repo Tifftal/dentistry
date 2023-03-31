@@ -25,16 +25,21 @@
     margin: 0px 150px 0px 180px;
 }
 
-.picContainer {
+/* .picContainer {
     display: flex;
     background-repeat: no-repeat;
     background-size: contain;
     background-image: url("../../../IMG/free-icon-font-heart.png");
     background-position: center;
+} */
+
+.picContainer img {
+    width: 50%;
+    border-radius: 100%;
 }
 
 
-.titleContainer p{
+.titleContainer p {
     font-size: 20px;
     font-weight: bold;
     padding: 0;

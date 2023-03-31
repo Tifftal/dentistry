@@ -76,8 +76,6 @@ const Navbar = () => {
                     </ul>
                 </div>
             </div >
-
-
             {/* <button className="openSideMenuButton" onClick={toggleMenu}></button> */}
             <div className="NavBarLinks">
                 <div><a href="/services">Услуги</a></div>
@@ -103,7 +101,7 @@ const Navbar = () => {
                 </div>
             </div>
         </div>
-
+ 
     );
 }
 

@@ -77,14 +77,15 @@ const Navbar = () => {
                 </div>
             </div >
 
-            <div className="navbarContent">
-                {/* <button className="openSideMenuButton" onClick={toggleMenu}></button> */}
-                <div className="NavBarLinks">
-                    <a href="#">Услуги</a>
-                    <a href="#">Цены</a>
-                    <a href="#">О нас</a>
-                </div>
-                <div className="brandNameNavbar">
+
+            {/* <button className="openSideMenuButton" onClick={toggleMenu}></button> */}
+            <div className="NavBarLinks">
+                <div><a href="/services">Услуги</a></div>
+                <div><a href="/price">Цены</a></div>
+                <div><a href="/about">О нас</a></div>
+            </div>
+            <div className="brandNameNavbar">
+                <div>
                     <img src="../IMG/logo.png" alt="логотип" />
                 </div>
                 <div>

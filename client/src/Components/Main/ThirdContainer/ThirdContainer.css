@@ -19,6 +19,10 @@
     margin-left: 15%;
 }
 
+.leftContainer img {
+    z-index: -1;
+}
+
 .rightContainer {
     /* background-color: bisque; */
     text-align: left;

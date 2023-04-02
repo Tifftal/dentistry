@@ -5,6 +5,7 @@
     box-shadow: 0.3em 0.3em 3em rgba(1, 85, 71, 0.429);
     position: sticky;
     top: 0;
+    z-index: 90;
 }
 
 .NavBarLinks {
@@ -178,6 +179,7 @@ button {
 .kebabMenu {
     color: #ffffff;
     text-align: left;
+    z-index: 100;
 }
 
 .kebabMenu a {
@@ -194,7 +196,7 @@ button {
     position: absolute;
     top: 40px;
     left: 40px;
-    z-index: 9999;
+    z-index: 100;
     -webkit-user-select: none;
     user-select: none;
 }

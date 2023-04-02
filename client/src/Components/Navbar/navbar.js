@@ -27,7 +27,6 @@ const Navbar = () => {
                     <span></span>
                     <span></span>
                     <ul id="menu" >
-                        {/* <img src='../IMG/2023-02-26 02.05.17.jpg'/> */}
                         <a href="/about"><li>Команда</li></a>
                         <a href="/about"><li>Портфолио</li></a>
                         <a href="/services"><li>Услуги</li></a>
@@ -38,7 +37,6 @@ const Navbar = () => {
                         <a href="/about"><li>Анкета пациента</li></a>
                         <a href="/about"><li>Документы</li></a>
                         <a href="/about"><li>Контакты</li></a>
-                        {/* <a href="/"><li>Онлайн-консультация</li></a> */}
                         <div>
                             <div className='priem'>
                                 <button onClick={HandleOpenNote}>Записаться на прием {">>"}</button>

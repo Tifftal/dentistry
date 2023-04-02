@@ -33,7 +33,7 @@
     box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.2);
 }
 
-.adv h1{
+.adv h1 {
     font-size: 20px;
     padding-top: 1%;
     padding-bottom: 0.5%;
@@ -41,8 +41,7 @@
     padding-left: 2%;
 }
 
-.adv p{
-    /* border: 2px solid black; */
+.adv p {
     border-top: 1px solid rgb(206, 206, 206);
     font-size: 15px;
     text-align: left;
@@ -50,4 +49,24 @@
     margin-right: 2%;
 }
 
+.adv p {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s;
+    transform-origin: top;
+}
 
+.adv {
+    max-height: 50px;
+    transition: max-height 0.3s;
+}
+
+.adv.open p {
+    max-height: 100%;
+    transition: max-height 0.5s;
+}
+
+.adv.open {
+    max-height: 200px;
+    transition: max-height 0.3s;
+}

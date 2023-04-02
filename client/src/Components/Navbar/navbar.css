@@ -376,3 +376,11 @@ button {
 .scBtn:hover {
     filter: invert(0.9);
 }
+
+#menuToggle input {
+    z-index: 10;
+}
+
+#menuToggle span {
+    z-index: 5;
+}

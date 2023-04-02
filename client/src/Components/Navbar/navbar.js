@@ -28,15 +28,9 @@ const Navbar = () => {
                     <span></span>
                     <ul id="menu" >
                         <a href="/about"><li>Команда</li></a>
-                        <a href="/about"><li>Портфолио</li></a>
                         <a href="/services"><li>Услуги</li></a>
-                        <a href="/services"><li>Стоматология Детям</li></a>
                         <a href="/about"><li>О компании</li></a>
-                        <a href="/about"><li>Блог</li></a>
-                        <a href="/about"><li>FAQ</li></a>
-                        <a href="/about"><li>Анкета пациента</li></a>
                         <a href="/about"><li>Документы</li></a>
-                        <a href="/about"><li>Контакты</li></a>
                         <div>
                             <div className='priem'>
                                 <button onClick={HandleOpenNote}>Записаться на прием {">>"}</button>
@@ -74,7 +68,6 @@ const Navbar = () => {
                     </ul>
                 </div>
             </div >
-            {/* <button className="openSideMenuButton" onClick={toggleMenu}></button> */}
             <div className="NavBarLinks">
                 <div><a href="/services">Услуги</a></div>
                 <div><a href="/price">Цены</a></div>

@@ -27,7 +27,7 @@ const Navbar = () => {
                     <span></span>
                     <span></span>
                     <ul id="menu" >
-                        <a href="/about"><li>Команда</li></a>
+                        <a href="/doctors"><li>Команда</li></a>
                         <a href="/services"><li>Услуги</li></a>
                         <a href="/about"><li>О компании</li></a>
                         <a href="/about"><li>Документы</li></a>

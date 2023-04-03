@@ -1,0 +1,149 @@
+.backgr {
+    background: linear-gradient(rgb(156, 187, 190), white);
+}
+
+.doctors {
+    margin: 0 5% 0 5%;
+}
+
+.titleDoc h1 {
+    padding-top: 5%;
+    font-size: 45px;
+    font-weight: 700;
+    text-align: left;
+    color: rgb(255, 255, 255);
+}
+
+ul.breadcrumb {
+    list-style: none;
+}
+
+ul.breadcrumb li {
+    display: inline;
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+}
+
+ul.breadcrumb li+li:before {
+    padding: 5%;
+    color: rgba(255, 255, 255);
+    content: "-\00a0";
+}
+
+ul.breadcrumb li a {
+    color: rgb(88, 175, 183);
+    text-decoration: none;
+}
+
+ul.breadcrumb li a:hover {
+    color: rgb(9, 9, 9);
+    text-decoration: none;
+}
+
+.textDoc {
+    margin: 4% 0 0 0;
+}
+
+.textDoc p {
+    text-align: left;
+    font-size: 25px;
+    font-weight: 600;
+    margin: 0;
+    color: rgb(255, 255, 255);
+}
+
+.docBtn {
+    margin: 2% 0 0 10%;
+}
+
+.docBtn button {
+    text-decoration: none;
+    background: red;
+    border: none;
+    margin-left: 20%;
+    background-color: rgb(58, 79, 128);
+    outline: none;
+    width: 20%;
+    height: 50px;
+    border-radius: 5px;
+    box-shadow: 0.3em 0.3em 0.6em rgba(49, 109, 103, 0.575);
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: 500;
+    padding: 0;
+    transition: 0.5s;
+}
+
+.docBtn button:hover {
+    filter: brightness(1.2);
+}
+
+.photoDoc {
+    display: grid;
+    grid-template-columns: 27% 23% 23% 23%;
+    grid-template-rows: repeat(4, 350px);
+    grid-gap: 4%;
+    margin: 5% 4% 0 0;
+}
+
+/* .ph {
+    background-color: rgb(156, 187, 190);
+} */
+
+.noPhoto {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    /* background-color: aqua; */
+}
+
+.photoDoc img {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 100%;
+    height: auto;
+    transition: 1s;
+}
+
+.photoDoc img:hover {
+    transform: scale(1.05);
+}
+
+.photoDoc p {
+    font-size: 15px;
+    text-align: center;
+}
+
+.photoDoc h3 {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* .cart {
+    position: relative;
+    overflow: hidden;
+}
+
+.onea {
+    color: #eee;
+    font-size: 12px;
+    position: absolute;
+    top: 0px
+}
+
+.twoa {
+    color: #eee;
+    font-size: 12px;
+    position: absolute;
+    top: 14px;
+}
+
+.cart iframe {
+    width: 560px;
+    height: 400px;
+    position: relative;
+
+} */

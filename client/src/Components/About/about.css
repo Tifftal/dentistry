@@ -1,0 +1,8 @@
+.about p {
+    padding: 3%;
+    text-align: left;
+}
+
+.background {
+    background: linear-gradient(rgb(156, 187, 190), white);
+}

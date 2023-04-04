@@ -23,6 +23,10 @@
     text-align: left;
 }
 
+.box1 button a {
+    text-decoration: none;
+}
+
 .box1 button {
     font-size: 22px;
     font-weight: 700;

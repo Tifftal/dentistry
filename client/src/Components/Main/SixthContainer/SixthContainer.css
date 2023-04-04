@@ -42,7 +42,8 @@
 }
 
 .adv p {
-    border-top: 1px solid rgb(206, 206, 206);
+    border-top: 1px solid rgb(206,206, 206);
+    margin-top: 1%;
     font-size: 15px;
     text-align: left;
     margin-left: 2%;
@@ -52,7 +53,7 @@
 .adv p {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.8s;
+    transition: max-height 0.4s;
     transform-origin: top;
 }
 
@@ -63,10 +64,10 @@
 
 .adv.open p {
     max-height: 100%;
-    transition: max-height 1s;
+    transition: max-height 0.8s;
 }
 
 .adv.open {
     max-height: 200px;
-    transition: max-height 0.6s;
+    transition: max-height 1s;
 }

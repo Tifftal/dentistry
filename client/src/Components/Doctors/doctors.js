@@ -20,7 +20,7 @@ const Doctors = () => {
                     </p>
                 </div>
                 <div className="docBtn">
-                    <button>Смотреть портфолио</button>
+                    <a href="/portfolio"><button>Смотреть портфолио</button></a>
                     <a href="/vacancy"><button>Наши вакансии</button></a>
                 </div>
                 <div className="photoDoc">

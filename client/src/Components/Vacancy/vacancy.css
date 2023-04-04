@@ -1,0 +1,62 @@
+.backgrVac {
+    background: linear-gradient(rgb(156, 187, 190), white);
+}
+
+.vacancy {
+    margin: 0 5% 0 5%;
+}
+
+.titleVac h1 {
+    padding-top: 5%;
+    font-size: 45px;
+    font-weight: 700;
+    text-align: left;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+ul.breadcrumbVac {
+    text-align: left;
+    list-style: none;
+    padding: 0;
+}
+
+ul.breadcrumbVac li {
+    display: inline;
+    font-size: 20px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+ul.breadcrumbVac li+li:before {
+    padding: 0.5%;
+    color: rgba(0, 0, 0, 0.6);
+    content: "-\00a0";
+}
+
+ul.breadcrumbVac li a {
+    color: rgb(88, 175, 183);
+    text-decoration: none;
+}
+
+ul.breadcrumbVac li a:hover {
+    color: rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+}
+
+.textVac {
+    margin: 4% 0 0 0;
+}
+
+.textVac p {
+    text-align: left;
+    font-size: 25px;
+    font-weight: 600;
+    margin: 0;
+    color: rgba(0, 0, 0, 0.6);
+    margin-bottom: 10%;
+}
+
+.textVac a {
+    text-decoration: none;
+    color: rgb(88, 175, 183);
+}

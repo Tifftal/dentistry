@@ -7,6 +7,8 @@ import About from './Components/About/about';
 import Services from './Components/Services/services';
 import Price from './Components/Price/price';
 import Doctors from './Components/Doctors/doctors';
+import Vacancy from './Components/Vacancy/vacancy'
+import Portfolio from './Components/Portfolio/portfolio'
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
           <Route path="/price" element={<Price />}></Route>
           <Route path="/services" element={<Services />}></Route>
           <Route path="/doctors" element={<Doctors />}></Route>
+          <Route path='/vacancy' element={<Vacancy/>}></Route>
+          <Route path='/portfolio' element={<Portfolio/>}></Route>
         </Routes>
         <Footer />
       </BrowserRouter>

@@ -21,7 +21,7 @@ const Doctors = () => {
                 </div>
                 <div className="docBtn">
                     <button>Смотреть портфолио</button>
-                    <button>Наши вакансии</button>
+                    <a href="/vacancy"><button>Наши вакансии</button></a>
                 </div>
                 <div className="photoDoc">
 
@@ -37,8 +37,102 @@ const Doctors = () => {
                             </iframe>
                         </div> */}
 
-                    <div className="noPhoto"></div>
+                    <div className="noPhoto">
+                        <div className="stick">
+                            <h1>
+                                Команда
+                            </h1>
+                        </div>
+                    </div>
                     <div className="ph">
+                        <img src="../../IMG/DSC02687-2.jpg" />
+                        <h3>
+                            Иванов Иван Иванович
+                        </h3>
+                        <p>
+                            Терапевт
+                        </p>
+                    </div>
+                    <div className="ph">
+                        <img src="../../IMG/DSC02687-2.jpg" />
+                        <h3>
+                            Иванов Иван Иванович
+                        </h3>
+                        <p>
+                            Терапевт
+                        </p>
+                    </div>
+
+                    <div className="ph">
+                        <img src="../../IMG/DSC02687-2.jpg" />
+                        <h3>
+                            Иванов Иван Иванович
+                        </h3>
+                        <p>
+                            Терапевт
+                        </p>
+                    </div>
+
+                    <div className="ph">
+                        <img src="../../IMG/DSC02687-2.jpg" />
+                        <h3>
+                            Иванов Иван Иванович
+                        </h3>
+                        <p>
+                            Терапевт
+                        </p>
+                    </div>
+
+                    <div className="ph">
+                        <img src="../../IMG/DSC02687-2.jpg" />
+                        <h3>
+                            Иванов Иван Иванович
+                        </h3>
+                        <p>
+                            Терапевт
+                        </p>
+                    </div>
+
+                    <div className="ph">
+                        <img src="../../IMG/DSC02687-2.jpg" />
+                        <h3>
+                            Иванов Иван Иванович
+                        </h3>
+                        <p>
+                            Терапевт
+                        </p>
+                    </div>
+
+                    <div className="ph">
+                        <img src="../../IMG/DSC02687-2.jpg" />
+                        <h3>
+                            Иванов Иван Иванович
+                        </h3>
+                        <p>
+                            Терапевт
+                        </p>
+                    </div>
+
+                    <div className="ph">
+                        <img src="../../IMG/DSC02687-2.jpg" />
+                        <h3>
+                            Иванов Иван Иванович
+                        </h3>
+                        <p>
+                            Терапевт
+                        </p>
+                    </div>
+                    <div className="ph">
+                        <img src="../../IMG/DSC02687-2.jpg" />
+                        <h3>
+                            Иванов Иван Иванович
+                        </h3>
+                        <p>
+                            Терапевт
+                        </p>
+                    </div>
+
+                    {/* <div className="ph">
                         <img src="../../IMG/DSC02687-2.jpg" />
                         <h3>
                             Иванов Иван Иванович
@@ -117,7 +211,7 @@ const Doctors = () => {
                         <p>
                             Терапевт
                         </p>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>

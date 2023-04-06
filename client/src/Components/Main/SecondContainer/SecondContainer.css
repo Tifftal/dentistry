@@ -105,3 +105,32 @@
     text-align: center;
     /* margin-top: 250px; */
 }
+
+@media (max-width: 900px) { /* изменяем стили для ширины экрана до 768px */
+    .secondContainer {
+    display: flex;
+    flex-direction: column;
+    }
+    .box1 {
+    margin: 20px;
+    grid-column-start: unset;
+    grid-row-start: unset;
+    grid-row-end: unset;
+    }
+    .secondContainer img {
+    margin: 20px auto;
+    width: 40%;
+    }
+    .box2,
+    .box3,
+    .box4,
+    .box5 {
+    margin: 20px;
+    }
+    .box2 h3,
+    .box3 h3,
+    .box4 h3,
+    .box5 h3 {
+    margin-top: 50px;
+    }
+    }

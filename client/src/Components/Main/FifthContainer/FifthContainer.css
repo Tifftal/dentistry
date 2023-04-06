@@ -25,14 +25,6 @@
     margin: 0px 150px 0px 180px;
 }
 
-/* .picContainer {
-    display: flex;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-image: url("../../../IMG/free-icon-font-heart.png");
-    background-position: center;
-} */
-
 .picContainer img {
     width: 50%;
     border-radius: 100%;
@@ -48,4 +40,47 @@
 
 .contectContainer {
     font-size: 16px;
+}
+
+@media (max-width: 900px) {
+    .advCards {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        margin: 0px 50px 0px 50px;
+    }
+}
+
+/* Media query for even smaller screens */
+
+@media (max-width: 900px) {
+    .fifthContainer h1 {
+        font-size: 30px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    
+    .triangle {
+        height: 40px;
+        border-left: 360px solid transparent;
+        border-right: 360px solid transparent;
+        border-top: 30px solid #ffffff;
+    }
+    
+    .advCards {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        margin: 0px 20px 0px 20px;
+    }
+    
+    .picContainer img {
+        width: 100%;
+    }
+    
+    .titleContainer p {
+        font-size: 16px;
+    }
+    
+    .contectContainer {
+        font-size: 14px;
+    }
 }

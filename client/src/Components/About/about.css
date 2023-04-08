@@ -1,8 +1,119 @@
-.about p {
-    padding: 3%;
+.about_text p {
     text-align: left;
+    font-size: 25px;
+    font-weight: 600;
+    margin: 0;
+    color: rgb(0, 0, 0, 0.6);
 }
 
-.background {
+.backgr_about {
     background: linear-gradient(rgb(156, 187, 190), white);
+}
+
+.titleAbout h1 {
+    padding-top: 5%;
+    font-size: 45px;
+    font-weight: 700;
+    text-align: left;
+    color: rgba(255, 255, 255);
+}
+
+.about {
+    margin: 0 5% 5% 5%;
+}
+
+
+ul.breadcrumbAbout {
+    text-align: left;
+    list-style: none;
+    padding: 0;
+}
+
+ul.breadcrumbAbout li {
+    display: inline;
+    font-size: 20px;
+    font-weight: 600;
+    color: rgba(255, 255, 255);
+}
+
+ul.breadcrumbAbout li+li:before {
+    padding: 0.5%;
+    color: rgb(255, 255, 255);
+    content: "-\00a0";
+}
+
+ul.breadcrumbAbout li a {
+    color: rgb(88, 175, 183);
+    text-decoration: none;
+}
+
+ul.breadcrumbAbout li a:hover {
+    color: rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+}
+
+.Slider img {
+    width: 40%;
+    height: auto;
+    margin-bottom: 5%;
+}
+
+.InfAbout {
+    display: grid;
+    grid-template-columns: 25% 30% 30%;
+    grid-template-rows: auto;
+    grid-column-gap: 5%;
+}
+
+.AboutTitle h2 {
+    position: fixed;
+    top: 40%;
+    margin-left: 0%;
+    vertical-align: middle;
+    font-size: 90px;
+    font-weight: 800;
+    color: rgba(0, 0, 0, 0.05);
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+}
+
+.Container_about {
+    /* background-color: green; */
+    margin-top: 5%;
+}
+
+.Container_about p {
+    background-color: rgb(255, 255, 255);
+    font-size: 120%;
+    text-align: left;
+    padding: 4%;
+    margin-top: 5%;
+    margin-bottom: 10%;
+    border-radius: 5px;
+    box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+}
+
+.BtnAbout {
+    margin-bottom: 10%;
+    text-align: right;
+}
+
+.BtnAbout button {
+    text-decoration: none;
+    border: none;
+    background-color: rgb(58, 79, 128);
+    outline: none;
+    width: 70%;
+    height: 140%;
+    border-radius: 5px;
+    box-shadow: 0.3em 0.3em 0.6em rgba(49, 109, 103, 0.575);
+    color: rgb(255, 255, 255);
+    font-size: 120%;
+    font-weight: 500;
+    padding: 0;
+    transition: 0.5s;
+}
+
+.BtnAbout button:hover {
+    filter: brightness(1.2);
 }

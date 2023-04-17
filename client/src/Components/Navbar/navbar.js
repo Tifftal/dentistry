@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import KebabMenu from './kebabmenu';
 import './navbar.css'
 import Note from "../Popup/Note/Note";
+import Note1 from "../Popup/Note/Note1";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -15,10 +16,24 @@ const Navbar = () => {
         setIsOpen(false)
     }
 
+    
+    const [isOpen1, setIsOpen1] = useState(false);
+
+    const HandleOpenNote1 = () => {
+        setIsOpen1(true)
+    }
+
+    const HandleCloseNote1 = () => {
+        setIsOpen1(false)
+    }
+
     return (
         <div className="navigationBar">
             {isOpen && (
                 <Note onClose={HandleCloseNote} />
+            )}
+            {isOpen1 && (
+                <Note1 onClose={HandleCloseNote1} />
             )}
             <div className='kebabMenu'>
                 <div id="menuToggle">
@@ -69,8 +84,7 @@ const Navbar = () => {
                 </div>
             </div >
             <div className="NavBarLinks">
-                <div><a href="/services">Услуги</a></div>
-                <div><a href="/price">Цены</a></div>
+                <div><a href="/services">Услуги и цены</a></div>
                 <div><a href="/about">О нас</a></div>
             </div>
             <div className="brandNameNavbar">
@@ -84,7 +98,7 @@ const Navbar = () => {
             <div className="contactInfoNavbar">
                 <div className="contactBar1">
                     <p>+7 929 123 45 67</p>
-                    <button>Заказать обратный звонок</button>
+                    <button onClick={HandleOpenNote1}>Заказать обратный звонок</button>
                 </div>
                 <div className="contactBar2">
                     <p>Московская, 11</p>

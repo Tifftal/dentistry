@@ -10,8 +10,10 @@
 
 .NavBarLinks {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     align-self: center;
+    margin-right: 5%;
+    margin-left: 5%;
 }
 
 .NavBarLinks a {

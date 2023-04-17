@@ -28,21 +28,22 @@
 }
 
 .brandNameNavbar {
-    display: grid;
-    grid-template-columns: 17% 83%;
+    display: flex;
+    flex-direction: row;
     text-align: center;
 }
 
 .brandNameNavbar h1 {
-    margin-top: 2.5%;
-    font-size: 55px;
+    margin: auto;
+    width: 90%;
+    font-size: 50px;
     font-weight: 600;
-    padding-right: 3%;
 }
 
 .brandNameNavbar img {
-    width: 100%;
-    height: auto;
+    margin: auto;
+    width: 98px;
+    height: 98px;
 }
 
 .contactInfoNavbar {
@@ -289,4 +290,102 @@
 
 #menuToggle span {
     z-index: 5;
+}
+
+@media screen and (max-width: 900px) {
+    .navigationBar {
+        display: flex;
+        flex-direction: row;
+        background-color: rgba(245, 245, 245, 0.64);
+        box-shadow: 0.3em 0.3em 3em rgba(1, 85, 71, 0.429);
+        position: sticky;
+        top: 0;
+        z-index: 90;
+    }
+
+    .brandNameNavbar {
+        margin-left: auto;
+        margin-right: auto;
+        width: 55%;
+    }
+
+    .brandNameNavbar img{
+        height: 82px;
+        width: 82px;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .brandNameNavbar h1 {
+        margin-left: 0;
+        margin-right: 0;
+        font-size: 40px;
+    }
+
+    .NavBarLinks {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-self: center;
+    }
+
+    .NavBarLinks {
+        display: none;
+    }
+
+    .contactInfoNavbar {
+        display: none;
+    }
+
+    #menu {
+        height: 110%;
+        position: fixed;
+        width: 400px;
+        margin: -100px 0 0 0;
+        padding: 50px;
+        padding-top: 125px;
+        left: -400px;
+        background: rgb(156, 187, 190);
+        list-style-type: none;
+        -webkit-font-smoothing: antialiased;
+        transform-origin: 0% 0%;
+        transform: translate(100%, 0);
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    }
+
+    #menu a {
+        text-decoration: none;
+    }
+
+    #menu img {
+        margin-left: 5px;
+        height: 100%;
+        width: auto;
+    }
+    
+    #menu li {
+        margin: 0px 55px;
+        padding: 7px 10px;
+        font-size: 20px;
+        font-weight: 600;
+        text-decoration: none;
+        border-left: 3px solid rgb(92, 160, 165);
+    }
+
+    .lastInf {
+        display: flex;
+        flex-direction: column;
+        grid-template-rows: 60px;
+        color: rgb(255, 255, 255);
+    }
+
+    .lastInf button {
+        height: 50px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    #menuToggle input:checked~ul {
+        transform: scale(1.0, 1.0);
+        opacity: 1;
+    }
 }

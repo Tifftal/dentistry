@@ -92,10 +92,6 @@ ul.breadcrumb li a:hover {
     grid-row-gap: 5%;
 }
 
-/* .ph {
-    background-color: rgb(156, 187, 190);
-} */
-
 .noPhoto {
     grid-column-start: 1;
     grid-column-end: 2;
@@ -170,3 +166,4 @@ ul.breadcrumb li a:hover {
     position: relative;
 
 } */
+

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import KebabMenu from './kebabmenu';
+
 import './navbar.css'
 import Note from "../Popup/Note/Note";
 import Note1 from "../Popup/Note/Note1";
@@ -89,12 +89,11 @@ const Navbar = () => {
                 <div><a href="/about">О нас</a></div>
             </div>
             <div className="brandNameNavbar">
-                <div>
+                
                     <img src="../IMG/logo.png" alt="логотип" />
-                </div>
-                <div>
+                
                     <h1>Формула улыбки</h1>
-                </div>
+                
             </div>
             <div className="contactInfoNavbar">
                 <div className="contactBar1">

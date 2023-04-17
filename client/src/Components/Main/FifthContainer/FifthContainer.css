@@ -61,8 +61,8 @@
     
     .triangle {
         height: 40px;
-        border-left: 360px solid transparent;
-        border-right: 360px solid transparent;
+        border-left: 240px solid transparent;
+        border-right: 240px solid transparent;
         border-top: 30px solid #ffffff;
     }
     

@@ -85,6 +85,8 @@
   font-size: 18px;
   font-weight: 600;
   transition: 0.5s;
+  margin-bottom: 5%;
+  margin-top: 5%;
 }
 
 .formNote button:hover {

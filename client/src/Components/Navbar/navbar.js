@@ -17,24 +17,25 @@ const Navbar = () => {
     }
 
     
-    const [isOpen1, setIsOpen1] = useState(false);
+    // const [isOpen1, setIsOpen1] = useState(false);
 
-    const HandleOpenNote1 = () => {
-        setIsOpen1(true)
-    }
+    // const HandleOpenNote1 = () => {
+    //     setIsOpen1(true)
+    // }
 
-    const HandleCloseNote1 = () => {
-        setIsOpen1(false)
-    }
+    // const HandleCloseNote1 = () => {
+    //     setIsOpen1(false)
+    // }
 
     return (
         <div className="navigationBar">
             {isOpen && (
-                <Note onClose={HandleCloseNote} />
+                <Note onClose={HandleCloseNote} setIsOpen={setIsOpen}/>
             )}
-            {isOpen1 && (
+            {/* {isOpen1 && (
                 <Note1 onClose={HandleCloseNote1} />
-            )}
+            )} */}
+            
             <div className='kebabMenu'>
                 <div id="menuToggle">
                     <input type="checkbox" defaultChecked />
@@ -98,7 +99,7 @@ const Navbar = () => {
             <div className="contactInfoNavbar">
                 <div className="contactBar1">
                     <p>+7 929 123 45 67</p>
-                    <button onClick={HandleOpenNote1}>Заказать обратный звонок</button>
+                    <button>Заказать обратный звонок</button>
                 </div>
                 <div className="contactBar2">
                     <p>Московская, 11</p>

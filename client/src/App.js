@@ -9,6 +9,7 @@ import Price from './Components/Price/price';
 import Doctors from './Components/Doctors/doctors';
 import Vacancy from './Components/Vacancy/vacancy'
 import Portfolio from './Components/Portfolio/portfolio'
+import Documnets from './Components/Documents/documents'
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/doctors" element={<Doctors />}></Route>
           <Route path='/vacancy' element={<Vacancy/>}></Route>
           <Route path='/portfolio' element={<Portfolio/>}></Route>
+          <Route path='/documents' element={<Documnets/>}></Route>
         </Routes>
         <Footer />
       </BrowserRouter>

@@ -1,7 +1,5 @@
 import React from 'react';
-import { useState } from 'react';
 import './Note.css'
-import Sent from "../Note/Sent";
 
 function Modal(props) {
 

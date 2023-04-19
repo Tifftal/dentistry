@@ -46,7 +46,7 @@ const Navbar = () => {
                         <a href="/doctors"><li>Команда</li></a>
                         <a href="/services"><li>Услуги</li></a>
                         <a href="/about"><li>О компании</li></a>
-                        <a href="/about"><li>Документы</li></a>
+                        <a href="/documents"><li>Документы</li></a>
                         <div>
                             <div className='priem'>
                                 <button onClick={HandleOpenNote}>Записаться на прием {">>"}</button>

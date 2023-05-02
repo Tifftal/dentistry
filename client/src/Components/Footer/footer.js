@@ -26,17 +26,10 @@ const Footer = () => {
                 </div>
 
                 <div className="footer_menu">
-                    <a href="#">Портфолио</a>
                     <a href="#">Команда</a>
                     <a href="#">Услуги</a>
-                    <a href="#">Стоматология Детям</a>
                     <a href="#">О компании</a>
-                    <a href="#">Блог</a>
-                    <a href="#">FAQ</a>
-                    <a href="#">Анкета пациента</a>
                     <a href="#">Документы</a>
-                    <a href="#">Контакты</a>
-                    <a href="#">Онлайн-консультация</a>
                 </div>
 
                 <div className="footer_form">

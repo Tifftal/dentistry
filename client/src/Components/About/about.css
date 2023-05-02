@@ -1,9 +1,11 @@
 .about_text p {
     text-align: left;
-    font-size: 25px;
-    font-weight: 600;
+    font-size: 140%;
+    font-weight: 500;
     margin: 0;
     color: rgb(0, 0, 0, 0.6);
+    margin-bottom: 2%;
+    line-height: 140%;
 }
 
 .backgr_about {

@@ -1,0 +1,166 @@
+.backgrDoc {
+    background: linear-gradient(rgb(156, 187, 190), white);
+}
+
+.documents {
+    margin: 0 5% 15% 5%;
+}
+
+.titleDoc h1 {
+    padding-top: 5%;
+    font-size: 45px;
+    font-weight: 700;
+    text-align: left;
+    color: rgb(255, 255, 255);
+}
+
+ul.breadcrumb {
+    list-style: none;
+}
+
+ul.breadcrumb li {
+    display: inline;
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+}
+
+ul.breadcrumb li+li:before {
+    padding: 5%;
+    color: rgba(255, 255, 255);
+    content: "-\00a0";
+}
+
+ul.breadcrumb li a {
+    color: rgb(88, 175, 183);
+    text-decoration: none;
+}
+
+ul.breadcrumb li a:hover {
+    color: rgb(9, 9, 9);
+    text-decoration: none;
+}
+
+.textDoc {
+    margin: 4% 0 0 0;
+}
+
+.textDoc p {
+    text-align: left;
+    font-size: 25px;
+    font-weight: 600;
+    margin: 0;
+    color: rgb(255, 255, 255);
+}
+
+.documBtn {
+    margin: 2% 0 0 15%;
+    text-decoration: none;
+    color: white;
+    text-align: left;
+}
+
+.documBtn button {
+    text-decoration: none;
+    border: none;
+    background-color: rgb(58, 79, 128);
+    outline: none;
+    width: 40%;
+    height: 50px;
+    border-radius: 5px;
+    box-shadow: 0.3em 0.3em 0.6em rgba(49, 109, 103, 0.575);
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: 500;
+    padding: 0;
+    transition: 0.5s;
+}
+
+.documBtn button:hover {
+    filter: brightness(1.2);
+}
+
+.stickDocum h1 {
+    z-index: 1;
+    position: fixed;
+    top: 30%;
+    margin-left: 0%;
+    vertical-align: middle;
+    font-size: 90px;
+    font-weight: 800;
+    color: rgba(0, 0, 0, 0.05);
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+}
+
+.cardDocum {
+    display: grid;
+    grid-template-columns: 27% 23% 23% 23%;
+    grid-template-rows: repeat(3, 270px);
+    margin: 5% 5% 5% 5%;
+    grid-column-gap: 2%;
+    grid-row-gap: 5%;
+}
+
+.noPhoto {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
+
+.cardDocum p {
+    font-size: 15px;
+    text-align: center;
+}
+
+.cardDocum h3 {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.DOC {
+    background-color: rgb(156, 187, 190);
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 100%;
+    height: auto;
+    border-radius: 5%;
+    transition: 1s;
+}
+
+.DOC:hover {
+    transform: scale(1.05);
+}
+
+.DOC h3 {
+    margin: 8% 0% 5% 15%;
+    text-align: left;
+    font-size: 130%;
+    color: rgb(46, 63, 102);
+    font-weight: 800;
+}
+
+.DOC button {
+    margin-top: 10%;
+    text-decoration: none;
+    border: none;
+    background-color: rgb(58, 79, 128);
+    outline: none;
+    width: 90%;
+    height: 50px;
+    border-radius: 5px;
+    box-shadow: 0.3em 0.3em 0.6em rgba(49, 109, 103, 0.575);
+    color: rgb(255, 255, 255);
+    font-size: 100%;
+    font-weight: 400;
+    padding: 0;
+    transition: 0.5s;
+}
+
+.DOC button:hover {
+    filter: brightness(1.2);
+}

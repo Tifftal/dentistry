@@ -32,9 +32,6 @@ const Navbar = () => {
             {isOpen && (
                 <Note onClose={HandleCloseNote} setIsOpen={setIsOpen}/>
             )}
-            {/* {isOpen1 && (
-                <Note1 onClose={HandleCloseNote1} />
-            )} */}
             
             <div className='kebabMenu'>
                 <div id="menuToggle">

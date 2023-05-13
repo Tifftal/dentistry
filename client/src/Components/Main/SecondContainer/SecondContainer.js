@@ -22,7 +22,7 @@ const SecondContainer = () => {
             <div className="box2">
                 <img src="../../IMG/DSC02687-2.jpg" />
                 <h3>
-                    Иванов Иван Иванович
+                    Куашева Фатима Магометовна
                 </h3>
                 <p>
                     Терапевт

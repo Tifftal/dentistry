@@ -1,9 +1,15 @@
 import React from "react";
 import "./SecondContainer.css"
+import Carousel from "./Carousel/Carousel";
 
 const SecondContainer = () => {
     return (
+        <div>
+        {window.innerWidth < 900 ?
+            <Carousel />
+            :
         <div className="secondContainer">
+
             <div className="box1">
                 <h1>
                     Наши специалисты
@@ -55,6 +61,8 @@ const SecondContainer = () => {
                     Терапевт
                 </p>
             </div>
+        
+        </div>}
         </div>
     )
 }

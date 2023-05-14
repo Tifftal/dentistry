@@ -51,7 +51,7 @@
 }
 
 /* Media query for even smaller screens */
-
+/* 
 @media (max-width: 900px) {
     .fifthContainer h1 {
         font-size: 30px;
@@ -60,10 +60,7 @@
     }
     
     .triangle {
-        height: 40px;
-        border-left: 240px solid transparent;
-        border-right: 240px solid transparent;
-        border-top: 30px solid #ffffff;
+        display: none;
     }
     
     .advCards {
@@ -83,4 +80,4 @@
     .contectContainer {
         font-size: 14px;
     }
-}
+} */

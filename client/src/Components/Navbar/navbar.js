@@ -80,7 +80,7 @@ const Navbar = () => {
                         </div>
                     </ul>
                 </div>
-            </div >
+            </div>
             <div className="NavBarLinks">
                 <div><a href="/services">Услуги и цены</a></div>
                 <div><a href="/about">О нас</a></div>

@@ -282,6 +282,18 @@
     transition: 0.1s;
 }
 
+.scBtn a {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.scBtn a img {
+    height: auto;
+    width: 100%;
+}
+
 .scBtn:hover {
     filter: invert(0.9);
 }
@@ -321,7 +333,7 @@
     .brandNameNavbar h1 {
         margin-left: 0;
         margin-right: 0;
-        font-size: 40px;
+        font-size: 30px;
     }
 
     .NavBarLinks {
@@ -385,9 +397,21 @@
         margin-top: 10px;
         margin-bottom: 10px;
     }
+
+    .scBtn a img {
+        display: none;
+    }
     
     #menuToggle input:checked~ul {
         transform: scale(1.0, 1.0);
         opacity: 1;
+    }
+
+    /* .kebabMenu {
+        width: 100%;
+    } */
+
+    #menu {
+        width: 80%;
     }
 }

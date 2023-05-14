@@ -1,132 +1,46 @@
-/* .sliderImg {
-    width: 30%;
-    height: auto;
-}
-
-.secondContainer {
-    height: 100%;
-}
-
-.sliderPage {
-    border-radius: 7%;
-    background-color: rgb(255, 255, 255);
-    width: 90%;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10%;
-    margin-bottom: 3%;
-    box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
-    position: relative;
-    transition: transform 0.5s ease-in-out;
-}
-
-.cardContainer {
-    display: flex;
-    flex-direction: row;
-}
-
-.previous {
-    transform: translateX(-200%);
-}
-
-.sliderContainer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    transition: transform 0.5s ease;
-  }
-  
-  .sliderContainer.slide-1 {
-    transform: translateX(0%);
-  }
-  
-  .sliderContainer.slide-2 {
-    transform: translateX(-100%);
-  }
-  
-  .sliderContainer.slide-3 {
-    transform: translateX(-200%);
-  }
-  
-  .sliderContainer.slide-4 {
-    transform: translateX(-300%);
-  }
-  
-
-.current {
-    transform: translate(0%);
-}
-
-.next {
-    transform: translateX(200%);
-}
-
-.current-slide {
-    transform: translateX(0%);
-}
-
-.next-slide {
-    transform: translateX(100%);
-}
-
-.sliderPage h3 {
-    font-size: 25px;
-}
-
-.sliderPage p {
-    font-size: 20px;;
-}
-
-.sliderContainer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.previousBtn {
-    border-radius: 10px;
-    height: 50px;
-    width: 50px;
-    background-color: #3A4F80;
-    color: aliceblue;
-    border: 0px;
-    margin: auto auto;
-    margin-bottom: 10%;
-    margin-right: 40px;
-    box-shadow: 0.3em 0.3em 0.6em rgb(49, 109, 103);
-}
-
-.nextBtn {
-    border-radius: 10px;
-    height: 50px;
-    width: 50px;
-    background-color: #3A4F80;
-    color: aliceblue;
-    border: 0px;
-    margin: auto auto;
-    margin-bottom: 10%;
-    margin-left: 40px;
-    box-shadow: 0.3em 0.3em 0.6em rgb(49, 109, 103);
-} */
 .carousel {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    height: 500px;
-  }
-  .slides {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-  }
-  .slide {
-    flex-shrink: 0;
-    width: 100%;
-  }
-  
-  img {
-    width:100px;
-    height: 100px;
-  }
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 500px;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  flex-shrink: 0;
+  width: 100%;
+  padding: 20px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 40px;
+}
+
+.btnPlaceholder {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.btnPlaceholder .next {
+  background-color: transparent;
+  border: none;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.btnPlaceholder .prev {
+  background-color: transparent;
+  border: none;
+  font-size: 40px;
+  cursor: pointer;
+}

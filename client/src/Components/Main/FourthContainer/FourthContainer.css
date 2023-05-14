@@ -49,33 +49,8 @@
     margin: 15px 0px 0px 10px;
 }
 
-@media screen and (max-width: 900) {
-    .informationContainer {
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: 120px 120px;
-    }
-    
-    .servicesContainer {
-      grid-template-columns: 80px 240px;
-    }
+@media screen and (max-width: 900px) {
+  .fourthContainer {
+    display: none;
   }
-  
-  /* Media query for even smaller screens */
-  @media screen and (max-width: 480px) {
-    .informationContainer {
-      grid-template-columns: repeat(1, 1fr);
-      grid-template-rows: 120px 120px 120px;
-    }
-    
-    .servicesContainer {
-      grid-template-columns: 60px 200px;
-    }
-    
-    .title h1 {
-      font-size: 30px;
-    }
-    
-    .text p {
-      font-size: 16px;
-    }
-  }
+}

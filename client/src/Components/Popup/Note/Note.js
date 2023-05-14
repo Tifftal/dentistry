@@ -12,7 +12,7 @@ function Modal(props) {
           <input type="text" name="name" placeholder="Телефон" id="name" required />
           <input type="text" name="name" placeholder="Причина обращения" id="name" required />
           <div className='formDivNote'>
-            <input type="checkbox" name="intensive-courses" id="courses" unchecked />
+            <input type="checkbox" id="courses" />
             <label for="courses">
               Выражаю свое согласие на обработку персональных данных в соответствии с <a href="#">Федеральном законом "О персональных данных" от 27.07.2006 № 152-ФЗ</a>, с условиями обработки персональных данных ознакомлен(а).
             </label>

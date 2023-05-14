@@ -57,19 +57,26 @@
 }
 
 .formDivNote {
-  margin-top: 5%;
-  text-align: left;
+  /* margin-top: 5%; */
+  /* text-align: left;
   display: flex;
-  flex-direction: row;
+  flex-direction: row; */
+  /* width: 80%;
+  margin-left: -10%; */
+}
+
+.formDivNote {
+  display: grid;
+  grid-template-columns: 10% 90%;
+  text-align: left;
   width: 80%;
-  margin-left: -10%;
 }
 
 .formDivNote input {
-  text-align: left;
+  /* text-align: left;
   display: flex;
   flex-direction: row;
-  margin-top: 2%;
+  margin-top: 2%; */
 }
 
 .formNote button {

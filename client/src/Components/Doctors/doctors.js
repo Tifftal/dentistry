@@ -1,10 +1,12 @@
 import React from "react"
 import './doctors.css'
+import DoctorsCarousel from "./Carousel/DoctorsCarousel"
 
 const Doctors = () => {
     return (
         <div className="backgr">
             <div className="doctors">
+
                 <div className="titleDoc">
                     <h1>Наша команда</h1>
                 </div>
@@ -16,13 +18,16 @@ const Doctors = () => {
                 </div>
                 <div className="textDoc">
                     <p>
-                    Наши сотрудники - это команда высококвалифицированных стоматологов, которые обладают обширным опытом и знаниями в области стоматологии. Мы гордимся нашей командой и уверены в их способности предоставить нашим пациентам качественную стоматологическую помощь.
+                        Наши сотрудники - это команда высококвалифицированных стоматологов, которые обладают обширным опытом и знаниями в области стоматологии. Мы гордимся нашей командой и уверены в их способности предоставить нашим пациентам качественную стоматологическую помощь.
                     </p>
                 </div>
                 <div className="docBtn">
                     <a href="/portfolio"><button>Смотреть портфолио</button></a>
                     <a href="/vacancy"><button>Наши вакансии</button></a>
                 </div>
+                    {window.innerWidth < 900 ?
+                        <DoctorsCarousel />
+                        :
                 <div className="photoDoc">
 
                     {/* <div className="cart">
@@ -131,88 +136,7 @@ const Doctors = () => {
                             Терапевт
                         </p>
                     </div>
-
-                    {/* <div className="ph">
-                        <img src="../../IMG/DSC02687-2.jpg" />
-                        <h3>
-                            Иванов Иван Иванович
-                        </h3>
-                        <p>
-                            Терапевт
-                        </p>
-                    </div>
-                    <div className="ph">
-                        <img src="../../IMG/DSC02687-2.jpg" />
-                        <h3>
-                            Иванов Иван Иванович
-                        </h3>
-                        <p>
-                            Терапевт
-                        </p></div>
-                    <div className="ph">
-                        <img src="../../IMG/DSC02687-2.jpg" />
-                        <h3>
-                            Иванов Иван Иванович
-                        </h3>
-                        <p>
-                            Терапевт
-                        </p>
-                    </div>
-                    <div className="ph">
-                        <img src="../../IMG/DSC02687-2.jpg" />
-                        <h3>
-                            Иванов Иван Иванович
-                        </h3>
-                        <p>
-                            Терапевт
-                        </p>
-                    </div>
-                    <div className="ph">
-                        <img src="../../IMG/DSC02687-2.jpg" />
-                        <h3>
-                            Иванов Иван Иванович
-                        </h3>
-                        <p>
-                            Терапевт
-                        </p>
-                    </div>
-                    <div className="ph">
-                        <img src="../../IMG/DSC02687-2.jpg" />
-                        <h3>
-                            Иванов Иван Иванович
-                        </h3>
-                        <p>
-                            Терапевт
-                        </p>
-                    </div>
-                    <div className="ph">
-                        <img src="../../IMG/DSC02687-2.jpg" />
-                        <h3>
-                            Иванов Иван Иванович
-                        </h3>
-                        <p>
-                            Терапевт
-                        </p>
-                    </div>
-                    <div className="ph">
-                        <img src="../../IMG/DSC02687-2.jpg" />
-                        <h3>
-                            Иванов Иван Иванович
-                        </h3>
-                        <p>
-                            Терапевт
-                        </p>
-                    </div>
-                    <div className="ph">
-                        <img src="../../IMG/DSC02687-2.jpg" />
-                        <h3>
-                            Иванов Иван Иванович
-                        </h3>
-                        <p>
-                            Терапевт
-                        </p>
-                    </div> */}
-                </div>
+                </div>}
             </div>
         </div>
     )

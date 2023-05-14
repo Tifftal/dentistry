@@ -149,3 +149,29 @@ tr:hover td {
     writing-mode: vertical-lr;
     transform: rotate(180deg);
 }
+
+@media screen and (max-width: 900px) {
+    .titleServ h1 {
+        font-size: 40px;
+    }
+
+    .infServ {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .textInfServ {
+        margin-bottom: 10px;
+    }
+
+    .textInfServ a {
+        height: 1000px;
+    }
+
+    .textInfServ a button {
+        height: 100%;
+    }
+    td {
+        font-size: 15px;
+    }
+}

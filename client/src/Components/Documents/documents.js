@@ -1,6 +1,7 @@
 import react, { useState } from "react"
 import './documents.css'
 import Note from "../Popup/Note/Note";
+import DoctorsCarousel from "../Doctors/Carousel/DoctorsCarousel";
 
 const Documents = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -34,10 +35,10 @@ const Documents = () => {
                     </p>
                 </div>
                 <div className="documBtn">
-                    { window.innerWidth > 900 ?
-                    <button onClick={HandleOpenNote}>Свяжитесь с нами, если возникнут вопросы</button>
-                    :
-                    <button onClick={HandleOpenNote}>Связаться с нами</button>
+                    {window.innerWidth > 900 ?
+                        <button onClick={HandleOpenNote}>Свяжитесь с нами, если возникнут вопросы</button>
+                        :
+                        <button onClick={HandleOpenNote}>Связаться с нами</button>
                     }
                 </div>
                 <div className="cardDocum">

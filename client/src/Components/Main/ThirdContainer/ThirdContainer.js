@@ -18,12 +18,12 @@ const ThirdContainer = () => {
                     Приглашаем вас в нашу клинику, чтобы лично убедиться в главном:
                     профессиональное лечение зубов без боли — современная реальность!
                 </p>
-                <button className="oneBtn">
+                <a href="/about"><button className="oneBtn">
                     Подробнее о компании
-                </button>
-                <button className="twoBtn">
-                    Наши пациенты
-                </button>
+                </button></a>
+                <a href="/portfolio"><button className="twoBtn">
+                    Наши работы
+                </button></a>
 
             </div>
         </div>

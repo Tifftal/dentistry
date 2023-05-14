@@ -10,6 +10,8 @@ import Doctors from './Components/Doctors/doctors';
 import Vacancy from './Components/Vacancy/vacancy'
 import Portfolio from './Components/Portfolio/portfolio'
 import Documnets from './Components/Documents/documents'
+import Way from './Components/Way/way'
+
 
 function App() {
   return (
@@ -25,6 +27,7 @@ function App() {
           <Route path='/vacancy' element={<Vacancy/>}></Route>
           <Route path='/portfolio' element={<Portfolio/>}></Route>
           <Route path='/documents' element={<Documnets/>}></Route>
+          <Route path='/way' element={<Way/>}></Route>
         </Routes>
         <Footer />
       </BrowserRouter>

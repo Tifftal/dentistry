@@ -45,7 +45,7 @@ const Doctors = () => {
                                 Ортодонт
                             </p>
                         </div>
-                        <div className="ph">
+                        {/* <div className="ph">
                             <img src="../../IMG/DSC02599-2.jpg" />
                             <h3>
                                 Иванов Иван Иванович
@@ -53,7 +53,7 @@ const Doctors = () => {
                             <p>
                                 ;;;;
                             </p>
-                        </div>
+                        </div> */}
                         <div className="ph">
                             <img src="../../IMG/DSC02687-2.jpg" />
                             <h3>

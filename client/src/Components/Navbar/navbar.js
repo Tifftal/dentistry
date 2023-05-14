@@ -73,7 +73,7 @@ const Navbar = () => {
             </div>
             <div className="brandNameNavbar">
 
-                <img src="../IMG/logo.png" alt="логотип" />
+                <a href='/'><img src="../IMG/logo.png" alt="логотип" /></a>
 
                 <h1><a href="/">Улыбка радуги</a></h1>
 

@@ -84,7 +84,7 @@ const Navbar = () => {
                     <button onClick={HandleOpenNote}>Заказать обратный звонок</button>
                 </div>
                 <div className="contactBar2">
-                    <p>г. Краснодар, ул.Ставропольская, д. 83</p>
+                    <p>г. Краснодар, <p>ул. Ставропольская, д. 83</p></p>
                 </div>
             </div>
         </div>

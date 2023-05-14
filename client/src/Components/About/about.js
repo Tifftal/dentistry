@@ -53,13 +53,10 @@ const About = () => {
                         <p>
                             Мы меняем отношение к стоматологу у детей. Доктор становится их другом, которому они доверяют и знают что он всегда будет на их стороне.
                         </p>
-                    </div>
-                    <div className="Container_about">
                         <p>
                             Мы уже завоевали доверие многих наших пациентов , их родственников и друзей.
                         </p>
                     </div>
-                    <div className="emptyBox"></div>
                     <div className="aboutBtnContainer">
                         <div className="BtnAbout">
                             <a href="/doctors"><button>Сотрудники</button></a>

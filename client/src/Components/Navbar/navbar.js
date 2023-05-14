@@ -3,7 +3,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './navbar.css'
 import Note from "../Popup/Note/Note";
-import Note1 from "../Popup/Note/Note1";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -81,7 +80,7 @@ const Navbar = () => {
             <div className="contactInfoNavbar">
                 <div className="contactBar1">
                     <p>+7 (967) 317-00-00</p>
-                    <button>Заказать обратный звонок</button>
+                    <button onClick={HandleOpenNote}>Заказать обратный звонок</button>
                 </div>
                 <div className="contactBar2">
                     <p>г. Краснодар, ул.Ставропольская, д. 83</p>

@@ -285,6 +285,7 @@
 .scBtn {
     filter: invert(1);
     transition: 0.1s;
+    margin-right: 10%;
 }
 
 .scBtn a {
@@ -328,7 +329,7 @@
         width: 55%;
     }
 
-    .brandNameNavbar img{
+    .brandNameNavbar img {
         height: 82px;
         width: 82px;
         margin-top: auto;
@@ -380,7 +381,7 @@
         height: 100%;
         width: auto;
     }
-    
+
     #menu li {
         margin: 0px 55px;
         padding: 7px 10px;
@@ -406,7 +407,7 @@
     .scBtn a img {
         display: none;
     }
-    
+
     #menuToggle input:checked~ul {
         transform: scale(1.0, 1.0);
         opacity: 1;

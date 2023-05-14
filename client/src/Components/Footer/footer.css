@@ -1,6 +1,6 @@
 .footer {
     display: grid;
-    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: 25% 15% 35% 25%;
     grid-template-rows: 100%;
     padding: 2% 3% 3% 3%;
     background-color: rgb(156, 187, 190);
@@ -170,6 +170,58 @@
     color: #ffffff;
 }
 
+.doci {
+    margin-left: 5%;
+}
+
+.doci ul {
+    margin: 0;
+    padding: 0;
+}
+
+.doci li {
+    text-decoration: none;
+    text-align: left;
+    list-style-type: none;
+    font-size: 90%;
+    padding: 0;
+    margin: 0;
+}
+
+.doci p {
+    margin-top: 2%;
+    text-align: left;
+    font-size: 105%;
+    margin-bottom: 0;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 15% 15% 15%;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+
+.cards img {
+    width: 70%;
+    height: auto;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+    filter: invert(1);
+}
+
+
+
+
+
+
+
+
+
+
 @media screen and (max-width: 900px) {
     .footer {
         display: grid;
@@ -195,6 +247,7 @@
     .Form input {
         display: none;
     }
+
     .Form button {
         display: none;
     }

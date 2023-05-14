@@ -15,7 +15,7 @@
   background-color: white;
   padding: 20px;
   width: 30%;
-  height: 60%;
+  height: 55%;
   border-radius: 10px;
 }
 
@@ -47,8 +47,8 @@
 }
 
 .formNote input {
-  margin-top: 7%;
-  height: 8%;
+  margin-top: 4%;
+  height: 9%;
   text-decoration: none;
   border: none;
   border-radius: 5px;
@@ -58,20 +58,7 @@
 
 .formNote label {
   width: 80%;
-}
-
-.formDivNote {
-  display: grid;
-  grid-template-columns: 10% 90%;
   text-align: left;
-  width: 80%;
-}
-
-.formDivNote input {
-  /* text-align: left;
-  display: flex;
-  flex-direction: row;
-  margin-top: 2%; */
 }
 
 .formNote button {
@@ -88,7 +75,7 @@
   font-weight: 600;
   transition: 0.5s;
   margin-bottom: 5%;
-  margin-top: 5%;
+  margin-top: 15%;
 }
 
 .formNote button:hover {

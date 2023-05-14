@@ -47,7 +47,7 @@ const About = () => {
                     </div>
                     <div className="Container_about">
                         <p>
-                            Клиника «Симклиник» открылась в 2019 году,
+                            Клиника «Формула улыбки» открылась в 2019 году,
                             и на сегодняшний день мы оказали
                             квалифицированную стоматологическую помощь
                             большому количеству пациентов.
@@ -64,10 +64,10 @@ const About = () => {
                     <div className="emptyBox"></div>
                     <div className="aboutBtnContainer">
                         <div className="BtnAbout">
-                            <a href="#"><button>Сотрудники</button></a>
+                            <a href="/doctors"><button>Сотрудники</button></a>
                         </div>
                         <div className="BtnAbout">
-                            <a href="#"><button>Наши вакансии</button></a>
+                            <a href="/vacancy"><button>Наши вакансии</button></a>
                         </div>
                     </div>
                 </div>

@@ -69,10 +69,10 @@ ul.breadcrumbServ li a:hover {
     padding-right: 5%;
 }
 
-.textInfServ h1 span {
+/* .textInfServ h1 span {
     color: dodgerblue;
-    cursor: pointer;
-}
+    
+} */
 
 .textInfServ button {
     text-decoration: none;
@@ -95,13 +95,14 @@ ul.breadcrumbServ li a:hover {
     filter: brightness(1.2);
 }
 
-.textInfServ a {
+.textInfServ h1 span {
     font-weight: 600;
     text-decoration: none;
     color: rgb(88, 175, 183);
+    cursor: pointer;
 }
 
-.textInfServ a:hover {
+.textInfServ h1 span:hover {
     filter: brightness(0.8);
 }
 

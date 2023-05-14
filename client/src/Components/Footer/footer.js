@@ -84,10 +84,10 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className='way'>
-                        <button>Как добраться {">>"}</button>
+                        <a href='/way'><button>Как добраться {">>"}</button></a>
                     </div>
                     <div className='price'>
-                        <a href="services"><button>Прайс-лист</button></a>
+                        <a href="/services"><button>Прайс-лист</button></a>
                     </div>
                 </div>
             </div>

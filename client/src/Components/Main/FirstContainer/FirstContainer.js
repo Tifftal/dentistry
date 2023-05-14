@@ -1,8 +1,9 @@
 import React from "react";
 import { useState } from "react";
 
-import Note from "../../Popup/Note/Note";
+
 import "./FirstContainer.css"
+import Modal from "../../Popup/Note/Note";
 const FirstContainer = () => {
     const [isOpen, setIsOpen] = useState(false);
 
@@ -16,7 +17,7 @@ const FirstContainer = () => {
     return (
         <div className="firstComponent">
             {isOpen && (
-                <Note onClose={HandleCloseNote} />
+                <Modal onClose={HandleCloseNote} />
             )}
             <div className="WelcomeContainer">
                 <h1>

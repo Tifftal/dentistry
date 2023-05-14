@@ -66,9 +66,10 @@ ul.breadcrumbAbout li a:hover {
 
 .InfAbout {
     display: grid;
-    grid-template-columns: 25% 30% 30%;
+    grid-template-columns: 10% 90%;
     grid-template-rows: auto;
     grid-column-gap: 5%;
+    width: 90%;
 }
 
 .AboutTitle h2 {
@@ -84,15 +85,18 @@ ul.breadcrumbAbout li a:hover {
 }
 
 .Container_about {
-    /* background-color: green; */
-    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
 }
 
 .Container_about p {
     background-color: rgb(255, 255, 255);
     font-size: 120%;
     text-align: left;
-    padding: 4%;
+    padding: 3%;
+    width: 27%;
     margin-top: 5%;
     margin-bottom: 10%;
     border-radius: 5px;
@@ -129,6 +133,11 @@ ul.breadcrumbAbout li a:hover {
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
+}
+
+.aboutBtnContainer button {
+    width: 75%;
+    margin-right: 100px;
 }
 
 @media screen and (max-width: 900px) {

@@ -80,11 +80,8 @@ const Footer = () => {
                             <img src="../IMG/placeholder.png" />
                         </div>
                         <div className='textFooter'>
-                            <p>г. Краснодар, ул.Ставропольская, д. 83</p>
+                            <p>г. Краснодар, ул. Ставропольская, д. 83</p>
                         </div>
-                    </div>
-                    <div className='way'>
-                        <a href='/way'><button>Как добраться {">>"}</button></a>
                     </div>
                     <div className='price'>
                         <a href="/services"><button>Прайс-лист</button></a>

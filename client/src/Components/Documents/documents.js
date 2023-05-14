@@ -1,23 +1,11 @@
 import react, { useState } from "react"
 import './documents.css'
 import DoctorsCarousel from "../Doctors/Carousel/DoctorsCarousel";
-import Okno from "../Okno/Okno";
+
 
 const Documents = () => {
-    const [isOpen, setIsOpen] = useState(false);
-
-    const HandleOpenNote = () => {
-        setIsOpen(true)
-    }
-
-    const HandleCloseNote = () => {
-        setIsOpen(false)
-    }
     return (
         <div className="backgrDoc">
-            {isOpen && (
-                <Okno onClose={HandleCloseNote} setIsOpen={setIsOpen} />
-            )}
             <div className="documents">
                 <div className="titleDoc">
                     <h1>Документы</h1>
@@ -78,84 +66,6 @@ const Documents = () => {
                         </h3>
                         <a href="#"><button>Ознакомиться с документом</button></a>
                     </div>
-                    {/* <div className="ph">
-                        <img src="../../IMG/DSC02687-2.jpg" />
-                        <h3>
-                            Иванов Иван Иванович
-                        </h3>
-                        <p>
-                            Терапевт
-                        </p>
-                    </div>
-
-                    <div className="ph">
-                        <img src="../../IMG/DSC02687-2.jpg" />
-                        <h3>
-                            Иванов Иван Иванович
-                        </h3>
-                        <p>
-                            Терапевт
-                        </p>
-                    </div>
-
-                    <div className="ph">
-                        <img src="../../IMG/DSC02687-2.jpg" />
-                        <h3>
-                            Иванов Иван Иванович
-                        </h3>
-                        <p>
-                            Терапевт
-                        </p>
-                    </div>
-
-                    <div className="ph">
-                        <img src="../../IMG/DSC02687-2.jpg" />
-                        <h3>
-                            Иванов Иван Иванович
-                        </h3>
-                        <p>
-                            Терапевт
-                        </p>
-                    </div>
-
-                    <div className="ph">
-                        <img src="../../IMG/DSC02687-2.jpg" />
-                        <h3>
-                            Иванов Иван Иванович
-                        </h3>
-                        <p>
-                            Терапевт
-                        </p>
-                    </div>
-
-                    <div className="ph">
-                        <img src="../../IMG/DSC02687-2.jpg" />
-                        <h3>
-                            Иванов Иван Иванович
-                        </h3>
-                        <p>
-                            Терапевт
-                        </p>
-                    </div>
-
-                    <div className="ph">
-                        <img src="../../IMG/DSC02687-2.jpg" />
-                        <h3>
-                            Иванов Иван Иванович
-                        </h3>
-                        <p>
-                            Терапевт
-                        </p>
-                    </div>
-                    <div className="ph">
-                        <img src="../../IMG/DSC02687-2.jpg" />
-                        <h3>
-                            Иванов Иван Иванович
-                        </h3>
-                        <p>
-                            Терапевт
-                        </p>
-                    </div> */}
                 </div>
             </div>
         </div>

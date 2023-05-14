@@ -237,13 +237,14 @@
     grid-template-rows: 20px 20px;
     grid-gap: 15px;
     color: rgb(255, 255, 255);
-    margin: 0px 65px 20px 65px;
+    margin: 5% 5% 5% 10%;
 }
 
 
 .iconBar img {
     width: 90%;
     height: auto;
+    border-radius: 0;
 }
 
 .textBar {
@@ -289,6 +290,7 @@
 .scBtn {
     filter: invert(1);
     transition: 0.1s;
+    margin-right: 10%;
 }
 
 .scBtn a {

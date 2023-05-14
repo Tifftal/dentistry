@@ -7,7 +7,7 @@ import ThirdContainer from "./ThirdContainer/ThirdContainer";
 import FourthContainer from "./FourthContainer/FourthContainer";
 import FifthContainer from "./FifthContainer/FifthContainer";
 import SixthContainer from "./SixthContainer/SixthContainer";
-import Way from "./Way/way";
+// import Way from "./Way/way";
 
 const Main = () => {
 
@@ -19,7 +19,7 @@ const Main = () => {
             <FourthContainer />
             <FifthContainer />
             <SixthContainer />
-            <Way />
+            {/* <Way /> */}
         </div>
     );
 }

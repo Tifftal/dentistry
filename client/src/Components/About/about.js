@@ -1,5 +1,6 @@
 import react from "react"
 import "./about.css"
+import Carousel from "./AboutCarousel/Carousel"
 
 const About = () => {
     return (
@@ -14,10 +15,7 @@ const About = () => {
                         <li>О нас</li>
                     </ul>
                 </div>
-                <div className="Slider">
-                    <img src='../../IMG/DSC02613-2.jpg' />
-                </div>
-
+                <Carousel />
                 <div className="about_text">
                     <p>
                         Формула Улыбки - это место, где вы можете получить высококачественные

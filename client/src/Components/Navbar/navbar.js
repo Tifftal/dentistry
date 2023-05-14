@@ -75,7 +75,7 @@ const Navbar = () => {
 
                 <a href='/'><img src="../IMG/logo.png" alt="логотип" /></a>
 
-                <h1><a href="/">Улыбка радуги</a></h1>
+                <h1><a href="/">Формула Улыбки</a></h1>
 
             </div>
             <div className="contactInfoNavbar">

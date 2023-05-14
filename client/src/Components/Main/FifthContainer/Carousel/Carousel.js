@@ -41,7 +41,7 @@ const Carousel = () => {
                         key={adv.id}
                     >
                         <img src={adv.img} alt={`Slide ${adv.id}`} />
-                        <p>{adv.name}</p>
+                        <h5>{adv.name}</h5>
                     </div>
                 ))}
             </div>

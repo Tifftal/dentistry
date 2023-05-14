@@ -34,13 +34,6 @@ const Documents = () => {
                         Свяжитесь с нами, если у вас возникнут вопросы. Свяжитесь с нами, если у вас возникнут вопросы.
                     </p>
                 </div>
-                <div className="documBtn">
-                    {window.innerWidth > 900 ?
-                        <button onClick={HandleOpenNote}>Свяжитесь с нами, если возникнут вопросы</button>
-                        :
-                        <button onClick={HandleOpenNote}>Связаться с нами</button>
-                    }
-                </div>
                 <div className="cardDocum">
                     <div className="noPhoto">
                         <div className="stickDocum">

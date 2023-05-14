@@ -56,7 +56,16 @@ ul.breadcrumbVac li a:hover {
     margin-bottom: 10%;
 }
 
-.textVac a {
-    text-decoration: none;
+.textVac p span {
     color: rgb(88, 175, 183);
+}
+
+@media screen and (max-width: 900px) {
+    .titleVac h1 {
+        font-size: 40px;
+    }
+
+    .textVac p {
+        font-size: 20px;
+    }
 }

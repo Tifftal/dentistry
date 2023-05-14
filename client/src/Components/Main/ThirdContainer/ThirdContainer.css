@@ -14,16 +14,20 @@
     position: relative;
     display: flex;
     top: -25%;
-    margin-left: 15%;
+    margin-left: 0;
+    margin-right: 10%;
 }
 
 .leftContainer img {
     z-index: -1;
+    width:  auto;
+    height: auto;
 }
 
 .rightContainer {
     text-align: left;
     margin-top: 50px;
+    margin-left: 10%;
 }
 
 .rightContainer h1 {
@@ -47,7 +51,7 @@
     font-size: 18px;
     border-radius: 5px;
     height: 11%;
-    width: 35%;
+    width: 40%;
     letter-spacing: 2px;
     font-weight: 600;
     border: 2px solid rgb(58, 79, 128);
@@ -67,7 +71,7 @@
     font-size: 18px;
     border-radius: 5px;
     height: 11%;
-    width: 35%;
+    width: 40%;
     letter-spacing: 2px;
     font-weight: 600;
     border: 2px solid rgb(58, 79, 128);

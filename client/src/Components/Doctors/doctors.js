@@ -50,28 +50,18 @@ const Doctors = () => {
                         </div>
                     </div>
                     <div className="ph">
-                        <img src="../../IMG/DSC02687-2.jpg" />
+                        <img src="../../IMG/DSC02747-2.jpg" />
                         <h3>
-                            Иванов Иван Иванович
+                            Таценко Елена Геннадьевна
                         </h3>
                         <p>
-                            Терапевт
+                            Ортодонт
                         </p>
                     </div>
                     <div className="ph">
                         <img src="../../IMG/DSC02687-2.jpg" />
                         <h3>
-                            Иванов Иван Иванович
-                        </h3>
-                        <p>
-                            Терапевт
-                        </p>
-                    </div>
-
-                    <div className="ph">
-                        <img src="../../IMG/DSC02687-2.jpg" />
-                        <h3>
-                            Иванов Иван Иванович
+                            Еремеева Екатерина Романовна
                         </h3>
                         <p>
                             Терапевт
@@ -79,16 +69,26 @@ const Doctors = () => {
                     </div>
 
                     <div className="ph">
-                        <img src="../../IMG/DSC02687-2.jpg" />
+                        <img src="../../IMG/IMG_20230323_214441.jpg" />
                         <h3>
-                            Иванов Иван Иванович
+                            Смык Александр Александрович
+                        </h3>
+                        <p>
+                            Хирург-имплантолог
+                        </p>
+                    </div>
+
+                    <div className="ph">
+                        <img src="../../IMG/DSC02705-2.jpg" />
+                        <h3>
+                            Куашева Фатима Магометовна
                         </h3>
                         <p>
                             Терапевт
                         </p>
                     </div>
 
-                    <div className="ph">
+                    {/* <div className="ph">
                         <img src="../../IMG/DSC02687-2.jpg" />
                         <h3>
                             Иванов Иван Иванович

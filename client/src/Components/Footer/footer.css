@@ -126,6 +126,7 @@
 .iconFooter img {
     width: auto;
     height: 80%;
+    border-radius: 0;
 }
 
 .textFooter {
@@ -212,15 +213,6 @@
     margin: 0;
     filter: invert(1);
 }
-
-
-
-
-
-
-
-
-
 
 @media screen and (max-width: 900px) {
     .footer {

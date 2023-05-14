@@ -86,7 +86,7 @@ ul.breadcrumb li a:hover {
 .photoDoc {
     display: grid;
     grid-template-columns: 27% 23% 23% 23%;
-    grid-template-rows: repeat(3, 350px);
+    grid-template-rows: repeat(2, 350px);
     margin: 5% 5% 5% 5%;
     grid-column-gap: 2%;
     grid-row-gap: 5%;

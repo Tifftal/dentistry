@@ -19,20 +19,6 @@
     margin-bottom: 10%;
 }
 
-/* .maptitle a {
-    color: #eee;
-    font-size: 12px;
-    position: absolute;
-    top: 0px;
-}
-
-.maptext a {
-    color: #eee;
-    font-size: 12px;
-    position: absolute;
-    top: 14px;
-} */
-
 .map iframe {
     position: relative;
 }

@@ -1,12 +1,12 @@
 import React from "react";
 import { useState } from "react";
+import Modal from "../../Popup/Note/Note";
 
 
 import "./FirstContainer.css"
-import Modal from "../../Popup/Note/Note";
+
 const FirstContainer = () => {
     const [isOpen, setIsOpen] = useState(false);
-    //asd
     const HandleOpenNote = () => {
         setIsOpen(true)
     }
@@ -18,10 +18,11 @@ const FirstContainer = () => {
         <div className="firstComponent">
             {isOpen && (
                 <Modal onClose={HandleCloseNote} />
+                
             )}
             <div className="WelcomeContainer">
                 <h1>
-                    Мы дарим вам бесплатную&nbsp; чистку зубов
+                    Мы дарим вам бесплатную чистку зубов
                 </h1>
                 <p>
                     Наши врачи - профессионалы своего дела

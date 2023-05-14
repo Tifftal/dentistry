@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
-import Modal from "../../Popup/Note/Note";
+import Okno from "../../Okno/Okno";
+
 
 
 import "./FirstContainer.css"
@@ -17,8 +18,7 @@ const FirstContainer = () => {
     return (
         <div className="firstComponent">
             {isOpen && (
-                <Modal onClose={HandleCloseNote} />
-                
+                <Okno onClose={HandleCloseNote} />
             )}
             <div className="WelcomeContainer">
                 <h1>

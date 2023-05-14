@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './navbar.css'
-import Modal from "../Popup/Note/Note";
+import Okno from '../Okno/Okno';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -18,7 +18,7 @@ const Navbar = () => {
     return (
         <div className="navigationBar">
             {isOpen && (
-                <Modal onClose={HandleCloseNote} setIsOpen={setIsOpen} />
+                <Okno onClose={HandleCloseNote} setIsOpen={setIsOpen} />
             )}
 
             <div className='kebabMenu'>

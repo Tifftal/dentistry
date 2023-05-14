@@ -1,7 +1,7 @@
 import React from 'react';
-import './Note.css'
+import './Okno.css'
 
-function Modal(props) {
+function Okno(props) {
 
   return (
     <div className="modal">
@@ -19,4 +19,4 @@ function Modal(props) {
   );
 }
 
-export default Modal;
+export default Okno;

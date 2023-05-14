@@ -1,7 +1,7 @@
 import react, { useState } from "react"
 import './documents.css'
-import Note from "../Popup/Note/Note";
 import DoctorsCarousel from "../Doctors/Carousel/DoctorsCarousel";
+import Okno from "../Okno/Okno";
 
 const Documents = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -16,7 +16,7 @@ const Documents = () => {
     return (
         <div className="backgrDoc">
             {isOpen && (
-                <Note onClose={HandleCloseNote} setIsOpen={setIsOpen} />
+                <Okno onClose={HandleCloseNote} setIsOpen={setIsOpen} />
             )}
             <div className="documents">
                 <div className="titleDoc">

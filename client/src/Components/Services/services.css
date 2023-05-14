@@ -69,6 +69,11 @@ ul.breadcrumbServ li a:hover {
     padding-right: 5%;
 }
 
+.textInfServ h1 span {
+    color: dodgerblue;
+    cursor: pointer;
+}
+
 .textInfServ button {
     text-decoration: none;
     border: none;

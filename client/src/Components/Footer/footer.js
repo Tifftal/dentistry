@@ -38,13 +38,13 @@ const Footer = () => {
                             <img src="../IMG/phone-call.png" />
                         </div>
                         <div className='textFooter'>
-                            <p>+7 123 456 78 90</p>
+                            <p>+7 (967) 317-00-00</p>
                         </div>
                         <div className='iconFooter'>
                             <img src="../IMG/placeholder.png" />
                         </div>
                         <div className='textFooter'>
-                            <p>Москва, Московская, 11</p>
+                            <p>г. Краснодар, ул.Ставропольская, д. 83</p>
                         </div>
                     </div>
                     <div className='way'>

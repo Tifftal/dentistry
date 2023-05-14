@@ -203,6 +203,10 @@
     border-left: 3px solid rgb(92, 160, 165);
 }
 
+#menu a li:nth-last-of-type() {
+    margin-bottom: 100px;
+}
+
 #menuToggle input:checked~ul {
     transform: scale(1.0, 1.0);
     opacity: 1;
@@ -243,7 +247,7 @@
 }
 
 .textBar {
-    padding-top: 1%;
+    margin-bottom: 10px;
     font-size: 15px;
     font-weight: 500;
 }
@@ -328,7 +332,7 @@
         width: 55%;
     }
 
-    .brandNameNavbar img{
+    .brandNameNavbar img {
         height: 82px;
         width: 82px;
         margin-top: auto;
@@ -380,7 +384,7 @@
         height: 100%;
         width: auto;
     }
-    
+
     #menu li {
         margin: 0px 55px;
         padding: 7px 10px;
@@ -406,7 +410,7 @@
     .scBtn a img {
         display: none;
     }
-    
+
     #menuToggle input:checked~ul {
         transform: scale(1.0, 1.0);
         opacity: 1;

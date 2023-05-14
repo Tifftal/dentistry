@@ -80,7 +80,7 @@ ul.breadcrumbPort li a:hover {
     width: auto;
 }
 
-.case h3{
+.case h3 {
     font-size: 32px;
     font-weight: 600;
     text-align: left;
@@ -99,13 +99,36 @@ ul.breadcrumbPort li a:hover {
     /* transform: skew(-12deg) translateX(-50%); */
     background: rgba(88, 175, 183, 0.5);
     z-index: 0;
-  }
+}
 
-  .case p {
+.case p {
     font-size: 18px;
     font-weight: 500;
     text-align: left;
     color: rgba(0, 0, 0, 0.6);
     padding-top: 5%;
     text-align: left;
-  }
+}
+
+@media screen and (max-width: 900px) {
+    .titlePort h1 {
+        font-size: 40px;
+    }
+
+    .clinicalCase {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .clinicalCase img {
+        width: 75%;
+    }
+
+    .case h3 {
+        font-size: 25px;
+    }
+
+    .case p {
+        font-size: 15px;
+    }
+}

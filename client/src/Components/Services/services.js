@@ -1,7 +1,25 @@
 import react from "react"
 import './services.css'
+import { Link } from "react-router-dom"
+import DownloadLink from "react-download-link";
 
 const Services = () => {
+
+    const onButtonClick = () => {
+        // using Java Script method to get PDF file
+        fetch('DOC/прайс-лист.pdf').then(response => {
+            response.blob().then(blob => {
+                // Creating new object of PDF file
+                const fileURL = window.URL.createObjectURL(blob);
+                // Setting various property values
+                let alink = document.createElement('a');
+                alink.href = fileURL;
+                alink.download = 'прайс%202022%20СБИС%20(1).pdf';
+                alink.click();
+            })
+        })
+    }
+
     return (
         <div className="backgrServ">
             <div className="services">
@@ -31,7 +49,8 @@ const Services = () => {
                             по разумным ценам.
                         </h1>
                         <h1>
-                            Для ознакомления Вы так же можете скачать полный прейскурант <a href="../../DOC/прайс%202022%20СБИС%20(1).xlsx" download> Прейскурант ООО СМАЙЛ ФОРМУЛА от 1.02.2023</a>.
+                            Для ознакомления Вы так же можете скачать полный  
+                            <span onClick={()=>{onButtonClick()}}> Прейскурант ООО СМАЙЛ ФОРМУЛА от 1.02.2023</span>.
                             Цены в данном разделе представлены для ознакомления и не являются публичной офертой.
                             Окончательная стоимость лечения определяется после очного осмотра и проведения диагностики.
                         </h1>

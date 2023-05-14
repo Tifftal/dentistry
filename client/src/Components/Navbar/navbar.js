@@ -33,19 +33,20 @@ const Navbar = () => {
                         <a href="/services"><li>Услуги</li></a>
                         <a href="/about"><li>О компании</li></a>
                         <a href="/documents"><li>Документы</li></a>
+                        <a href="/portfolio"><li>Наши работы</li></a>
                         <div>
                             <div className='infBar'>
                                 <div className='iconBar'>
                                     <img src="../IMG/phone-call.png" />
                                 </div>
-                                <div className='textBar'>
-                                    <p>+7 123 456 78 90</p>
+                                <div className="textBar">
+                                    <p>+7 (967) 317-00-00</p>
                                 </div>
                                 <div className='iconBar'>
                                     <img src="../IMG/placeholder.png" />
                                 </div>
-                                <div className='textBar'>
-                                    <p>Москва, Московская, 11</p>
+                                <div className="textBar">
+                                    <p>Краснодар, Ставропольская, 83</p>
                                 </div>
                             </div>
                         </div>

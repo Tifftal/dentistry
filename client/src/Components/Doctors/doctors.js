@@ -87,59 +87,10 @@ const Doctors = () => {
                             Терапевт
                         </p>
                     </div>
-
-                    {/* <div className="ph">
-                        <img src="../../IMG/DSC02687-2.jpg" />
-                        <h3>
-                            Иванов Иван Иванович
-                        </h3>
-                        <p>
-                            Терапевт
-                        </p>
-                    </div>
-
-                    <div className="ph">
-                        <img src="../../IMG/DSC02687-2.jpg" />
-                        <h3>
-                            Иванов Иван Иванович
-                        </h3>
-                        <p>
-                            Терапевт
-                        </p>
-                    </div>
-
-                    <div className="ph">
-                        <img src="../../IMG/DSC02687-2.jpg" />
-                        <h3>
-                            Иванов Иван Иванович
-                        </h3>
-                        <p>
-                            Терапевт
-                        </p>
-                    </div>
-
-                    <div className="ph">
-                        <img src="../../IMG/DSC02687-2.jpg" />
-                        <h3>
-                            Иванов Иван Иванович
-                        </h3>
-                        <p>
-                            Терапевт
-                        </p>
-                    </div>
-                    <div className="ph">
-                        <img src="../../IMG/DSC02687-2.jpg" />
-                        <h3>
-                            Иванов Иван Иванович
-                        </h3>
-                        <p>
-                            Терапевт
-                        </p>
-                    </div>
                 </div>}
             </div>
         </div>
     )
 }
 
-export default Doctors
+export default Doctors;

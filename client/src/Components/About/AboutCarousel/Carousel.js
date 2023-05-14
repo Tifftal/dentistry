@@ -1,20 +1,34 @@
 import React, { useState } from "react";
+import "./aboutCarousel.css";
 
 const advs = [
     {
         id: 1,
-        img: "../../../IMG/DSC02613-2.jpg",
-        name: "Комплексные методы лечения",
+        img: "../../../IMG/sl1.jpg",
     },
     {
         id: 2,
-        img: "../../../IMG/DSC02660-2.jpg",
-        name: "Только высококвалифицрованные врачи"
+        img: "../../../IMG/sl2.jpg",
     },
     {
         id: 3,
-        img: "../../../IMG/DSC02655-2.jpg",
-        name: "Контроль за качеством лекарств"
+        img: "../../../IMG/sl3.jpg",
+    },
+    {
+        id: 4,
+        img: "../../../IMG/sl4.jpg",
+    },
+    {
+        id: 5,
+        img: "../../../IMG/sl5.jpg",
+    },
+    {
+        id: 6,
+        img: "../../../IMG/sl6.jpg",
+    },
+    {
+        id: 7,
+        img: "../../../IMG/sl7.jpg",
     },
 ]
 
@@ -31,17 +45,16 @@ const Carousel = () => {
 
 
     return (
-        <div className="carousel">
-            <div className="slides"
+        <div className="carouselAbout">
+            <div className="slidesAbout"
                 style={{ transform: `translateX(-${currentSlide * 100}%)` }}
             >
                 {advs.map((adv) => (
                     <div
-                        className="slide"
+                        className="slideAbout"
                         key={adv.id}
                     >
                         <img src={adv.img} alt={`Slide ${adv.id}`} />
-                        <h5>{adv.name}</h5>
                     </div>
                 ))}
             </div>

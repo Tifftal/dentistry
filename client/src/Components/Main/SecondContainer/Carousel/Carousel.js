@@ -5,37 +5,42 @@ const slides = [
   {
     id: 1,
     img: "../../IMG/DSC02687-2.jpg",
-    name: "Бильбо",
-    surname: "Бэггинс",
-    vacancy: "Вор",
+    name: "Еремеева",
+    surname: "Екатерина",
+    patronimic: "Романовна",
+    vacancy: "Терапевт",
   },
   {
     id: 2,
     img: "../../IMG/DSC02747-2.jpg",
-    name: "Гендальф",
-    surname: "Серый",
-    vacancy: "Колдун",
+    name: "Таценко",
+    surname: "Елена",
+    patronimic: "Генадьевна",
+    vacancy: "Ортодонт",
   },
   {
     id: 3,
-    img: "../../IMG/DSC02705-2.jpg",
-    name: "Леголас",
-    surname: "Из леса",
-    vacancy: "Стрелок",
+    img: "../../IMG/IMG_20230323_214441.jpg",
+    name: "Смык",
+    surname: "Александр",
+    patronimic: "Александрович",
+    vacancy: "Хирург-имплантолог",
   },
-  {
-    id: 4,
-    img: "../../IMG/DSC02599-2.jpg",
-    name: "Торин",
-    surname: "Дубощит",
-    vacancy: "Гном",
-  },
+  // {
+  //   id: 4,
+  //   img: "../../IMG/DSC02599-2.jpg",
+  //   name: "Ладно",
+  //   surname: "Ладно",
+  //   patronimic: "Ладно",
+  //   vacancy: "Лано?",
+  // },
   {
     id: 5,
     img: "../../IMG/DSC02705-2.jpg",
-    name: "Голлум",
-    surname: "Смеггл",
-    vacancy: "Хоббит",
+    name: "Куашева",
+    surname: "Фатима",
+    patronimic: "Магометовна",
+    vacancy: "Терапевт",
   }
 ];
 
@@ -61,7 +66,8 @@ const Carousel = () => {
             key={slide.id}
           >
             <img src={slide.img} alt={`Slide ${slide.id}`} />
-            <p>{slide.name} {slide.surname}</p>
+            <h5>{slide.name} {slide.surname} {slide.patronimic}</h5>
+            <p>{slide.vacancy}</p>
           </div>
         ))}
       </div>

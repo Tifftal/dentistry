@@ -30,16 +30,9 @@ const Documents = () => {
                 </div>
                 <div className="textDoc">
                     <p>
-                        Уважаемые пациенты, в этом разделе вы можете ознакомиться с основными документами, связанными с работой клиники «SimClinic».
+                        Уважаемые пациенты, в этом разделе вы можете ознакомиться с основными документами, связанными с работой клиники "Формула Улыбки".
                         Свяжитесь с нами, если у вас возникнут вопросы. Свяжитесь с нами, если у вас возникнут вопросы.
                     </p>
-                </div>
-                <div className="documBtn">
-                    {window.innerWidth > 900 ?
-                        <button onClick={HandleOpenNote}>Свяжитесь с нами, если возникнут вопросы</button>
-                        :
-                        <button onClick={HandleOpenNote}>Связаться с нами</button>
-                    }
                 </div>
                 <div className="cardDocum">
                     <div className="noPhoto">

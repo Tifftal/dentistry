@@ -14,29 +14,33 @@
     color: rgb(255, 255, 255);
 }
 
-ul.breadcrumb {
+ul .breadcrumb {
     list-style: none;
 }
 
-ul.breadcrumb li {
+.stick h1 {
+    user-select: none;
+}
+
+ul .breadcrumb li {
     display: inline;
     font-size: 20px;
     font-weight: 600;
     color: rgb(255, 255, 255);
 }
 
-ul.breadcrumb li+li:before {
+ul .breadcrumb li+li:before {
     padding: 5%;
     color: rgba(255, 255, 255);
     content: "-\00a0";
 }
 
-ul.breadcrumb li a {
+ul .breadcrumb li a {
     color: rgb(88, 175, 183);
     text-decoration: none;
 }
 
-ul.breadcrumb li a:hover {
+ul .breadcrumb li a:hover {
     color: rgb(9, 9, 9);
     text-decoration: none;
 }
@@ -57,7 +61,7 @@ ul.breadcrumb li a:hover {
     margin: 2% 0 0 10%;
 }
 
-.docBtn a{
+.docBtn a {
     text-decoration: none;
     color: white;
 }
@@ -141,29 +145,22 @@ ul.breadcrumb li a:hover {
     margin: 0;
 }
 
-/* .cart {
-    position: relative;
-    overflow: hidden;
+@media screen and (max-width: 900px) {
+    .backgr .doctors .titleDoc h1 {
+        font-size: 40px;
+    }
+
+    .backgr .doctors .textDoc p {
+        font-size: 20px;
+    }
+
+    .backgr .doctors .docBtn {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .backgr .doctors .docBtn button{
+        width: auto;
+        font-size: 15px;
+    }
 }
-
-.onea {
-    color: #eee;
-    font-size: 12px;
-    position: absolute;
-    top: 0px
-}
-
-.twoa {
-    color: #eee;
-    font-size: 12px;
-    position: absolute;
-    top: 14px;
-}
-
-.cart iframe {
-    width: 560px;
-    height: 400px;
-    position: relative;
-
-} */
-

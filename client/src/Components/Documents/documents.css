@@ -45,6 +45,10 @@ ul.breadcrumb li a:hover {
     margin: 4% 0 0 0;
 }
 
+.stickDocum h1 {
+    user-select: none;
+}
+
 .textDoc p {
     text-align: left;
     font-size: 25px;
@@ -163,4 +167,27 @@ ul.breadcrumb li a:hover {
 
 .DOC button:hover {
     filter: brightness(1.2);
+}
+
+@media screen and (max-width: 900px) {
+    .titleDoc h1 {
+        font-size: 40px;
+    }
+
+    .textDoc p {
+        font-size: 17px;
+    }
+
+    .documBtn button {
+        font-size: 15px
+    }
+
+    .cardDocum {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .DOC {
+        padding: 10px;
+    }
 }

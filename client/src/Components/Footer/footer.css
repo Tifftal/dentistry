@@ -1,6 +1,6 @@
 .footer {
     display: grid;
-    grid-template-columns: 20% 25% 35% 20%;
+    grid-template-columns: 33% 33% 33%;
     grid-template-rows: 100%;
     padding: 2% 3% 3% 3%;
     background-color: rgb(156, 187, 190);
@@ -203,4 +203,20 @@
         display: none;
     }
 
+    .textFooter p {
+        font-size: 10px;
+    }
+
+    .way button {
+        font-size: 15px;
+    }
+
+    .price button {
+        font-size: 15px;
+    }
+
+    .iconFooter img {
+        width: 23px;
+        height: auto;
+    }
 }

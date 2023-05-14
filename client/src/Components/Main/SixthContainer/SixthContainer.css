@@ -72,3 +72,20 @@
     transition: max-height 1s;
 }
 
+@media screen and (max-width: 900px) {
+    .titleSixthContainer h1 {
+        font-size: 30px;
+    }
+
+    .advantagesContainer p {
+        font-size: 10px;
+    }
+
+    .advantagesContainer h1 {
+        font-size: 15px;
+    }
+
+    .adv p {
+        border-top: none;
+    }
+}

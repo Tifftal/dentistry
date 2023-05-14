@@ -14,8 +14,8 @@
 .modal-content {
   background-color: white;
   padding: 20px;
-  width: 50%;
-  height: 80%;
+  width: 30%;
+  height: 60%;
   border-radius: 10px;
 }
 
@@ -56,20 +56,22 @@
   width: 90%;
 }
 
-.formDivNote {
-  margin-top: 5%;
-  text-align: left;
-  display: flex;
-  flex-direction: row;
+.formNote label {
   width: 80%;
-  margin-left: -10%;
+}
+
+.formDivNote {
+  display: grid;
+  grid-template-columns: 10% 90%;
+  text-align: left;
+  width: 80%;
 }
 
 .formDivNote input {
-  text-align: left;
+  /* text-align: left;
   display: flex;
   flex-direction: row;
-  margin-top: 2%;
+  margin-top: 2%; */
 }
 
 .formNote button {

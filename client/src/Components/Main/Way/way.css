@@ -1,0 +1,55 @@
+.contact {
+    background-color: white;
+}
+
+.titleContact h1 {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    font-size: 45px;
+    font-weight: bold;
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+
+}
+
+.address {
+    display: grid;
+    grid-template-columns: 1% 98%;
+    grid-row: 500px;
+}
+
+.infAddress {
+    width: 20vw;
+    height: 500px;
+    z-index: 1;
+    background-color: rgb(156, 188, 191);
+    position: relative;
+    display: flex;
+    right: -8vw;
+}
+
+.map {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 10%;
+    box-shadow: 0.3em 0.3em 3em rgba(1, 85, 71, 0.429);
+}
+
+/* .maptitle a {
+    color: #eee;
+    font-size: 12px;
+    position: absolute;
+    top: 0px;
+}
+
+.maptext a {
+    color: #eee;
+    font-size: 12px;
+    position: absolute;
+    top: 14px;
+} */
+
+.map iframe {
+    position: relative;
+}

@@ -43,6 +43,10 @@ ul.breadcrumbServ li a:hover {
     text-decoration: none;
 }
 
+.ServicesTitle h2 {
+    user-select: none;
+}
+
 .infServ {
     display: grid;
     grid-template-columns: 40% 60%;

@@ -34,7 +34,11 @@ const Documents = () => {
                     </p>
                 </div>
                 <div className="documBtn">
+                    { window.innerWidth > 900 ?
                     <button onClick={HandleOpenNote}>Свяжитесь с нами, если возникнут вопросы</button>
+                    :
+                    <button onClick={HandleOpenNote}>Связаться с нами</button>
+                    }
                 </div>
                 <div className="cardDocum">
                     <div className="noPhoto">

@@ -16,23 +16,12 @@ const Navbar = () => {
         setIsOpen(false)
     }
 
-    
-    // const [isOpen1, setIsOpen1] = useState(false);
-
-    // const HandleOpenNote1 = () => {
-    //     setIsOpen1(true)
-    // }
-
-    // const HandleCloseNote1 = () => {
-    //     setIsOpen1(false)
-    // }
-
     return (
         <div className="navigationBar">
             {isOpen && (
-                <Note onClose={HandleCloseNote} setIsOpen={setIsOpen}/>
+                <Note onClose={HandleCloseNote} setIsOpen={setIsOpen} />
             )}
-            
+
             <div className='kebabMenu'>
                 <div id="menuToggle">
                     <input type="checkbox" defaultChecked />
@@ -45,9 +34,6 @@ const Navbar = () => {
                         <a href="/about"><li>О компании</li></a>
                         <a href="/documents"><li>Документы</li></a>
                         <div>
-                            <div className='priem'>
-                                <button onClick={HandleOpenNote}>Записаться на прием {">>"}</button>
-                            </div>
                             <div className='infBar'>
                                 <div className='iconBar'>
                                     <img src="../IMG/phone-call.png" />
@@ -64,7 +50,7 @@ const Navbar = () => {
                             </div>
                         </div>
                         <div className='lastInf'>
-                            <button onClick={HandleOpenNote}>Задать вопрос доктору</button>
+                            <button onClick={HandleOpenNote}>Записаться на прием</button>
                             <div className='socialBar'>
                                 <div></div>
                                 <div className='scBtn'>
@@ -86,24 +72,23 @@ const Navbar = () => {
                 <div><a href="/about">О нас</a></div>
             </div>
             <div className="brandNameNavbar">
-                
-                    <img src="../IMG/logo.png" alt="логотип" />
-                
-                    <h1>Формула улыбки</h1>
-                
+
+                <img src="../IMG/logo.png" alt="логотип" />
+
+                <h1><a href="/">Улыбка радуги</a></h1>
+
             </div>
             <div className="contactInfoNavbar">
                 <div className="contactBar1">
-                    <p>+7 929 123 45 67</p>
+                    <p>+7 (967) 317-00-00</p>
                     <button>Заказать обратный звонок</button>
                 </div>
                 <div className="contactBar2">
-                    <p>Московская, 11</p>
-                    <button>Изменить клинику</button>
+                    <p>г. Краснодар, ул.Ставропольская, д. 83</p>
                 </div>
             </div>
         </div>
- 
+
     );
 }
 

@@ -42,6 +42,11 @@
     font-weight: 600;
 }
 
+.brandNameNavbar a {
+    text-decoration: none;
+    color: black;
+}
+
 .brandNameNavbar img {
     margin: auto;
     width: 98px;
@@ -353,7 +358,7 @@
     #menu {
         height: 110%;
         position: fixed;
-        width: 400px;
+        width: 500px;
         margin: -100px 0 0 0;
         padding: 50px;
         padding-top: 125px;
@@ -412,6 +417,24 @@
     } */
 
     #menu {
-        width: 80%;
+        width: 90%;
+    }
+
+    #menu a li {
+        font-size: 15px;
+    }
+
+    .infBar .iconBar img {
+        width: 15px;
+        height: auto;
+    }
+
+    .infBar .textBar p {
+        font-size: 13px;
+    }
+
+    .lastInf button {
+        font-size: 15px;
+        width: 90%;
     }
 }

@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 import './Carousel.css';
 
 const slides = [
-  {
-    id: 1,
-    img: "../../IMG/DSC02687-2.jpg",
-    name: "Еремеева",
-    surname: "Екатерина",
-    patronimic: "Романовна",
-    vacancy: "Терапевт",
-  },
+  // {
+  //   id: 1,
+  //   img: "../../IMG/DSC02687-2.jpg",
+  //   name: "Еремеева",
+  //   surname: "Екатерина",
+  //   patronimic: "Романовна",
+  //   vacancy: "Терапевт",
+  // },
   {
     id: 2,
     img: "../../IMG/DSC02747-2.jpg",
@@ -32,7 +32,7 @@ const slides = [
     name: "Еремеева",
     surname: "Екатерина",
     patronimic: "Романовна",
-    vacancy: "",
+    vacancy: "Терапевт",
   },
   {
     id: 5,

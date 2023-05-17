@@ -1,8 +1,50 @@
-import React from "react"
-import './doctors.css'
-import DoctorsCarousel from "./Carousel/DoctorsCarousel"
+import React from "react";
+import './doctors.css';
+import DoctorsCarousel from "./Carousel/DoctorsCarousel";
+import Doctor from "../Doctor/Doctor";
+import { Link } from "react-router-dom";
 
 const Doctors = () => {
+
+    const doctors = [
+        {
+            id: 1,
+            img: "../../IMG/DSC02747-2.jpg",
+            name: "Таценко",
+            surname: "Елена",
+            patronimic: "Генадьевна",
+            specialization: "Ортодонт",
+            docs: [],
+        },
+        {
+            id: 2,
+            img: "../../IMG/DSC02599-2.jpg",
+            name: "Екатерина",
+            surname: "Еремеева",
+            patronimic: "Романовна",
+            specialization: "Терапевт",
+            docs: [],
+        },
+        {
+            id: 3,
+            img: "../../IMG/IMG_20230323_214441.jpg",
+            name: "Александр",
+            surname: "Смык",
+            patronimic: "Александрович",
+            specialization: "Хирург-имплантолог",
+            docs: [],
+        },
+        {
+            id: 4,
+            img: "../../IMG/DSC02705-2.jpg",
+            name: "Фатима",
+            surname: "Куашева",
+            patronimic: "Магометовна",
+            specialization: "Терапевт",
+            docs: [],
+        }
+    ]
+
     return (
         <div className="backgr">
             <div className="doctors">
@@ -11,7 +53,7 @@ const Doctors = () => {
                     <h1>Наша команда</h1>
                 </div>
                 <div>
-                    <ul class="breadcrumb">
+                    <ul className="breadcrumb">
                         <li><a href="/">Главная</a></li>
                         <li>Команда</li>
                     </ul>
@@ -36,53 +78,19 @@ const Doctors = () => {
                                 </h1>
                             </div>
                         </div>
-                        <div className="ph">
-                            <img src="../../IMG/DSC02747-2.jpg" />
-                            <h3>
-                                Таценко Елена Геннадьевна
-                            </h3>
-                            <p>
-                                Ортодонт
-                            </p>
-                        </div>
-                        {/* <div className="ph">
-                            <img src="../../IMG/DSC02687-2.jpg" />
-                            <h3>
-                                Иванов Иван Иванович
-                            </h3>
-                            <p>
-                                ;;;;
-                            </p>
-                        </div> */}
-                        <div className="ph">
-                            <img src="../../IMG/DSC02599-2.jpg" />
-                            <h3>
-                                Еремеева Екатерина Романовна
-                            </h3>
-                            <p>
-                                Терапевт
-                            </p>
-                        </div>
-
-                        <div className="ph">
-                            <img src="../../IMG/IMG_20230323_214441.jpg" />
-                            <h3>
-                                Смык Александр Александрович
-                            </h3>
-                            <p>
-                                Хирург-имплантолог
-                            </p>
-                        </div>
-
-                        <div className="ph">
-                            <img src="../../IMG/DSC02705-2.jpg" />
-                            <h3>
-                                Куашева Фатима Магометовна
-                            </h3>
-                            <p>
-                                Терапевт
-                            </p>
-                        </div>
+                        {doctors?.map(doc => (
+                            <Link to={`/doctors/doctor/${doc.id}`}>
+                                <div className="ph">
+                                    <img src={doc.img} alt={doc.surname}/>
+                                    <h3>
+                                        {doc.surname} {doc.name} {doc.patronimic}
+                                    </h3>
+                                    <p>
+                                        {doc.specialization}
+                                    </p>
+                                </div>
+                            </Link>
+                        ))}
                     </div>}
             </div>
         </div>

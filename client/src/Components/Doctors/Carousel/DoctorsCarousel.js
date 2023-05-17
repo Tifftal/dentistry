@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const slides = [
   // {
@@ -59,15 +60,12 @@ const Carousel = () => {
       <div className="slides"
         style={{ transform: `translateX(-${currentSlide * 100}%)` }}
       >
-        {slides.map((slide) => (
-          <div
-            className="slide"
-            key={slide.id}
-          >
-            <img src={slide.img} alt={`Slide ${slide.id}`} />
-            <h5>{slide.name} {slide.surname} {slide.patronimic}</h5>
-            <p>{slide.vacancy}</p>
-          </div>
+        {slides?.map((slide) => (
+          <Link to={`/doctors/doctor/${slide.id}`} key={slide.id} className="slide" style={{textDecoration: "none", color: "black"}}>
+              <img src={slide.img} alt={`Slide ${slide.id}`} />
+              <h5>{slide.name} {slide.surname} {slide.patronimic}</h5>
+              <p>{slide.vacancy}</p>
+          </Link>
         ))}
       </div>
       <div className="btnPlaceholder">

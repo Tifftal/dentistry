@@ -176,8 +176,8 @@
 
 #menu {
     height: 110vh;
-    position: absolute;
-    width: 600px;
+    position: sticky;
+    width: 1000px;
     margin: -120px 0 0 0;
     padding: 50px;
     padding-top: 125px;

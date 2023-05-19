@@ -17,15 +17,18 @@ const Portfolio = () => {
                 </div>
                 <div className="clinicalCase">
                     <div className="case">
-                        <img src="../../IMG/keramicheskie-viniry.jpg" />
+                        <img src="../../IMG/protezirovanie_zubov_foto_do_i_posle_7.jpg" />
+                    </div>
+                    <div className="case">
+                    <img src="../../IMG/protezirovanie_zubov_foto_do_i_posle_7-2.jpg" />
                     </div>
                     <div className="case">
                         <h3>
                             Клинический случай №1
                         </h3>
                         <p>
-                            Жалобы: боль в зубе при надкусывании. 
-                            В другой клинике сказали, что необходимо удаление, т. к большая киста. 
+                            Жалобы: боль в зубе при надкусывании.
+                            В другой клинике сказали, что необходимо удаление, т. к большая киста.
                             Была удалена не корректная пломба, извлечён металлический штифт. В итоге спасли зуб, киста зажила.
                         </p>
                     </div>

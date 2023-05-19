@@ -1,4 +1,4 @@
-import {makeAutoObservable} from "mobx";
+import { makeAutoObservable } from "mobx";
 
 class Doc {
     img = "empty";
@@ -7,17 +7,23 @@ class Doc {
     patronimic = "empty";
     specialization = "empty";
     docs;
-    constructor () {
+    education = "empty";
+    qualification = "empty";
+    about = "empty";
+    constructor() {
         makeAutoObservable(this);
     }
 
-    setData (img, name, surname, patronimic, specialization, docs) {
+    setData(img, name, surname, patronimic, specialization, docs, education, qualification, about) {
         this.img = img;
         this.name = name;
         this.surname = surname;
         this.patronimic = patronimic;
         this.specialization = specialization;
         this.docs = docs;
+        this.education = education;
+        this.qualification = qualification;
+        this.about = about;
     }
 }
 

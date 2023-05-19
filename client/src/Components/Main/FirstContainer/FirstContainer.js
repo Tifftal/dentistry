@@ -30,13 +30,18 @@ const FirstContainer = () => {
                 </div>
             )}
             <div className="WelcomeContainer">
-                <h1>
-                    Мы дарим вам бесплатную чистку зубов
-                </h1>
-                <p>
-                    Наши врачи - профессионалы своего дела
-                </p>
-                <button onClick={HandleOpenNote}>Записаться на прием</button>
+                <div className="intro__media">
+                    <video id="video" src="../Video/StomatologyVideo.mp4" className="intro__media-vide" autoPlay muted loop></video>
+                </div>
+                <div className="intro__content">
+                    <h1>
+                        Мы дарим вам бесплатную чистку зубов
+                    </h1>
+                    <p>
+                        Наши врачи - профессионалы своего дела
+                    </p>
+                    <button onClick={HandleOpenNote}>Записаться на прием</button>
+                </div>
             </div>
         </div>
     )

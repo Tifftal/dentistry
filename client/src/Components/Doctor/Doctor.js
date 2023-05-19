@@ -8,7 +8,7 @@ const Doctor = observer(() => {
             <div>
                 <img src={Doc.img} />
                 <p>
-                    {Doc.surname} {Doc.name} {Doc.patronimic}
+                {Doc.name} {Doc.surname} {Doc.patronimic}
                 </p>
                 {
                     Doc.docs?.map(docs => (

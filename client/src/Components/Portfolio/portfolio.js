@@ -16,11 +16,13 @@ const Portfolio = () => {
                     </ul>
                 </div>
                 <div className="clinicalCase">
-                    <div className="case">
-                        <img src="../../IMG/protezirovanie_zubov_foto_do_i_posle_7.jpg" />
-                    </div>
-                    <div className="case">
-                    <img src="../../IMG/protezirovanie_zubov_foto_do_i_posle_7-2.jpg" />
+                    <div className="caseContainer">
+                        <div className="case">
+                            <img src="../../IMG/protezirovanie_zubov_foto_do_i_posle_7.jpg" />
+                        </div>
+                        <div className="case">
+                            <img src="../../IMG/protezirovanie_zubov_foto_do_i_posle_7-2.jpg" />
+                        </div>
                     </div>
                     <div className="case">
                         <h3>

@@ -19,7 +19,7 @@ const AdminPanel = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:8082/callback/delete/${id}`);
+      await axios.post(`http://localhost:8082/callback/delete/${id}`);
       fetchData();
     } catch (error) {
       console.log(error);

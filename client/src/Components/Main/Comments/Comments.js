@@ -1,9 +1,24 @@
 import React from "react";
 import "./Comments.css"
+import { useState } from 'react';
+import Comment from '../../Comment/Comment';
+
 
 const Comments = () => {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const HandleOpenNote = () => {
+        setIsOpen(true)
+    }
+
+    const HandleCloseNote = () => {
+        setIsOpen(false)
+    }
     return (
         <div className="comments">
+            {isOpen && (
+                <Comment onClose={HandleCloseNote} setIsOpen={setIsOpen} />
+            )}
             <h1>
                 Отзывы
             </h1>
@@ -21,12 +36,11 @@ const Comments = () => {
                     </p>
                 </div>
                 <div className="BtnOtz">
-                    <a href="#"><button>Оставить отзыв</button></a>
+                    <a href="#"><button onClick={HandleOpenNote}>Оставить отзыв</button></a>
                 </div>
             </div>
             <div className="Otz">
                 <h1>Иванов Иван</h1>
-                <p>Наш пациент из г. Краснодар</p>
                 <h2>21.02.2023</h2>
                 <p><b>Тут текст отзыва</b>   ed ut
                     perspiciatis unde omnis i
@@ -43,7 +57,6 @@ const Comments = () => {
             </div>
             <div className="Otz">
                 <h1>Иванов Иван</h1>
-                <p>Наш пациент из г. Краснодар</p>
                 <h2>21.02.2023</h2>
                 <p><b>Тут текст отзыва</b>   ed ut
                     perspiciatis unde omnis i

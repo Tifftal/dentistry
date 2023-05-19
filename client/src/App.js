@@ -10,6 +10,7 @@ import Vacancy from './Components/Vacancy/vacancy'
 import Portfolio from './Components/Portfolio/portfolio'
 import Documnets from './Components/Documents/documents'
 import Doctor from './Components/Doctor/Doctor';
+import AdminPanel from './Components/AdminPanel/AdminPanel';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
           <Route path='/vacancy' element={<Vacancy />}></Route>
           <Route path='/portfolio' element={<Portfolio />}></Route>
           <Route path='/documents' element={<Documnets />}></Route>
+          <Route path='/admin/panel' element={<AdminPanel />}></Route>
         </Routes>
         <Footer />
       </BrowserRouter>

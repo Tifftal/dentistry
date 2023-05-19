@@ -1,8 +1,8 @@
 import React from "react";
 import "./Comments.css"
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Comment from '../../Comment/Comment';
-
+import axios from "axios";
 
 const Comments = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -14,6 +14,27 @@ const Comments = () => {
     const HandleCloseNote = () => {
         setIsOpen(false)
     }
+
+    const [comments, setComments] = useState([]);
+
+    useEffect(() => {
+        fetchData();
+    }, []);
+
+    const fetchData = async () => {
+        try {
+            const response = await axios.get(
+                "http://localhost:8082/admin/panel/getAllForAdmin"
+            );
+            const publishedComments = response.data.filter(
+                (comment) => comment.status === "published"
+            );
+            setComments(publishedComments);
+        } catch (error) {
+            console.log(error);
+        }
+    };
+
     return (
         <div className="comments">
             {isOpen && (
@@ -40,36 +61,13 @@ const Comments = () => {
                 </div>
             </div>
             <div className="Otz">
-                <h1>Иванов Иван</h1>
-                <h2>21.02.2023</h2>
-                <p><b>Тут текст отзыва</b>   ed ut
-                    perspiciatis unde omnis i
-                    ste natus error sit voluptatem
-                    accusantium doloremque laudantium,
-                    totam rem aperiam, eaque ipsa quae
-                    ab illo inventore veritatis et quasi
-                    architecto beatae vitae dicta sunt explicabo.
-                    Nemo enim ipsam voluptatem quia voluptas sit
-                    aspernatur aut odit aut fugit, sed quia consequuntur
-                    magni dolores eos qui ratione voluptatem sequi
-                    nesciunt.
-                </p>
-            </div>
-            <div className="Otz">
-                <h1>Иванов Иван</h1>
-                <h2>21.02.2023</h2>
-                <p><b>Тут текст отзыва</b>   ed ut
-                    perspiciatis unde omnis i
-                    ste natus error sit voluptatem
-                    accusantium doloremque laudantium,
-                    totam rem aperiam, eaque ipsa quae
-                    ab illo inventore veritatis et quasi
-                    architecto beatae vitae dicta sunt explicabo.
-                    Nemo enim ipsam voluptatem quia voluptas sit
-                    aspernatur aut odit aut fugit, sed quia consequuntur
-                    magni dolores eos qui ratione voluptatem sequi
-                    nesciunt.
-                </p>
+                {comments.map((comment) => (
+                    <div key={comment.id}>
+                        <h1>{comment.name}</h1>
+                        <h2>{comment.date}</h2>
+                        <p>{comment.comments}</p>
+                    </div>
+                ))}
             </div>
         </div>
     )

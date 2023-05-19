@@ -12,15 +12,11 @@ const AdminComment = () => {
 
   const fetchData = async () => {
     try {
-      const pendingResponse = await axios.get(
-        "http://localhost:8082/comments/get?status=pending"
+      const response = await axios.get(
+        "http://localhost:8082/comments/getAllForAdmin"
       );
-      const publishedResponse = await axios.get(
-        "http://localhost:8082/comments/get?status=published"
-      );
-
-      setPendingComments(pendingResponse.data);
-      setPublishedComments(publishedResponse.data);
+      setPendingComments(response.data.filter(comment => comment.status === "pending"));
+      setPublishedComments(response.data.filter(comment => comment.status === "published"));
     } catch (error) {
       console.log(error);
     }
@@ -37,16 +33,16 @@ const AdminComment = () => {
 
   return (
     <div className="admin-comment">
-      <h2>Комментики</h2>
+      <h2>Комментарии</h2>
       <div>
-        <h3>"Pending" Комментарии</h3>
+        <h3>"Pending" KoMenTapNN</h3>
         <table className="table">
           <thead>
             <tr>
               <th>Имя</th>
               <th>Номер</th>
-              <th>Отзыв</th>
-              <th>Статус</th>
+              <th>Комментарий</th>
+              <th>Действие</th>
             </tr>
           </thead>
           <tbody>
@@ -60,7 +56,7 @@ const AdminComment = () => {
                     onClick={() => handleDelete(comment.id)}
                     className="delete-button"
                   >
-                    Delete
+                    Удалить
                   </button>
                 </td>
               </tr>
@@ -69,14 +65,14 @@ const AdminComment = () => {
         </table>
       </div>
       <div>
-        <h3>"Published" Комменчу интиq</h3>
+        <h3>Опубликованные комментарии</h3>
         <table className="table">
           <thead>
             <tr>
               <th>Имя</th>
               <th>Номер</th>
-              <th>Отзыв</th>
-              <th>Статус</th>
+              <th>Комментарий</th>
+              <th>Действие</th>
             </tr>
           </thead>
           <tbody>
@@ -90,7 +86,7 @@ const AdminComment = () => {
                     onClick={() => handleDelete(comment.id)}
                     className="delete-button"
                   >
-                    Delete
+                    Удалить
                   </button>
                 </td>
               </tr>

@@ -11,6 +11,8 @@ import Portfolio from './Components/Portfolio/portfolio'
 import Documnets from './Components/Documents/documents'
 import Doctor from './Components/Doctor/Doctor';
 import AdminPanel from './Components/AdminPanel/AdminPanel';
+import AdminCallBack from './Components/AdminPanel/CallBack/AdminCallBack';
+import AdminComment from './Components/AdminPanel/Comment/AdminComment';
 
 
 function App() {
@@ -28,6 +30,9 @@ function App() {
           <Route path='/portfolio' element={<Portfolio />}></Route>
           <Route path='/documents' element={<Documnets />}></Route>
           <Route path='/admin/panel' element={<AdminPanel />}></Route>
+          <Route path='/admin/panel/callback' element={<AdminCallBack />}></Route>
+          <Route path='/admin/panel/comment' element={<AdminComment />}></Route>
+          {/* <Route path='/admin/panel/teeth/images'></Route> */}
         </Routes>
         <Footer />
       </BrowserRouter>

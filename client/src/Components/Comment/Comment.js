@@ -20,7 +20,7 @@ function Comment(props) {
 
     console.log(data);
 
-    axios.post("http://localhost:8082/comment/send", data)
+    axios.post("http://localhost:8082/comments/send", data)
       .then(function (response) {
         console.log(response);
       })

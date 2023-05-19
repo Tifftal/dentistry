@@ -12,13 +12,13 @@ function Okno(props) {
 
         const data = {
             name: name,
-            phone: phone,
-            timestamp: new Date().toISOString(),
+            number: phone,
+            date: new Date().toISOString(),
         };
 
         console.log(data);
 
-        axios.post('api?', data)
+        axios.post('http://localhost:8082/callback/send', data)
             .then(function (response) {
                 console.log(response.data);
             })

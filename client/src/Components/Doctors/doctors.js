@@ -1,10 +1,15 @@
 import React from "react";
 import './doctors.css';
 import DoctorsCarousel from "./Carousel/DoctorsCarousel";
-import Doctor from "../Doctor/Doctor";
 import { Link } from "react-router-dom";
+import { observer } from "mobx-react-lite";
+import Doc from "../../Store/Doctors";
 
-const Doctors = () => {
+const Doctors = observer(() => {
+
+    const setData = (img, name, surname, patronimic, specialization, docs) => {
+        Doc.setData(img, name, surname, patronimic, specialization, docs);
+    }
 
     const doctors = [
         {
@@ -79,7 +84,7 @@ const Doctors = () => {
                             </div>
                         </div>
                         {doctors?.map(doc => (
-                            <Link to={`/doctors/doctor/${doc.id}`}>
+                            <Link to={`/doctors/doctor/${doc.id}`} onClick = {()=>{setData(doc.img, doc.name, doc.surname, doc.patronimic, doc.specialization, doc.docs)}}>
                                 <div className="ph">
                                     <img src={doc.img} alt={doc.surname}/>
                                     <h3>
@@ -95,6 +100,6 @@ const Doctors = () => {
             </div>
         </div>
     )
-}
+})
 
 export default Doctors;

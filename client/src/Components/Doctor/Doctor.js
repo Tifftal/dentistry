@@ -1,21 +1,23 @@
 import React from "react";
+import Doc from "../../Store/Doctors";
+import { observer } from "mobx-react-lite";
 
-const Doctor = ({image, name, surname, patronimic, documents}) => {
+const Doctor = observer(() => {
     return (
         <div className="doctorContainer">
             <div>
-                <img src={image}/>
+                <img src={Doc.img} />
                 <p>
-                    {surname} {name} {patronimic}
+                    {Doc.surname} {Doc.name} {Doc.patronimic}
                 </p>
                 {
-                    documents?.map(docs => (
-                        <a href={docs} download={docs}><button>{documents}</button></a>
+                    Doc.docs?.map(docs => (
+                        <a href={docs} download={docs}><button>Документы</button></a>
                     ))
                 }
             </div>
         </div>
     )
-}
+});
 
 export default Doctor;

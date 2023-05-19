@@ -15,8 +15,9 @@ const AdminComment = () => {
       const response = await axios.get(
         "http://localhost:8082/comments/getAllForAdmin"
       );
-      setPendingComments(response.data.filter(comment => comment.status === "pending"));
-      setPublishedComments(response.data.filter(comment => comment.status === "published"));
+      const comments = response.data;
+      setPendingComments(comments.filter(comment => comment.status === "pending"));
+      setPublishedComments(comments.filter(comment => comment.status === "published"));
     } catch (error) {
       console.log(error);
     }
@@ -24,7 +25,16 @@ const AdminComment = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:8082/comments/delete/${id}`);
+      await axios.post(`http://localhost:8082/comments/delete/${id}`);
+      fetchData();
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const handlePublish = async (id) => {
+    try {
+      await axios.post(`http://localhost:8082/comments/publish/${id}`);
       fetchData();
     } catch (error) {
       console.log(error);
@@ -35,7 +45,7 @@ const AdminComment = () => {
     <div className="admin-comment">
       <h2>Комментарии</h2>
       <div>
-        <h3>"Pending" KoMenTapNN</h3>
+        <h3>Ожидающие публикации</h3>
         <table className="table">
           <thead>
             <tr>
@@ -52,6 +62,12 @@ const AdminComment = () => {
                 <td>{comment.number}</td>
                 <td>{comment.comment}</td>
                 <td>
+                  <button
+                    onClick={() => handlePublish(comment.id)}
+                    className="publish-button"
+                  >
+                    Опубликовать
+                  </button>
                   <button
                     onClick={() => handleDelete(comment.id)}
                     className="delete-button"

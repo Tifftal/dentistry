@@ -22,7 +22,7 @@ function Comment(props) {
 
     axios.post("http://localhost:8082/comments/send", data)
       .then(function (response) {
-        console.log(response);
+        console.log(response.data);
       })
       .catch(function (error) {
         console.log(error);

@@ -24,11 +24,9 @@ const Comments = () => {
     const fetchData = async () => {
         try {
             const response = await axios.get(
-                "http://localhost:8082/admin/panel/getAllForAdmin"
+                "http://localhost:8082/comments/getAllForUser"
             );
-            const publishedComments = response.data.filter(
-                (comment) => comment.status === "published"
-            );
+            const publishedComments = response.data;
             setComments(publishedComments);
         } catch (error) {
             console.log(error);
@@ -65,7 +63,7 @@ const Comments = () => {
                     <div key={comment.id}>
                         <h1>{comment.name}</h1>
                         <h2>{comment.date}</h2>
-                        <p>{comment.comments}</p>
+                        <p>{comment.comment}</p>
                     </div>
                 ))}
             </div>

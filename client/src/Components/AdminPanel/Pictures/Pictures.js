@@ -27,6 +27,7 @@ const Pictures = () => {
     //content
 
     const handleImageUpload = async (event) => {
+        event.preventDeault()
         const fileBefore = document.getElementById('beforeImage').value;
         const fileAfter = document.getElementById('afterImage').value;
 

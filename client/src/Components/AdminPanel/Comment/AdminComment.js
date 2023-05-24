@@ -13,7 +13,7 @@ const AdminComment = () => {
   const fetchData = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:8082/comments/getAllForAdmin"
+        "http://45.12.72.31:8082/comments/getAllForAdmin"
       );
       const comments = response.data;
       setPendingComments(comments.filter(comment => comment.status === "pending"));
@@ -25,7 +25,7 @@ const AdminComment = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.post(`http://localhost:8082/comments/delete/${id}`);
+      await axios.post(`http://45.12.72.31:8082/comments/delete/${id}`);
       fetchData();
     } catch (error) {
       console.log(error);
@@ -34,7 +34,7 @@ const AdminComment = () => {
 
   const handlePublish = async (id) => {
     try {
-      await axios.post(`http://localhost:8082/comments/publish/${id}`);
+      await axios.post(`http://45.12.72.31:8082/comments/publish/${id}`);
       fetchData();
     } catch (error) {
       console.log(error);

@@ -31,9 +31,6 @@ function App() {
           <Route path='/portfolio' element={<Portfolio />}></Route>
           <Route path='/documents' element={<Documnets />}></Route>
           <Route path='/admin/panel' element={<AdminPanel />}></Route>
-          <Route path='/admin/panel/callback' element={<AdminCallBack />}></Route>
-          <Route path='/admin/panel/comment' element={<AdminComment />}></Route>
-          <Route path='/admin/panel/images' element={<Pictures />}></Route>
         </Routes>
         <Footer />
       </BrowserRouter>

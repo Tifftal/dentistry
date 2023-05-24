@@ -3,6 +3,21 @@ import Doc from "../../Store/Doctors";
 import './Doctor.css';
 
 const Eremeeva = () => {
+    const onButtonClick = () => {
+        // using Java Script method to get PDF file
+        fetch('DOC/Еремеева Екатерина Романовна.zip').then(response => {
+            response.blob().then(blob => {
+                // Creating new object of PDF file
+                const fileURL = window.URL.createObjectURL(blob);
+                // Setting various property values
+                let alink = document.createElement('a');
+                alink.href = fileURL;
+                alink.download = 'Еремеева Екатерина Романовна.zip';
+                alink.click();
+            })
+        })
+    }
+
     const Doc = {
         id: 2,
             img: "../../IMG/DSC02599-2.jpg",
@@ -40,7 +55,7 @@ const Eremeeva = () => {
                     <p>
                         {Doc.about}
                     </p>
-                    <button>Документы</button>
+                    <button onClick={()=>{onButtonClick()}}>Документы</button>
                 </div>
 
             </div>

@@ -5,7 +5,7 @@ import axios from "axios";
 function Okno(props) {
 
     const handleSubmitForm = (event) => {
-        event.preventDefault(); 
+        event.preventDefault();
 
         const name = document.getElementById('name').value;
         const phone = document.getElementById('phone').value;
@@ -31,6 +31,10 @@ function Okno(props) {
         <div className="modal">
             <div className="modal-content">
                 <span className="close" onClick={props.onClose}>&times;</span>
+                <span className="modal-header">
+                    <h3>Обратный звонок</h3>
+                    <p>Наши спеециалисты с радостью перезвонят, проконсультируют и при необходимости запишут <h5>Вас на прием течение 5 минут!</h5></p>
+                </span>
                 <form className='formNote' onSubmit={handleSubmitForm}>
                     <input type="text" name="name" placeholder="Имя" id="name" required pattern="[a-zA-Zа-яА-ЯЁё\s]+" title="Введите имя на русском или английском" />
                     <input type="text" name="phone" placeholder="Телефон" id="phone" required pattern="^\+?[1-9]\d{1,10}$" title="Введите корректный номер телефона" />

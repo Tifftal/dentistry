@@ -33,6 +33,9 @@ function Comment(props) {
     <div className="modalOtz">
       <div className="modal-content">
         <span className="close" onClick={props.onClose}>&times;</span>
+        <span className="modal-header">
+          <h3>Оставьте свой отзыв</h3>
+        </span>
         <form className='formNote' onSubmit={handleSubmitForm}>
           <input type="text" name="name" placeholder="Имя" id="name" required pattern="[a-zA-Zа-яА-ЯЁё\s]+" title="Введите имя на русском или английском" />
           <input type="text" name="phone" placeholder="Номер телефона" id="number" required pattern="^\+?[1-9]\d{1,10}$" title="Введите корректный номер телефона" />

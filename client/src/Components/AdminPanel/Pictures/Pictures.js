@@ -34,8 +34,8 @@ const Pictures = () => {
         const content = document.getElementById('description').value;
 
         const data = {
-            fileBefore: fileBefore,
-            fileAfter: fileAfter,
+            fileBefore: btoa(fileBefore),
+            fileAfter: btoa(fileAfter),
             title: title,
             content: content,
         }

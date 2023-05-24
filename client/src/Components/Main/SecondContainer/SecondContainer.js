@@ -26,7 +26,7 @@ const SecondContainer = () => {
                         </a>
                     </div>
                     <div className="box2">
-                        <img src="../../IMG/DSC02687-2.jpg" />
+                        <img src="../../IMG/DSC02599-2.jpg" />
                         <h3>
                             Еремеева Екатерина Романовна
                         </h3>

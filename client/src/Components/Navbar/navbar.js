@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './navbar.css'
-import Modal from "../Popup/Note/Note";
+import Okno from '../Okno/Okno';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -18,7 +18,7 @@ const Navbar = () => {
     return (
         <div className="navigationBar">
             {isOpen && (
-                <Modal onClose={HandleCloseNote} setIsOpen={setIsOpen} />
+                <Okno onClose={HandleCloseNote} setIsOpen={setIsOpen} />
             )}
 
             <div className='kebabMenu'>
@@ -84,7 +84,7 @@ const Navbar = () => {
                     <button onClick={HandleOpenNote}>Заказать обратный звонок</button>
                 </div>
                 <div className="contactBar2">
-                    <p>г. Краснодар, <p>ул. Ставропольская, д. 83</p></p>
+                    <a href="#map" style={{whiteSpace: "pre-wrap", textDecoration: "none", cursor:"pointer", color: "black"}}>г. Краснодар, {`\n`}ул. Ставропольская, д. 83</a>
                 </div>
             </div>
         </div>

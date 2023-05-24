@@ -124,6 +124,7 @@ ul .breadcrumb li a:hover {
 .photoDoc p {
     font-size: 100%;
     text-align: center;
+    
 }
 
 .photoDoc h3 {
@@ -132,11 +133,22 @@ ul .breadcrumb li a:hover {
     text-align: center;
     margin: 0;
     padding: 0;
+    color: black;
+}
+
+.photoDoc a {
+    text-decoration: none;
 }
 
 .ph {
     margin: 0;
 }
+
+.ph p {
+    color: black;
+}
+
+
 
 @media screen and (max-width: 900px) {
     .backgr .doctors .titleDoc h1 {

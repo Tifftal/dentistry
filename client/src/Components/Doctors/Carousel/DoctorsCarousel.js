@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const slides = [
-  {
-    id: 1,
-    img: "../../IMG/DSC02687-2.jpg",
-    name: "Еремеева",
-    surname: "Екатерина",
-    patronimic: "Романовна",
-    vacancy: "Терапевт",
-  },
+  // {
+  //   id: 1,
+  //   img: "../../IMG/DSC02687-2.jpg",
+  //   name: "Еремеева",
+  //   surname: "Екатерина",
+  //   patronimic: "Романовна",
+  //   vacancy: "Терапевт",
+  // },
   {
     id: 2,
     img: "../../IMG/DSC02747-2.jpg",
@@ -25,14 +26,14 @@ const slides = [
     patronimic: "Александрович",
     vacancy: "Хирург-имплантолог",
   },
-  // {
-  //   id: 4,
-  //   img: "../../IMG/DSC02599-2.jpg",
-  //   name: "Ладно",
-  //   surname: "Ладно",
-  //   patronimic: "Ладно",
-  //   vacancy: "Лано?",
-  // },
+  {
+    id: 4,
+    img: "../../IMG/DSC02599-2.jpg",
+    name: "Еремеева",
+    surname: "Екатерина",
+    patronimic: "Романовна",
+    vacancy: "Терапевт",
+  },
   {
     id: 5,
     img: "../../IMG/DSC02705-2.jpg",
@@ -59,15 +60,12 @@ const Carousel = () => {
       <div className="slides"
         style={{ transform: `translateX(-${currentSlide * 100}%)` }}
       >
-        {slides.map((slide) => (
-          <div
-            className="slide"
-            key={slide.id}
-          >
-            <img src={slide.img} alt={`Slide ${slide.id}`} />
-            <h5>{slide.name} {slide.surname} {slide.patronimic}</h5>
-            <p>{slide.vacancy}</p>
-          </div>
+        {slides?.map((slide) => (
+          <Link to={`/doctors/doctor/${slide.id}`} key={slide.id} className="slide" style={{textDecoration: "none", color: "black"}}>
+              <img src={slide.img} alt={`Slide ${slide.id}`} />
+              <h5>{slide.name} {slide.surname} {slide.patronimic}</h5>
+              <p>{slide.vacancy}</p>
+          </Link>
         ))}
       </div>
       <div className="btnPlaceholder">

@@ -15,7 +15,7 @@ function Comment(props) {
       name: name,
       number: number,
       comment: comment,
-      date: new Date().toISOString(),
+      date: new Date(),
     }
 
     console.log(data);

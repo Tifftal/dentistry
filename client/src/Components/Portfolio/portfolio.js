@@ -2,6 +2,33 @@ import React, {useState, useEffect} from "react";
 import './portfolio.css';
 import axios from "axios";
 
+const ImageComponent = () => {
+  const [base64Image, setBase64Image] = useState('');
+
+  useEffect(() => {
+    const loadImage = async () => {
+      try {
+        const response = await fetch('../../IMG/protezirovanie_zubov_foto_do_i_posle_7.jpg');
+        const blob = await response.blob();
+
+        const reader = new FileReader();
+        reader.onloadend = () => {
+          const base64Data = reader.result;
+          setBase64Image(base64Data);
+        };
+        reader.readAsDataURL(blob);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    loadImage();
+  }, []);
+
+  return <img src={base64Image} alt="Image" />;
+};
+
+
 const Portfolio = () => {
     const [data, setData] = useState([])
 
@@ -36,16 +63,18 @@ const Portfolio = () => {
                         <li>Портфолио</li>
                     </ul>
                 </div>
+                                <img src="../../IMG/protezirovanie_zubov_foto_do_i_posle_7.jpg" />
+                                имаге компонент
+                                <ImageComponent />
                 {data.map(image => (
                     <div className="clinicalCase">
                         <div className="caseContainer">
                             <div className="case">
-                                {/* <img src="../../IMG/protezirovanie_zubov_foto_do_i_posle_7.jpg" /> */}
-                                <img src={`data:image/jpg;base64,` + image.fileBefore} alt={image.title} />
+                                <img src={image.fileBefore} alt={image.title} />
                             </div>
                             <div className="case">
                                 {/* <img src="../../IMG/protezirovanie_zubov_foto_do_i_posle_7-2.jpg" /> */}
-                                <img src={`data:image/jpg;base64,` + image.fileAfter} alt={image.title} />
+                                <img src={image.fileAfter} alt={image.title} />
                             </div>
                         </div>
                         <div className="case">
@@ -68,3 +97,4 @@ const Portfolio = () => {
 }
 
 export default Portfolio
+

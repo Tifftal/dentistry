@@ -74,10 +74,10 @@ const Pictures = () => {
 
   return (
     <div>
-      <h1>Picture Upload</h1>
+      <h1>Загрузка</h1>
       <form onSubmit={handleImageUpload}>
         <div>
-          <label htmlFor="beforeImage">Before Image:</label>
+          <label htmlFor="beforeImage">Изображение ДО:</label>
           <input
             type="file"
             id="beforeImage"
@@ -88,7 +88,7 @@ const Pictures = () => {
           />
         </div>
         <div>
-          <label htmlFor="afterImage">After Image:</label>
+          <label htmlFor="afterImage">Изображение После:</label>
           <input
             type="file"
             id="afterImage"
@@ -99,7 +99,7 @@ const Pictures = () => {
           />
         </div>
         <div>
-          <label htmlFor="title">Title:</label>
+          <label htmlFor="title">Заголовок:</label>
           <input
             type="text"
             id="title"
@@ -109,7 +109,7 @@ const Pictures = () => {
           />
         </div>
         <div>
-          <label htmlFor="description">Description:</label>
+          <label htmlFor="description">Описание:</label>
           <textarea
             id="description"
             value={description}
@@ -117,7 +117,7 @@ const Pictures = () => {
             required
           />
         </div>
-        <button type="submit">Submit</button>
+        <button type="submit">Отправить</button>
       </form>
       <div className="image-pairs">
         {images.map((pair, index) => (
@@ -129,7 +129,7 @@ const Pictures = () => {
                 onClick={() => handleImageDelete(pair[0])}
                 className="delete-button"
               >
-                Delete
+                Удалить
               </button>
             </div>
             <div>
@@ -139,7 +139,7 @@ const Pictures = () => {
                 onClick={() => handleImageDelete(pair[1])}
                 className="delete-button"
               >
-                Delete
+                Удалить
               </button>
             </div>
           </div>
@@ -148,9 +148,9 @@ const Pictures = () => {
       <table className="existing-images">
         <thead>
           <tr>
-            <th>Name</th>
-            <th>Image</th>
-            <th>Action</th>
+            <th>Название</th>
+            <th>Картинка</th>
+            <th>Действие</th>
           </tr>
         </thead>
         <tbody>
@@ -165,7 +165,7 @@ const Pictures = () => {
                   onClick={() => handleImageDelete(image)}
                   className="delete-button"
                 >
-                  Delete
+                  Удалить
                 </button>
               </td>
             </tr>

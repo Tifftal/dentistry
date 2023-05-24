@@ -4,14 +4,19 @@ import axios from "axios";
 const Pictures = () => {
     const [data, setData] = useState([])
 
-    useEffect(()=>{
+    useEffect(() => {
         fetchExistingImages();
-    },[])
+    }, [])
 
     const fetchExistingImages = async () => {
         try {
             const response = await axios.get("http://localhost:8082/work/get");
+            response.data.map(image => {
+                image.fileBefore = atob(image.fileBefore);
+                image.fileAfter = atob(image.fileAfter);
+            })
             setData(response.data);
+
         } catch (error) {
             console.log(error);
         }
@@ -24,7 +29,7 @@ const Pictures = () => {
     //content
 
     const handleImageUpload = async (event) => {
-        event.preventDeault()
+        event.preventDefault()
         const fileBefore = document.getElementById('beforeImage').value;
         const fileAfter = document.getElementById('afterImage').value;
 
@@ -37,6 +42,7 @@ const Pictures = () => {
             title: title,
             content: content,
         }
+        console.log(data);
 
         axios.post("http://localhost:8082/work/post", data)
             .then(function (response) {
@@ -111,10 +117,10 @@ const Pictures = () => {
                         <tr key={image.id}>
                             <td>{image.title}</td>
                             <td>
-                                <img src={`data:image/jpg;base64,`+image.fileBefore} alt={image.title} className="image" />
+                                <img src={`data:image/jpg;base64,` + image.fileBefore} alt={image.title} className="image" />
                             </td>
                             <td>
-                                <img src={`data:image/jpg;base64,`+image.fileAfter} alt={image.title} className="image" />
+                                <img src={`data:image/jpg;base64,` + image.fileAfter} alt={image.title} className="image" />
                             </td>
                             <td>
                                 <button

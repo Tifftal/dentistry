@@ -4,6 +4,21 @@ import DoctorsCarousel from "../Doctors/Carousel/DoctorsCarousel";
 
 
 const Documents = () => {
+    const onButtonClick = () => {
+        // using Java Script method to get PDF file
+        fetch('DOC/Документы.zip').then(response => {
+            response.blob().then(blob => {
+                // Creating new object of PDF file
+                const fileURL = window.URL.createObjectURL(blob);
+                // Setting various property values
+                let alink = document.createElement('a');
+                alink.href = fileURL;
+                alink.download = 'Документы.zip';
+                alink.click();
+            })
+        })
+    }
+
     return (
         <div className="backgrDoc">
             <div className="documents">
@@ -21,6 +36,7 @@ const Documents = () => {
                         Уважаемые пациенты, в этом разделе вы можете ознакомиться с основными документами, связанными с работой клиники "Формула Улыбки".
                         Свяжитесь с нами, если у вас возникнут вопросы. Свяжитесь с нами, если у вас возникнут вопросы.
                     </p>
+                    <a href="#"><button onClick={()=>{onButtonClick()}}>Скачать документы</button></a>
                 </div>
                 <div className="cardDocum">
                     <div className="noPhoto">
@@ -29,42 +45,6 @@ const Documents = () => {
                                 Документы
                             </h1>
                         </div>
-                    </div>
-                    <div className="DOC">
-                        <h3>
-                            Лицензия на осуществление медицинской деятельности
-                        </h3>
-                        <a href="#"><button>Ознакомиться с документом</button></a>
-                    </div>
-                    <div className="DOC">
-                        <h3>
-                            Лицензия на осуществление медицинской деятельности
-                        </h3>
-                        <a href="#"><button>Ознакомиться с документом</button></a>
-                    </div>
-                    <div className="DOC">
-                        <h3>
-                            Лицензия на осуществление медицинской деятельности
-                        </h3>
-                        <a href="#"><button>Ознакомиться с документом</button></a>
-                    </div>
-                    <div className="DOC">
-                        <h3>
-                            Лицензия на осуществление медицинской деятельности
-                        </h3>
-                        <a href="#"><button>Ознакомиться с документом</button></a>
-                    </div>
-                    <div className="DOC">
-                        <h3>
-                            Лицензия на осуществление медицинской деятельности
-                        </h3>
-                        <a href="#"><button>Ознакомиться с документом</button></a>
-                    </div>
-                    <div className="DOC">
-                        <h3>
-                            Лицензия на осуществление медицинской деятельности
-                        </h3>
-                        <a href="#"><button>Ознакомиться с документом</button></a>
                     </div>
                 </div>
             </div>

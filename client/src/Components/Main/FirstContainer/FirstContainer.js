@@ -6,7 +6,6 @@ import axios from "axios";
 
 const FirstContainer = () => {
     const [isOpen, setIsOpen] = useState(false);
-    console.log(isOpen);
     const HandleOpenNote = () => {
         setIsOpen(true)
     }

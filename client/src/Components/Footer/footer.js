@@ -87,7 +87,7 @@ const Footer = () => {
                         <a href="/services"><button>Прайс-лист</button></a>
                     </div>
                 </div>
-            <a href="https://www.youtube.com/playlist?list=PLoRUGYjn-3ghE13Qea1CTvFNLwEEvK072" style={{fontSize:"1px"}}>тут</a>
+            <a href="https://www.youtube.com/playlist?list=PLoRUGYjn-3ghE13Qea1CTvFNLwEEvK072" style={{fontSize:"0.5px", color:"transparent"}}>тут</a>
             </div>
         </div>
     );

@@ -1,0 +1,21 @@
+.image-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+  }
+  
+  .image-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .image {
+    width: 200px;
+    height: auto;
+  }
+  
+  .delete-button {
+    margin-top: 10px;
+  }
+  

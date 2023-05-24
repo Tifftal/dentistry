@@ -8,11 +8,11 @@ const AdminPanel = () => {
 
   return (
     <div className="admin-panel">
-      <h2>Admin Panel</h2>
+      <h2>Панель администратора</h2>
       <div className="data-list">
-        <Link to="/admin/panel/callback">Коллбек</Link>
-        <Link to="/admin/panel/comment">Комменты</Link>
-        <Link to="/admin/panel/teeth/images">Зубки</Link>
+        <Link to="/admin/panel/callback"><button>Обратный звонок</button></Link>
+        <Link to="/admin/panel/comment"><button>Комментарии</button></Link>
+        <Link to="/admin/panel/teeth/images"><button>До/После</button></Link>
       </div>
     </div>
   );

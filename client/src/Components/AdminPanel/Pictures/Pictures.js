@@ -13,8 +13,8 @@ const Pictures = () => {
           const response = await axios.get("http://localhost:8082/work/get");
           const data = response.data.map((item) => ({
             ...item,
-            fileBefore: Uint8Array.from(item.fileBefore, (c) => c.charCodeAt(0)),
-            fileAfter: Uint8Array.from(item.fileAfter, (c) => c.charCodeAt(0)),
+            fileBefore:item.fileBefore,
+            fileAfter: item.fileAfter,
           }));
           setData(data);
         } catch (error) {

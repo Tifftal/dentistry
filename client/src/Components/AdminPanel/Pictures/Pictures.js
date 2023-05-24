@@ -38,37 +38,43 @@ const Pictures = () => {
         const fileBefore = fileBeforeInput.files[0];
         const fileAfter = fileAfterInput.files[0];
       
-        const reader = new FileReader();
+        const readerBefore = new FileReader();
+        const readerAfter = new FileReader();
       
-        reader.onload = function () {
-          const fileBeforeData = reader.result;
-          const fileAfterData = reader.result;
+        readerBefore.onload = function () {
+          const fileBeforeData = readerBefore.result;
       
-          const title = document.getElementById('title').value;
-          const content = document.getElementById('description').value;
+          readerAfter.onload = function () {
+            const fileAfterData = readerAfter.result;
       
-          const data = {
-            fileBefore: fileBeforeData,
-            fileAfter: fileAfterData,
-            title: title,
-            content: content,
+            const title = document.getElementById('title').value;
+            const content = document.getElementById('description').value;
+      
+            const data = {
+              fileBefore: fileBeforeData,
+              fileAfter: fileAfterData,
+              title: title,
+              content: content,
+            };
+      
+            console.log(data);
+      
+            axios
+              .post("http://localhost:8082/work/post", data)
+              .then(function (response) {
+                console.log(response.data);
+              })
+              .catch(function (error) {
+                console.log(error);
+              });
           };
       
-          console.log(data);
-      
-          axios
-            .post("http://localhost:8082/work/post", data)
-            .then(function (response) {
-              console.log(response.data);
-            })
-            .catch(function (error) {
-              console.log(error);
-            });
+          readerAfter.readAsDataURL(fileAfter);
         };
       
-        reader.readAsDataURL(fileBefore);
-        reader.readAsDataURL(fileAfter);
+        readerBefore.readAsDataURL(fileBefore);
       };
+      
       
 
     const handleImageDelete = async (image) => {

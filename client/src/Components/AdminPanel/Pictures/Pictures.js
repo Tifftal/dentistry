@@ -30,29 +30,46 @@ const Pictures = () => {
     //content
 
     const handleImageUpload = async (event) => {
-        event.preventDefault()
-        const fileBefore = document.getElementById('beforeImage').value;
-        const fileAfter = document.getElementById('afterImage').value;
-
-        const title = document.getElementById('title').value;
-        const content = document.getElementById('description').value;
-
-        const data = {
-            fileBefore: btoa(fileBefore),
-            fileAfter: btoa(fileAfter),
+        event.preventDefault();
+      
+        const fileBeforeInput = document.getElementById('beforeImage');
+        const fileAfterInput = document.getElementById('afterImage');
+      
+        const fileBefore = fileBeforeInput.files[0];
+        const fileAfter = fileAfterInput.files[0];
+      
+        const reader = new FileReader();
+      
+        reader.onload = function () {
+          const fileBeforeData = reader.result;
+          const fileAfterData = reader.result;
+      
+          const title = document.getElementById('title').value;
+          const content = document.getElementById('description').value;
+      
+          const data = {
+            fileBefore: fileBeforeData,
+            fileAfter: fileAfterData,
             title: title,
             content: content,
-        }
-        console.log(data);
-
-        axios.post("http://localhost:8082/work/post", data)
+          };
+      
+          console.log(data);
+      
+          axios
+            .post("http://localhost:8082/work/post", data)
             .then(function (response) {
-                console.log(response.data);
+              console.log(response.data);
             })
             .catch(function (error) {
-                console.log(error);
-            })
-    }
+              console.log(error);
+            });
+        };
+      
+        reader.readAsDataURL(fileBefore);
+        reader.readAsDataURL(fileAfter);
+      };
+      
 
     const handleImageDelete = async (image) => {
         try {
@@ -74,7 +91,6 @@ const Pictures = () => {
                         id="beforeImage"
                         accept="image/*"
                         required
-                        multiple
                     />
                 </div>
                 <div>
@@ -84,7 +100,6 @@ const Pictures = () => {
                         id="afterImage"
                         accept="image/*"
                         required
-                        multiple
                     />
                 </div>
                 <div>

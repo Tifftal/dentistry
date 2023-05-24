@@ -10,7 +10,7 @@ const Pictures = (props) => {
 
     const fetchExistingImages = async () => {
         try {
-          const response = await axios.get("http://localhost:8082/work/get");
+          const response = await axios.get("http://45.12.72.31:8082/work/get");
           const data = response.data.map((item) => ({
             ...item,
             fileBefore:item.fileBefore,
@@ -60,7 +60,7 @@ const Pictures = (props) => {
             console.log(data);
       
             axios
-              .post("http://localhost:8082/work/post", data)
+              .post("http://45.12.72.31:8082/work/post", data)
               .then(function (response) {
                 console.log(response.data);
               })
@@ -79,7 +79,7 @@ const Pictures = (props) => {
 
     const handleImageDelete = async (image) => {
         try {
-            await axios.post(`http://localhost:8082/work/delete/${image.id}`);
+            await axios.post(`http://45.12.72.31:8082/work/delete/${image.id}`);
             fetchExistingImages();
         } catch (error) {
             console.log(error);

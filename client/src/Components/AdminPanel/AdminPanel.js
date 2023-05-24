@@ -23,7 +23,7 @@ const AdminPanel = () => {
 
     console.log(data);
 
-    axios.post("http://localhost:8082/checkAuth", data)
+    axios.post("http://45.12.72.31:8082/checkAuth", data)
     .then(function(response) {
       setAuth(true);
       console.log(response.data);

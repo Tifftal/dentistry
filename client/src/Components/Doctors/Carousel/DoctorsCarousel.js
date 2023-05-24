@@ -14,6 +14,7 @@ const slides = [
     id: 2,
     img: "../../IMG/DSC02747-2.jpg",
     name: "Таценко",
+    link: "Tacenko",
     surname: "Елена",
     patronimic: "Генадьевна",
     vacancy: "Ортодонт",
@@ -22,6 +23,7 @@ const slides = [
     id: 3,
     img: "../../IMG/IMG_20230323_214441.jpg",
     name: "Смык",
+    link: "Smyk",
     surname: "Александр",
     patronimic: "Александрович",
     vacancy: "Хирург-имплантолог",
@@ -29,6 +31,7 @@ const slides = [
   {
     id: 4,
     img: "../../IMG/DSC02599-2.jpg",
+    link: "Eremeeva",
     name: "Еремеева",
     surname: "Екатерина",
     patronimic: "Романовна",
@@ -37,6 +40,7 @@ const slides = [
   {
     id: 5,
     img: "../../IMG/DSC02705-2.jpg",
+    link: "Kuasheva",
     name: "Куашева",
     surname: "Фатима",
     patronimic: "Магометовна",
@@ -61,7 +65,7 @@ const Carousel = () => {
         style={{ transform: `translateX(-${currentSlide * 100}%)` }}
       >
         {slides?.map((slide) => (
-          <Link to={`/doctors/doctor/${slide.id}`} key={slide.id} className="slide" style={{textDecoration: "none", color: "black"}}>
+          <Link to={`/doctors/doctor/${slide.link}`} key={slide.id} className="slide" style={{textDecoration: "none", color: "black"}}>
               <img src={slide.img} alt={`Slide ${slide.id}`} />
               <h5>{slide.name} {slide.surname} {slide.patronimic}</h5>
               <p>{slide.vacancy}</p>

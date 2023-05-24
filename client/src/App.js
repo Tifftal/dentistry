@@ -14,6 +14,10 @@ import AdminPanel from './Components/AdminPanel/AdminPanel';
 import AdminCallBack from './Components/AdminPanel/CallBack/AdminCallBack';
 import AdminComment from './Components/AdminPanel/Comment/AdminComment';
 import Pictures from './Components/AdminPanel/Pictures/Pictures';
+import Fatima from './Components/Doctor/FatimaQA';
+import Smyk from './Components/Doctor/Smyk';
+import ElenaTac from './Components/Doctor/ElenaTac';
+import Eremeeva from './Components/Doctor/Eremeeva';
 
 
 function App() {
@@ -26,7 +30,10 @@ function App() {
           <Route path="/about" element={<About />}></Route>
           <Route path="/services" element={<Services />}></Route>
           <Route path="/doctors" element={<Doctors />}></Route>
-          <Route path='/doctors/doctor/*' element={<Doctor />}></Route>
+          <Route path="/doctors/Kuasheva" element={<Fatima />}></Route>
+          <Route path="/doctors/Smyk" element={<Smyk />}></Route>
+          <Route path="/doctors/Tacenko" element={<ElenaTac />}></Route>
+          <Route path="/doctors/Eremeeva" element={<Eremeeva />}></Route>
           <Route path='/vacancy' element={<Vacancy />}></Route>
           <Route path='/portfolio' element={<Portfolio />}></Route>
           <Route path='/documents' element={<Documnets />}></Route>

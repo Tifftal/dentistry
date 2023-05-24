@@ -19,6 +19,7 @@ const Doctors = observer(() => {
             name: "Елена",
             patronimic: "Генадьевна",
             specialization: "Ортодонт",
+            link: "Tacenko",
             docs: [],
             education: [`- Выпускница Кубанского государственного медицинского университета 2007`, <br />,
             `Специальность: «Стоматология»`, <br />,
@@ -53,6 +54,7 @@ const Doctors = observer(() => {
             surname: "Еремеева",
             patronimic: "Романовна",
             specialization: "Терапевт",
+            link: "Eremeeva",
             docs: [],
             education: `- Образование по специальности «Стоматология 31.05.03» в КубГМУ в 2022 году с отличием.`,
             qualification: [`- Обучение в Пикассо по цефалометрическому анализу, работа с КЛКТ-снимками, 2022.`, <br />,`
@@ -66,6 +68,7 @@ const Doctors = observer(() => {
             name: "Александр",
             surname: "Смык",
             patronimic: "Александрович",
+            link: "Smyk",
             specialization: "Хирург-имплантолог",
             docs: [],
             education: [`- Диплом об окончании медицинской академии 2015 г.`, <br />,`
@@ -89,6 +92,7 @@ const Doctors = observer(() => {
             surname: "Куашева",
             patronimic: "Магометовна",
             specialization: "Терапевт",
+            link: "Kuasheva",
             docs: [],
             education: [`- 2015 г. Кубанский государсвенный медицинский университет, Краснодар, стоматологический факультет, Стоматолог.`, <br />,`
             - 2016 г. Центральный институт повышения квалификации и профессиональной переподготовки, Стоматология ортопедическая, Врач стоматолог ортопед.`, <br />,`
@@ -143,7 +147,7 @@ const Doctors = observer(() => {
                             </div>
                         </div>
                         {doctors?.map(doc => (
-                            <Link to={`/doctors/doctor/${doc.id}`} onClick={() => { setData(doc.img, doc.name, doc.surname, doc.patronimic, doc.specialization, doc.docs, doc.education, doc.qualification, doc.about) }}>
+                            <Link to={`/doctors/${doc.link}`} onClick={() => { setData(doc.img, doc.name, doc.surname, doc.patronimic, doc.specialization, doc.docs, doc.education, doc.qualification, doc.about) }}>
                                 <div className="ph">
                                     <img src={doc.img} alt={doc.surname} />
                                     <h3>

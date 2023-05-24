@@ -43,11 +43,11 @@ const AdminComment = (props) => {
 
   return (
     <div className="admin-comment">
-    <button onClick={()=>{props.setBtn('')}}>Назад</button>
+    <button onClick={()=>{props.setBtn('')}} className="back-Btn">Назад</button>
       <h2>Комментарии</h2>
       <div>
         <h3>Ожидающие публикации</h3>
-        <table className="table">
+        <table className="table-Coms">
           <thead>
             <tr>
               <th>Имя</th>

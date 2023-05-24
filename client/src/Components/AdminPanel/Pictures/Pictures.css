@@ -1,38 +1,75 @@
 .image-pairs {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
-  }
-  
-  .image-pair {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  .image {
-    width: 200px;
-    height: auto;
-  }
-  
-  .delete-button {
-    margin-top: 10px;
-  }
-  
-  .existing-images {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-  }
-  
-  .existing-images th,
-  .existing-images td {
-    border: 1px solid #ccc;
-    padding: 10px;
-  }
-  
-  .existing-images th {
-    background-color: #f0f0f0;
-  }
-  
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+
+.image-pair {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.image {
+  width: 200px;
+  height: auto;
+}
+
+.delete-button {
+  margin-top: 10px;
+}
+
+.existing-images {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.existing-images th,
+.existing-images td {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.existing-images th {
+  background-color: #f0f0f0;
+}
+
+.upload-image {
+  width: 50%;
+  margin-left:auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#title {
+  width: 25%;
+  border: none;
+  border-radius: 5px;
+  padding: 2px;
+  margin-bottom: 5px;
+}
+
+#description {
+  width: 60%;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.upload-image button {
+  background-color: rgb(64, 87, 141);
+  padding: 5px;
+  color:whitesmoke;
+  border: none;
+  border-radius: 5px;
+}
+
+.image-cont img {
+  height: 100px;
+  width: auto;
+}

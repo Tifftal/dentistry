@@ -36,11 +36,12 @@ const AdminPanel = () => {
   return (
     <div className="admin-panel">
       {!auth ? (
-        <div>
-          <form onSubmit={handleSubmitForm}>
+        <div className="auth">
+          <form onSubmit={handleSubmitForm} className="auth-form">
+            <h2>Вход</h2>
             <input className="login" name="login" placeholder="Логин" id="login" required></input>
             <input className="password" name="password" placeholder="Пароль" id="password" required></input>
-            <button type="submit">Давай ебашь</button>
+            <button type="submit">Войти</button>
           </form>
         </div>
       ) : (
@@ -53,10 +54,10 @@ const AdminPanel = () => {
           ) : btn === 'комментарии' ? (
             <AdminComment setBtn={setBtn} />
           ) : btn === '' ? (
-            <div className="data-list">
-              <button onClick={() => { setBtn('обратный звонок') }}>Обратный звонок</button>
-              <button onClick={() => { setBtn('комментарии') }}>Комментарии</button>
-              <button onClick={() => { setBtn('до/после') }}>До/После</button>
+            <div className="data-list" style={{height: "50vh", width:"100%", marginLeft:"auto", marginRight:"auto"}}>
+              <button onClick={() => { setBtn('обратный звонок') }} style={{width:"200px"}}>Обратный звонок</button>
+              <button onClick={() => { setBtn('комментарии') }} style={{width:"200px"}}>Комментарии</button>
+              <button onClick={() => { setBtn('до/после') }} style={{width:"200px"}}>До/После</button>
             </div>
           ) : null}
         </div>

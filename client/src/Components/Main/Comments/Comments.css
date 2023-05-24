@@ -82,3 +82,22 @@
     padding: 1% 4%;
     text-align: left;
 }
+
+@media screen and (max-width:900px) {
+    .ComBtn {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .BtnOtz {
+        padding: 5px;
+    }
+
+    .BtnOtz button {
+        width: 70%;
+    }
+
+    .table-Coms {
+        width: 100%;
+    }
+}

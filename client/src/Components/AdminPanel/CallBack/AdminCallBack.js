@@ -29,7 +29,7 @@ const AdminCallBack = (props) => {
 
   return (
     <div className="admin-panel">
-      <button onClick={()=>{props.setBtn('')}}>Назад</button>
+      <button onClick={()=>{props.setBtn('')}} className="back-Btn">Назад</button>
       <h2>Обратный звонок</h2>
       <div className="data-list">
         {data.map((item) => (

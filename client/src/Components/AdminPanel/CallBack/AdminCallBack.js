@@ -9,14 +9,36 @@ const AdminCallBack = (props) => {
     fetchData();
   }, []);
 
+  const formatDateTime = (dateTime) => {
+    const date = new Date(dateTime);
+    
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const day = String(date.getDate()).padStart(2, '0');
+    const hours = String(date.getHours()).padStart(2, '0');
+    const minutes = String(date.getMinutes()).padStart(2, '0');
+    const seconds = String(date.getSeconds()).padStart(2, '0');
+  
+    return `${hours}:${minutes}:${seconds} ${day}-${month}-${year}`;
+  };
+  
+  // Пример использования в функции fetchData
   const fetchData = async () => {
     try {
       const response = await axios.get("http://45.12.72.31:8082/callback/get");
-      setData(response.data);
+      const callbackData = response.data;
+  
+      const formattedData = callbackData.map(callback => ({
+        ...callback,
+        date: formatDateTime(callback.date),
+      }));
+  
+      setData(formattedData);
     } catch (error) {
       console.log(error);
     }
   };
+  
 
   const handleDelete = async (id) => {
     try {

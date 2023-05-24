@@ -89,68 +89,70 @@ const Pictures = (props) => {
     };
 
     return (
-        <div>
+        <div className="DoPosle">
             <button onClick={() => { props.setBtn('') }} className="back-Btn">Назад</button>
             <h1>Загрузка</h1>
             <form onSubmit={handleImageUpload} className="upload-image">
                 <label htmlFor="beforeImage">Изображение ДО:</label>
-                <input
+                <input className="fileInput"
                     type="file"
                     id="beforeImage"
                     accept="image/*"
                     required
                 />
                 <label htmlFor="afterImage">Изображение После:</label>
-                <input
+                <input className="fileInput"
                     type="file"
                     id="afterImage"
                     accept="image/*"
                     required
                 />
-                <input
+                <input className="textInput"
                     type="text"
                     id="title"
                     placeholder="Заголовок"
                     required
                 />
-                <textarea
+                <textarea className="areaInput"
                     id="description"
                     placeholder="Описание"
                     required
                 />
                 <button type="submit">Отправить</button>
             </form>
-            <table className="existing-images">
-                <thead>
-                    <tr>
-                        <th>Заголовок</th>
-                        <th>Картинка ДО</th>
-                        <th>Картинка ПОСЛЕ</th>
-                        <th>Действие</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {data.map((image) => (
-                        <tr key={image.id}>
-                            <td>{image.title}</td>
-                            <td className="image-cont">
-                                <img src={image.fileBefore} alt={image.title} className="image" />
-                            </td>
-                            <td className="image-cont">
-                                <img src={image.fileAfter} alt={image.title} className="image" />
-                            </td>
-                            <td>
-                                <button
-                                    onClick={() => handleImageDelete(image)}
-                                    className="delete-button"
-                                >
-                                    Удалить
-                                </button>
-                            </td>
+            <div className="Table">
+                <table className="existing-images">
+                    <thead>
+                        <tr>
+                            <th>Заголовок</th>
+                            <th>Картинка ДО</th>
+                            <th>Картинка ПОСЛЕ</th>
+                            <th>Действие</th>
                         </tr>
-                    ))}
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                        {data.map((image) => (
+                            <tr key={image.id}>
+                                <td>{image.title}</td>
+                                <td className="image-cont">
+                                    <img src={image.fileBefore} alt={image.title} className="image" />
+                                </td>
+                                <td className="image-cont">
+                                    <img src={image.fileAfter} alt={image.title} className="image" />
+                                </td>
+                                <td>
+                                    <button
+                                        onClick={() => handleImageDelete(image)}
+                                        className="delete-button"
+                                    >
+                                        Удалить
+                                    </button>
+                                </td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            </div>
         </div>
     );
 };

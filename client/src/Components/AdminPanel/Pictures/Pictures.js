@@ -4,6 +4,8 @@ import axios from "axios";
 const Pictures = () => {
   const [images, setImages] = useState([]);
   const [existingImages, setExistingImages] = useState([]);
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
 
   useEffect(() => {
     fetchExistingImages();
@@ -30,6 +32,8 @@ const Pictures = () => {
             const base64String = reader.result.split(",")[1];
             const response = await axios.post("http://localhost:8082/api", {
               image: base64String,
+              title,
+              description,
             });
             resolve(response.data.url);
           };
@@ -52,6 +56,8 @@ const Pictures = () => {
       }
 
       setImages([...images, ...newImages]);
+      setTitle("");
+      setDescription("");
     } catch (error) {
       console.log(error);
     }
@@ -69,10 +75,53 @@ const Pictures = () => {
   return (
     <div>
       <h1>Picture Upload</h1>
-      <input type="file" multiple onChange={handleImageUpload} />
+      <form onSubmit={handleImageUpload}>
+        <div>
+          <label htmlFor="beforeImage">Before Image:</label>
+          <input
+            type="file"
+            id="beforeImage"
+            accept="image/*"
+            required
+            multiple
+            onChange={handleImageUpload}
+          />
+        </div>
+        <div>
+          <label htmlFor="afterImage">After Image:</label>
+          <input
+            type="file"
+            id="afterImage"
+            accept="image/*"
+            required
+            multiple
+            onChange={handleImageUpload}
+          />
+        </div>
+        <div>
+          <label htmlFor="title">Title:</label>
+          <input
+            type="text"
+            id="title"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+            required
+          />
+        </div>
+        <div>
+          <label htmlFor="description">Description:</label>
+          <textarea
+            id="description"
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+            required
+          />
+        </div>
+        <button type="submit">Submit</button>
+      </form>
       <div className="image-pairs">
         {images.map((pair, index) => (
-          <div key={index} className="image-pair">
+          <div className="image-pair" key={index}>
             <div>
               <h2>{pair[0].name}</h2>
               <img src={pair[0].url} alt={pair[0].name} className="image" />
@@ -96,13 +145,12 @@ const Pictures = () => {
           </div>
         ))}
       </div>
-      <h2>Existing Images</h2>
       <table className="existing-images">
         <thead>
           <tr>
             <th>Name</th>
             <th>Image</th>
-            <th>Delete</th>
+            <th>Action</th>
           </tr>
         </thead>
         <tbody>

@@ -70,7 +70,6 @@ const Pictures = () => {
                         accept="image/*"
                         required
                         multiple
-                        onChange={handleImageUpload}
                     />
                 </div>
                 <div>
@@ -81,7 +80,6 @@ const Pictures = () => {
                         accept="image/*"
                         required
                         multiple
-                        onChange={handleImageUpload}
                     />
                 </div>
                 <div>

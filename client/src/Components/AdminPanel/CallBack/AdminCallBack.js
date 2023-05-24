@@ -5,10 +5,6 @@ import "./adminCallBack.css";
 const AdminCallBack = (props) => {
   const [data, setData] = useState([]);
 
-  useEffect(() => {
-    fetchData();
-  }, []);
-
   const formatDateTime = (dateTime) => {
     const date = new Date(dateTime);
     
@@ -39,6 +35,9 @@ const AdminCallBack = (props) => {
     }
   };
   
+  useEffect(() => {
+    fetchData();
+  }, [fetchData]);
 
   const handleDelete = async (id) => {
     try {

@@ -6,10 +6,6 @@ const AdminComment = (props) => {
   const [pendingComments, setPendingComments] = useState([]);
   const [publishedComments, setPublishedComments] = useState([]);
 
-  useEffect(() => {
-    fetchData();
-  }, []);
-
   const formatDateTime = (dateTime) => {
     const date = new Date(dateTime);
     
@@ -40,6 +36,10 @@ const AdminComment = (props) => {
       console.log(error);
     }
   };
+
+  useEffect(() => {
+    fetchData();
+  }, [fetchData]);
 
   const handleDelete = async (id) => {
     try {

@@ -1,7 +1,5 @@
-import react from "react"
+import React from "react"
 import './services.css'
-import { Link } from "react-router-dom"
-import DownloadLink from "react-download-link";
 
 const Services = () => {
 

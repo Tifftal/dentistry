@@ -16,7 +16,7 @@ function Okno(props) {
             date: new Date().toISOString(),
         };
 
-        console.log(data);
+        props.onClose();
 
         axios.post('http://45.12.72.31:8082/callback/send', data)
             .then(function (response) {

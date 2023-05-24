@@ -26,7 +26,7 @@ const FirstContainer = () => {
             date: new Date().toISOString(),
         }
 
-        console.log(data);
+        HandleCloseNote()
 
         axios.post('http://45.12.72.31:8082/callback/send', data)
             .then(function (response){

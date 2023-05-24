@@ -9,11 +9,7 @@ import Doctors from './Components/Doctors/doctors';
 import Vacancy from './Components/Vacancy/vacancy'
 import Portfolio from './Components/Portfolio/portfolio'
 import Documnets from './Components/Documents/documents'
-import Doctor from './Components/Doctor/Doctor';
 import AdminPanel from './Components/AdminPanel/AdminPanel';
-import AdminCallBack from './Components/AdminPanel/CallBack/AdminCallBack';
-import AdminComment from './Components/AdminPanel/Comment/AdminComment';
-import Pictures from './Components/AdminPanel/Pictures/Pictures';
 import Fatima from './Components/Doctor/FatimaQA';
 import Smyk from './Components/Doctor/Smyk';
 import ElenaTac from './Components/Doctor/ElenaTac';

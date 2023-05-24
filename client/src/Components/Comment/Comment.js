@@ -18,7 +18,7 @@ function Comment(props) {
       date: new Date(),
     }
 
-    console.log(data);
+    props.onClose();
 
     axios.post("http://45.12.72.31:8082/comments/send", data)
       .then(function (response) {

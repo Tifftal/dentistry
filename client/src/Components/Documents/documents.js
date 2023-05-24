@@ -1,6 +1,5 @@
-import react, { useState } from "react"
+import React from 'react'
 import './documents.css'
-import DoctorsCarousel from "../Doctors/Carousel/DoctorsCarousel";
 
 
 const Documents = () => {

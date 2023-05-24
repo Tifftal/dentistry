@@ -65,7 +65,7 @@ const Carousel = () => {
         style={{ transform: `translateX(-${currentSlide * 100}%)` }}
       >
         {slides?.map((slide) => (
-          <Link to={`/doctors/doctor/${slide.link}`} key={slide.id} className="slide" style={{textDecoration: "none", color: "black"}}>
+          <Link to={`/doctors/${slide.link}`} key={slide.id} className="slide" style={{textDecoration: "none", color: "black"}}>
               <img src={slide.img} alt={`Slide ${slide.id}`} />
               <h5>{slide.name} {slide.surname} {slide.patronimic}</h5>
               <p>{slide.vacancy}</p>

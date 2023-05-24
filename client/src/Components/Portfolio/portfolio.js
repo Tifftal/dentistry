@@ -2,33 +2,6 @@ import React, {useState, useEffect} from "react";
 import './portfolio.css';
 import axios from "axios";
 
-const ImageComponent = () => {
-  const [base64Image, setBase64Image] = useState('');
-
-  useEffect(() => {
-    const loadImage = async () => {
-      try {
-        const response = await fetch('../../IMG/protezirovanie_zubov_foto_do_i_posle_7.jpg');
-        const blob = await response.blob();
-
-        const reader = new FileReader();
-        reader.onloadend = () => {
-          const base64Data = reader.result;
-          setBase64Image(base64Data);
-        };
-        reader.readAsDataURL(blob);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-
-    loadImage();
-  }, []);
-
-  return <img src={base64Image} alt="Image" />;
-};
-
-
 const Portfolio = () => {
     const [data, setData] = useState([])
 
@@ -70,7 +43,7 @@ const Portfolio = () => {
                                 <img src={image.fileBefore} alt={image.title} />
                             </div>
                             <div className="case">
-                                {/* <img src="../../IMG/protezirovanie_zubov_foto_do_i_posle_7-2.jpg" /> */}
+      
                                 <img src={image.fileAfter} alt={image.title} />
                             </div>
                         </div>
@@ -79,9 +52,6 @@ const Portfolio = () => {
                                 {image.title}
                             </h3>
                             <p>
-                                {/* Жалобы: боль в зубе при надкусывании.
-                                В другой клинике сказали, что необходимо удаление, т. к большая киста.
-                                Была удалена не корректная пломба, извлечён металлический штифт. В итоге спасли зуб, киста зажила. */}
                                 {image.content}
                             </p>
                         </div>

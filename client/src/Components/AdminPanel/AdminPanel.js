@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
 
 import "./adminPanel.css";
 import AdminCallBack from "./CallBack/AdminCallBack";

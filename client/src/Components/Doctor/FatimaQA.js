@@ -1,5 +1,4 @@
 import React from "react";
-import Doc from "../../Store/Doctors";
 import './Doctor.css';
 
 const Fatima = () => {
@@ -51,7 +50,7 @@ const Fatima = () => {
             </h1>
             <div className="DoctorCard">
                 <div>
-                    <img src={Doc.img} />
+                    <img src={Doc.img} alt={Doc.surname}/>
                 </div>
                 <div>
                     <h2>Образование</h2>

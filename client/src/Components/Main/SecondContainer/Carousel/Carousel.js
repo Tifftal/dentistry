@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 import './Carousel.css';
 
 const slides = [
-  // {
-  //   id: 1,
-  //   img: "../../IMG/DSC02687-2.jpg",
-  //   name: "Еремеева",
-  //   surname: "Екатерина",
-  //   patronimic: "Романовна",
-  //   vacancy: "Терапевт",
-  // },
+  {
+    id: 1,
+    img: "../../IMG/DSC02687-2.jpg",
+    name: "Еремеева",
+    surname: "Екатерина",
+    patronimic: "Романовна",
+    vacancy: "Терапевт",
+  },
   {
     id: 2,
     img: "../../IMG/DSC02747-2.jpg",
@@ -26,14 +26,14 @@ const slides = [
     patronimic: "Александрович",
     vacancy: "Хирург-имплантолог",
   },
-  {
-    id: 4,
-    img: "../../IMG/DSC02599-2.jpg",
-    name: "Еремеева",
-    surname: "Екатерина",
-    patronimic: "Романовна",
-    vacancy: "Терапевт",
-  },
+  // {
+  //   id: 4,
+  //   img: "../../IMG/DSC02599-2.jpg",
+  //   name: "Ладно",
+  //   surname: "Ладно",
+  //   patronimic: "Ладно",
+  //   vacancy: "Лано?",
+  // },
   {
     id: 5,
     img: "../../IMG/DSC02705-2.jpg",

@@ -8,7 +8,6 @@ import FourthContainer from "./FourthContainer/FourthContainer";
 import FifthContainer from "./FifthContainer/FifthContainer";
 import SixthContainer from "./SixthContainer/SixthContainer";
 import Way from "./Way/way";
-import Comments from "./Comments/Comments";
 
 const Main = () => {
 
@@ -21,7 +20,6 @@ const Main = () => {
             <FifthContainer />
             <SixthContainer />
             <Way />
-            <Comments />
         </div>
     );
 }

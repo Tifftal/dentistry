@@ -1,11 +1,9 @@
 .sixthContainer {
-    background: linear-gradient(rgb(156, 187, 190), 70%, white);
-    /* background-color: rgb(156, 187, 190); */
+    background: linear-gradient(rgb(156, 187, 190), white);
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-auto-rows: minmax(55px, auto);
-    padding-bottom: 7%;
-    /* margin-bottom: 5%; */
+    margin-bottom: 5%;
 }
 
 .titleSixthContainer h1 {

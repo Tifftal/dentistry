@@ -141,6 +141,28 @@ const Services = () => {
                                 <td className="col3">29900 ₽</td>
                             </tr>
                         </table>
+                        {/* <div className="serv">
+                            <a href="#">1.</a>
+                            <div className="podrobnee"><a href="#">Подробнее</a></div>
+                        </div>
+                        <div className="serv">
+                            <a href="#">2.</a>
+                        </div>
+                        <div className="serv">
+                            <a href="#">3.</a>
+                        </div>
+                        <div className="serv">
+                            <a href="#">4.</a>
+                        </div>
+                        <div className="serv">
+                            <a href="#">5.</a>
+                        </div>
+                        <div className="serv">
+                            <a href="#">6.</a>
+                        </div>
+                        <div className="serv">
+                            <a href="#">7.</a>
+                        </div> */}
                     </div>
                 </div>
             </div>

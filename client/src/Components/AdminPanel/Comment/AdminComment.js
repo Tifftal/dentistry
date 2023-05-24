@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./adminComment.css";
 
-const AdminComment = () => {
+const AdminComment = (props) => {
   const [pendingComments, setPendingComments] = useState([]);
   const [publishedComments, setPublishedComments] = useState([]);
 
@@ -43,6 +43,7 @@ const AdminComment = () => {
 
   return (
     <div className="admin-comment">
+    <button onClick={()=>{props.setBtn('')}}>Назад</button>
       <h2>Комментарии</h2>
       <div>
         <h3>Ожидающие публикации</h3>

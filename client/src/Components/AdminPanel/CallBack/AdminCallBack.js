@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./adminCallBack.css";
 
-const AdminCallBack = () => {
+const AdminCallBack = (props) => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -29,6 +29,7 @@ const AdminCallBack = () => {
 
   return (
     <div className="admin-panel">
+      <button onClick={()=>{props.setBtn('')}}>Назад</button>
       <h2>Обратный звонок</h2>
       <div className="data-list">
         {data.map((item) => (

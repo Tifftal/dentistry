@@ -63,9 +63,6 @@ const Portfolio = () => {
                         <li>Портфолио</li>
                     </ul>
                 </div>
-                                <img src="../../IMG/protezirovanie_zubov_foto_do_i_posle_7.jpg" />
-                                имаге компонент
-                                <ImageComponent />
                 {data.map(image => (
                     <div className="clinicalCase">
                         <div className="caseContainer">

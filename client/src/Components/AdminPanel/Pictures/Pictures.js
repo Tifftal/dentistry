@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-const Pictures = () => {
+const Pictures = (props) => {
     const [data, setData] = useState([])
 
     useEffect(() => {
@@ -88,6 +88,7 @@ const Pictures = () => {
 
     return (
         <div>
+            <button onClick={()=>{props.setBtn('')}}>Назад</button>
             <h1>Загрузка</h1>
             <form onSubmit={handleImageUpload}>
                 <div>

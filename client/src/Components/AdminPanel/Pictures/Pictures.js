@@ -2,19 +2,16 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 const Pictures = () => {
-    const [images, setImages] = useState([]);
-    const [existingImages, setExistingImages] = useState([]);
-    const [title, setTitle] = useState("");
-    const [description, setDescription] = useState("");
+    const [data, setData] = useState([])
 
-    useEffect(() => {
+    useEffect(()=>{
         fetchExistingImages();
-    }, []);
+    },[])
 
     const fetchExistingImages = async () => {
         try {
             const response = await axios.get("http://localhost:8082/work/get");
-            setExistingImages(response.data);
+            setData(response.data);
         } catch (error) {
             console.log(error);
         }
@@ -53,7 +50,7 @@ const Pictures = () => {
     const handleImageDelete = async (image) => {
         try {
             await axios.post(`http://localhost:8082/work/delete/${image.id}`);
-            setImages(images.filter((pair) => pair[0].name !== image.name));
+            fetchExistingImages();
         } catch (error) {
             console.log(error);
         }
@@ -88,8 +85,6 @@ const Pictures = () => {
                     <input
                         type="text"
                         id="title"
-                        value={title}
-                        onChange={(e) => setTitle(e.target.value)}
                         required
                     />
                 </div>
@@ -97,53 +92,29 @@ const Pictures = () => {
                     <label htmlFor="description">Описание:</label>
                     <textarea
                         id="description"
-                        value={description}
-                        onChange={(e) => setDescription(e.target.value)}
                         required
                     />
                 </div>
                 <button type="submit">Отправить</button>
             </form>
-            <div className="image-pairs">
-                {images.map((pair, index) => (
-                    <div className="image-pair" key={index}>
-                        <div>
-                            <h2>{pair[0].name}</h2>
-                            <img src={pair[0].url} alt={pair[0].name} className="image" />
-                            <button
-                                onClick={() => handleImageDelete(pair[0])}
-                                className="delete-button"
-                            >
-                                Удалить
-                            </button>
-                        </div>
-                        <div>
-                            <h2>{pair[1].name}</h2>
-                            <img src={pair[1].url} alt={pair[1].name} className="image" />
-                            <button
-                                onClick={() => handleImageDelete(pair[1])}
-                                className="delete-button"
-                            >
-                                Удалить
-                            </button>
-                        </div>
-                    </div>
-                ))}
-            </div>
             <table className="existing-images">
                 <thead>
                     <tr>
-                        <th>Название</th>
-                        <th>Картинка</th>
+                        <th>Заголовок</th>
+                        <th>Картинка ДО</th>
+                        <th>Картинка ПОСЛЕ</th>
                         <th>Действие</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {existingImages.map((image) => (
-                        <tr key={image.name}>
-                            <td>{image.name}</td>
+                    {data.map((image) => (
+                        <tr key={image.id}>
+                            <td>{image.title}</td>
                             <td>
-                                <img src={image.url} alt={image.name} className="image" />
+                                <img src={`data:image/jpg;base64,`+image.fileBefore} alt={image.title} className="image" />
+                            </td>
+                            <td>
+                                <img src={`data:image/jpg;base64,`+image.fileAfter} alt={image.title} className="image" />
                             </td>
                             <td>
                                 <button

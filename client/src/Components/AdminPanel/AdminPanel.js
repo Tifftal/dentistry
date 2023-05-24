@@ -45,7 +45,7 @@ const AdminPanel = () => {
           </form>
         </div>
       ) : (
-        <div>
+        <div className="AdminTitle">
           <h2>Панель администратора</h2>
           {btn === 'до/после' ? (
             <Pictures setBtn={setBtn} />

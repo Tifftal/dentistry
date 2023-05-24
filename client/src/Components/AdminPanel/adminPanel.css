@@ -51,15 +51,31 @@
 }
 
 .data-list button {
+  margin-top: 2%;
   width: 100%;
   height: 50px;
   border-radius: 5px;
   text-decoration: none;
   color: whitesmoke;
-  background-color: rgba(58, 79, 128, 0.7);
+  background-color: rgba(58, 79, 128);
   border: none;
+  transition: 0.5s;
+  font-size: 100%;
+  font-weight: 400;
+}
+
+.data-list button:hover {
+  background-color: rgba(58, 79, 128, 0.7);
 }
 
 .data-list a {
   text-decoration: none;
+}
+
+.AdminTitle h2 {
+  margin: 3%;
+  font-weight: 700;
+  font-size: 250%;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.6);
 }

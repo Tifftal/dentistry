@@ -55,7 +55,7 @@ const Services = () => {
                             Окончательная стоимость лечения определяется после очного осмотра и проведения диагностики.
                         </h1>
                         {/* <a href="/"><button>Наши гарантии (docx)</button></a> */}
-                        <a href="/"><button>Заказать услугу</button></a>
+                        {/* <a href="/"><button>Заказать услугу</button></a> */}
                     </div>
                     <div className="spisokServ">
                         <table>

@@ -29,13 +29,13 @@ const AdminCallBack = () => {
 
   return (
     <div className="admin-panel">
-      <h2>Коллбек</h2>
+      <h2>Обратный звонок</h2>
       <div className="data-list">
         {data.map((item) => (
           <div key={item.id} className="data-item">
-            <p><strong>Name:</strong> {item.name}</p>
-            <p><strong>Number:</strong> {item.number}</p>
-            <p><strong>Time:</strong> {item.time}</p>
+            <p><strong>Имя:</strong> {item.name}</p>
+            <p><strong>Номер:</strong> {item.number}</p>
+            <p><strong>Время:</strong> {item.date}</p>
             <button
               onClick={() => handleDelete(item.id)}
               className="delete-button"

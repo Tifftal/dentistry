@@ -12,7 +12,7 @@ const AdminPanel = () => {
       <div className="data-list">
         <Link to="/admin/panel/callback"><button>Обратный звонок</button></Link>
         <Link to="/admin/panel/comment"><button>Комментарии</button></Link>
-        <Link to="/admin/panel/teeth/images"><button>До/После</button></Link>
+        <Link to="/admin/panel/images"><button>До/После</button></Link>
       </div>
     </div>
   );

@@ -1,13 +1,14 @@
-.image-list {
+.image-pairs {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
   }
   
-  .image-card {
+  .image-pair {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
+    margin-bottom: 20px;
   }
   
   .image {
@@ -17,5 +18,21 @@
   
   .delete-button {
     margin-top: 10px;
+  }
+  
+  .existing-images {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .existing-images th,
+  .existing-images td {
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+  .existing-images th {
+    background-color: #f0f0f0;
   }
   

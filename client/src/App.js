@@ -13,6 +13,7 @@ import Doctor from './Components/Doctor/Doctor';
 import AdminPanel from './Components/AdminPanel/AdminPanel';
 import AdminCallBack from './Components/AdminPanel/CallBack/AdminCallBack';
 import AdminComment from './Components/AdminPanel/Comment/AdminComment';
+import Pictures from './Components/AdminPanel/Pictures/Pictures';
 
 
 function App() {
@@ -32,7 +33,7 @@ function App() {
           <Route path='/admin/panel' element={<AdminPanel />}></Route>
           <Route path='/admin/panel/callback' element={<AdminCallBack />}></Route>
           <Route path='/admin/panel/comment' element={<AdminComment />}></Route>
-          {/* <Route path='/admin/panel/teeth/images'></Route> */}
+          <Route path='/admin/panel/images' element={<Pictures />}></Route>
         </Routes>
         <Footer />
       </BrowserRouter>

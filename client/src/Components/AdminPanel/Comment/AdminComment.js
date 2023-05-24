@@ -10,14 +10,32 @@ const AdminComment = (props) => {
     fetchData();
   }, []);
 
+  const formatDateTime = (dateTime) => {
+    const date = new Date(dateTime);
+    
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const day = String(date.getDate()).padStart(2, '0');
+    const hours = String(date.getHours()).padStart(2, '0');
+    const minutes = String(date.getMinutes()).padStart(2, '0');
+    const seconds = String(date.getSeconds()).padStart(2, '0');
+  
+    return `${hours}:${minutes}:${seconds} ${day}-${month}-${year}`;
+  };
+  
+  // Пример использования в функции fetchData
   const fetchData = async () => {
     try {
-      const response = await axios.get(
-        "http://45.12.72.31:8082/comments/getAllForAdmin"
-      );
+      const response = await axios.get("http://45.12.72.31:8082/comments/getAllForAdmin");
       const comments = response.data;
-      setPendingComments(comments.filter(comment => comment.status === "pending"));
-      setPublishedComments(comments.filter(comment => comment.status === "published"));
+  
+      const formattedComments = comments.map(comment => ({
+        ...comment,
+        date: formatDateTime(comment.date),
+      }));
+  
+      setPendingComments(formattedComments.filter(comment => comment.status === "pending"));
+      setPublishedComments(formattedComments.filter(comment => comment.status === "published"));
     } catch (error) {
       console.log(error);
     }
@@ -43,13 +61,14 @@ const AdminComment = (props) => {
 
   return (
     <div className="admin-comment">
-    <button onClick={()=>{props.setBtn('')}} className="back-Btn">Назад</button>
+      <button onClick={() => { props.setBtn('') }} className="back-Btn">Назад</button>
       <h2>Комментарии</h2>
       <div>
         <h3>Ожидающие публикации</h3>
         <table className="table-Coms">
           <thead>
             <tr>
+              <th>Дата</th>
               <th>Имя</th>
               <th>Номер</th>
               <th>Комментарий</th>
@@ -59,6 +78,7 @@ const AdminComment = (props) => {
           <tbody>
             {pendingComments.map((comment) => (
               <tr key={comment.id}>
+                <td>{comment.date}</td>
                 <td>{comment.name}</td>
                 <td>{comment.number}</td>
                 <td>{comment.comment}</td>

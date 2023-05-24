@@ -21,17 +21,36 @@ const Comments = () => {
         fetchData();
     }, []);
 
-    const fetchData = async () => {
+    const formatDateTime = (dateTime) => {
+        const date = new Date(dateTime);
+        
+        const year = date.getFullYear();
+        const month = String(date.getMonth() + 1).padStart(2, '0');
+        const day = String(date.getDate()).padStart(2, '0');
+        const hours = String(date.getHours()).padStart(2, '0');
+        const minutes = String(date.getMinutes()).padStart(2, '0');
+        const seconds = String(date.getSeconds()).padStart(2, '0');
+      
+        return `${hours}:${minutes}:${seconds} ${day}-${month}-${year}`;
+      };
+      
+      // Пример использования в функции fetchData
+      const fetchData = async () => {
         try {
-            const response = await axios.get(
-                "http://45.12.72.31:8082/comments/getAllForUser"
-            );
-            const publishedComments = response.data;
-            setComments(publishedComments);
+          const response = await axios.get("http://45.12.72.31:8082/comments/getAllForUser");
+          const comments = response.data;
+      
+          const formattedComments = comments.map(comment => ({
+            ...comment,
+            date: formatDateTime(comment.date),
+          }));
+      
+          setComments(formattedComments);
         } catch (error) {
-            console.log(error);
+          console.log(error);
         }
-    };
+      };
+      
 
     return (
         <div className="comments">

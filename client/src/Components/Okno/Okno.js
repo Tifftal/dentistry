@@ -18,7 +18,7 @@ function Okno(props) {
 
         console.log(data);
 
-        axios.post('http://localhost:8082/callback/send', data)
+        axios.post('http://45.12.72.31:8082/callback/send', data)
             .then(function (response) {
                 console.log(response.data);
             })

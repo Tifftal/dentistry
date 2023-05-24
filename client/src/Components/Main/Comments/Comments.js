@@ -24,7 +24,7 @@ const Comments = () => {
     const fetchData = async () => {
         try {
             const response = await axios.get(
-                "http://localhost:8082/comments/getAllForUser"
+                "http://45.12.72.31:8082/comments/getAllForUser"
             );
             const publishedComments = response.data;
             setComments(publishedComments);

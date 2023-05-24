@@ -79,3 +79,13 @@
   text-align: left;
   color: rgba(0, 0, 0, 0.6);
 }
+
+@media screen and (max-width: 900px) {
+  .admin-panel{
+    width: auto;
+  }
+
+  .admin-panel1{
+    width: auto;
+  }
+}

@@ -3,12 +3,12 @@ import './Doctor.css';
 
 const Smyk = () => {
     const onButtonClick = () => {
-        fetch('DOC/Смык Александр Александрович.rar').then(response => {
+        fetch('DOC/СмыкАлександрАлександрович.rar').then(response => {
             response.blob().then(blob => {
                 const fileURL = window.URL.createObjectURL(blob);
                 let alink = document.createElement('a');
                 alink.href = fileURL;
-                alink.download = 'Смык Александр Александрович.rar';
+                alink.download = 'СмыкАлександрАлександрович.rar';
                 alink.click();
             });
         });

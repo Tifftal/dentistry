@@ -70,7 +70,7 @@ const Fatima = () => {
                     <p>
                         {Doc.about}
                     </p>
-                    <button onClick={()=>{onButtonClick()}}>Документы</button>
+                    <a href="#"><button onClick={()=>{onButtonClick()}}>Документы</button></a>
                 </div>
 
             </div>

@@ -253,6 +253,10 @@
     font-weight: 500;
 }
 
+.textBar p {
+    user-select: all;
+}
+
 .lastInf {
     display: grid;
     grid-template-columns: 55% 45%;

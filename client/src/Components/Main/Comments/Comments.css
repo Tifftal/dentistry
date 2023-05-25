@@ -92,9 +92,12 @@
 
     .BtnOtz {
         padding: 5px;
+        justify-content: center;
+        align-items: center;
     }
-
+    
     .BtnOtz button {
+        margin-left: 0px;
         width: 70%;
     }
 

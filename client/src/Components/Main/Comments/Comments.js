@@ -85,7 +85,7 @@ const Comments = () => {
                     </p>
                 </div>
                 <div className="BtnOtz">
-                    <a href="#"><button onClick={HandleOpenNote}>Оставить отзыв</button></a>
+                    <button onClick={HandleOpenNote}>Оставить отзыв</button>
                 </div>
             </div>
             <div >

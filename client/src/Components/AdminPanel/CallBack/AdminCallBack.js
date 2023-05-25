@@ -69,13 +69,15 @@ const AdminCallBack = (props) => {
       <h3 style={{color: "rgba(0, 0, 0, 0.6)"}}>Обратный звонок</h3>
       <div className="data-list">
         {data.map((item) => (
-          <div key={item.id} className="data-item">
+          <div key={item.id} className="data-item" style={{marginBottom: "10px"}}>
             <p><strong>Имя:</strong> {item.name}</p>
             <p><strong>Номер:</strong> {item.number}</p>
             <p><strong>Время:</strong> {item.date}</p>
             <button
               onClick={() => handleDelete(item.id)}
-              className="delete-button">
+              className="delete-button"
+              style={{height: "35px", fontSize: "15px"}}
+              >
               Удалить
             </button>
           </div>

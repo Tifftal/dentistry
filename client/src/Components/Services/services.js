@@ -25,7 +25,7 @@ const Services = () => {
                     <h1>Услуги</h1>
                 </div>
                 <div>
-                    <ul class="breadcrumbServ">
+                    <ul className="breadcrumbServ">
                         <li><a href="/">Главная</a></li>
                         <li>Услуги</li>
                     </ul>
@@ -57,6 +57,7 @@ const Services = () => {
                     </div>
                     <div className="spisokServ">
                         <table>
+                        <tbody>
                             {/* <caption>Таблица № 1</caption> */}
                             <tr>
                                 <td className="col1">1.</td>
@@ -138,6 +139,7 @@ const Services = () => {
                                 <td className="col2">Внутрикостная дентальная имплантация Implantium (Корея)</td>
                                 <td className="col3">29900 ₽</td>
                             </tr>
+                            </tbody>
                         </table>
                     </div>
                 </div>

@@ -2,17 +2,6 @@ import React from "react";
 import './Doctor.css';
 
 const Smyk = () => {
-    const onButtonClick = () => {
-        fetch('DOC/СмыкАлександрАлександрович.rar').then(response => {
-            response.blob().then(blob => {
-                const fileURL = window.URL.createObjectURL(blob);
-                let alink = document.createElement('a');
-                alink.href = fileURL;
-                alink.download = 'СмыкАлександрАлександрович.rar';
-                alink.click();
-            });
-        });
-    };
     
 
     const Doc = {

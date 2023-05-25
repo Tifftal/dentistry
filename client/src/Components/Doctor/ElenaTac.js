@@ -3,21 +3,6 @@ import './Doctor.css';
 
 const ElenaTac = () => {
 
-    const onButtonClick = () => {
-        // using Java Script method to get PDF file
-        fetch('DOC/ТаценкоЕленаГеннадьевна.rar').then(response => {
-            response.blob().then(blob => {
-                // Creating new object of PDF file
-                const fileURL = window.URL.createObjectURL(blob);
-                // Setting various property values
-                let alink = document.createElement('a');
-                alink.href = fileURL;
-                alink.download = 'ТаценкоЕленаГеннадьевна.rar';
-                alink.click();
-            })
-        })
-    }
-
     const Doc = {
         id: 1,
             img: "../../IMG/DSC02747-2.jpg",

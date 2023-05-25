@@ -147,7 +147,7 @@ const Doctors = observer(() => {
                             </div>
                         </div>
                         {doctors?.map(doc => (
-                            <Link to={`/doctors/${doc.link}`} onClick={() => { setData(doc.img, doc.name, doc.surname, doc.patronimic, doc.specialization, doc.docs, doc.education, doc.qualification, doc.about) }}>
+                            <Link key={doc.id} to={`/doctors/${doc.link}`} onClick={() => { setData(doc.img, doc.name, doc.surname, doc.patronimic, doc.specialization, doc.docs, doc.education, doc.qualification, doc.about) }}>
                                 <div className="ph">
                                     <img src={doc.img} alt={doc.surname} />
                                     <h3>

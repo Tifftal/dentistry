@@ -69,7 +69,7 @@ const Portfolio = () => {
                     <h1>Портфолио</h1>
                 </div>
                 <div>
-                    <ul class="breadcrumbPort">
+                    <ul className="breadcrumbPort">
                         <li><a href="/">Главная</a></li>
                         <li><a href="/doctors">Команда</a></li>
                         <li>Портфолио</li>
@@ -77,7 +77,7 @@ const Portfolio = () => {
                 </div>
                 {window.innerWidth > 900 ? 
                 data.map(image => (
-                    <div className="clinicalCase">
+                    <div className="clinicalCase" key={image.id}>
                         <div className="caseContainer">
                             <div className="case">
                                 <img src={image.fileBefore} alt={image.title} />

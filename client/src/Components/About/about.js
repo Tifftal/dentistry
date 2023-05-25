@@ -1,4 +1,4 @@
-import react from "react"
+import React from "react"
 import "./about.css"
 import Carousel from "./AboutCarousel/Carousel"
 
@@ -10,7 +10,7 @@ const About = () => {
                     <h1>О нас</h1>
                 </div>
                 <div>
-                    <ul class="breadcrumbAbout">
+                    <ul className="breadcrumbAbout">
                         <li><a href="/">Главная</a></li>
                         <li>О нас</li>
                     </ul>

@@ -25,7 +25,7 @@ const Documents = () => {
                     <h1>Документы</h1>
                 </div>
                 <div>
-                    <ul class="breadcrumb">
+                    <ul className="breadcrumb">
                         <li><a href="/">Главная</a></li>
                         <li>Документы</li>
                     </ul>

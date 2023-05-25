@@ -91,7 +91,7 @@ const AdminComment = (props) => {
             {pendingComments.map((comment) => (
               <tr key={comment.id}>
                 <td className="number">{comment.date}</td>
-                <td>{comment.name}</td>
+                <td style={{color: "#3A4F80"}}>{comment.name}</td>
                 <td className="number">{comment.number}</td>
                 <td>{comment.comment}</td>
                 <td>
@@ -127,7 +127,7 @@ const AdminComment = (props) => {
           <tbody>
             {publishedComments.map((comment) => (
               <tr key={comment.id}>
-                <td>{comment.name}</td>
+                <td style={{color: "#3A4F80"}}>{comment.name}</td>
                 <td className="number">{comment.number}</td>
                 <td>{comment.comment}</td>
                 <td>

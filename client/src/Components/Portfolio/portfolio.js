@@ -45,7 +45,7 @@ const Portfolio = () => {
                                 <img src={slide.fileBefore} className="Before" alt="До" />
                                 <img src={slide.fileAfter} className="After" alt="После" />
                                 <h3>{slide.title}</h3>
-                                <p>{slide.content}</p>
+                                <p style={{wordBreak: "break-all"}}>{slide.content}</p>
                             </div>
                         ))
                     }

@@ -117,3 +117,11 @@
   margin-bottom: 5%;
   margin-top: 5%;
 }
+
+@media screen and (max-width: 900px) {
+  .image-cont {
+    display: none;
+  }
+
+  
+}

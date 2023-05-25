@@ -4,14 +4,14 @@ import './Doctor.css';
 const Fatima = () => {
     const onButtonClick = async() => {
         // using Java Script method to get PDF file
-        await fetch('DOC/Куашева Фатима Магометовна.rar').then(response => {
+        await fetch('DOC/Куашева Фатима Магометовна.zip').then(response => {
             response.blob().then(blob => {
                 // Creating new object of PDF file
                 const fileURL = window.URL.createObjectURL(blob);
                 // Setting various property values
                 let alink = document.createElement('a');
                 alink.href = fileURL;
-                alink.download = 'Куашева Фатима Магометовна.rar';
+                alink.download = 'Куашева Фатима Магометовна.zip';
                 alink.click();
             })
         })

@@ -10,7 +10,7 @@ const Fatima = () => {
                 const fileURL = window.URL.createObjectURL(blob);
                 // Setting various property values
                 let alink = document.createElement('a');
-                alink.href = fileURL + '/КуашеваФатимаМагометовна.zip';
+                alink.href = fileURL + 'DOC/КуашеваФатимаМагометовна.zip';
                 alink.download = 'КуашеваФатимаМагометовна.zip';
                 alink.click();
             })
@@ -36,7 +36,7 @@ const Fatima = () => {
             - врача-стоматолога, Dental art.`, <br />,`
             - 2019 г. Прямые реставрации фронтальной группы зубов Direct Anterior
             Denting.education.`, <br />,`
-            - 2018 г. The bond- Алгоритмы адгезионных процессов, Hexagon international LTD.`, <br />,`
+            - 2018 г. The bond - Алгоритмы адгезионных процессов, Hexagon international LTD.`, <br />,`
             - 2016 г. Клиника боли лица и челюстей, Mis course.`, <br />,`
             - 2014 г. Современные вопросы применения 3D-технологий в
             современной стоматологической практике, Пикассо.`],

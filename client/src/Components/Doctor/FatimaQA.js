@@ -10,7 +10,7 @@ const Fatima = () => {
                 const fileURL = window.URL.createObjectURL(blob);
                 // Setting various property values
                 let alink = document.createElement('a');
-                alink.href = fileURL + 'DOC/КуашеваФатимаМагометовна.zip';
+                alink.href = fileURL;
                 alink.download = 'КуашеваФатимаМагометовна.zip';
                 alink.click();
             })

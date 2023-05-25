@@ -4,14 +4,19 @@ import './Doctor.css';
 const Fatima = () => {
     const onButtonClick = () => {
         // using Java Script method to get PDF file
-        fetch('DOC/Куашева Фатима Магометовна.zip').then(response => {
+        fetch('DOC/КуашеваФатимаМагометовна.zip').then(response => {
             response.blob().then(blob => {
                 // Creating new object of PDF file
                 const fileURL = window.URL.createObjectURL(blob);
                 // Setting various property values
                 let alink = document.createElement('a');
                 alink.href = fileURL;
-                alink.download = 'Куашева Фатима Магометовна.zip';
+                alink.download = 'КуашеваФатимаМагометовна.zip';
+                alink.addEventListener('click', () => {
+                    setTimeout(() => {
+                        URL.revokeObjectURL(fileURL);
+                    });
+                });
                 alink.click();
             })
         })
@@ -36,7 +41,7 @@ const Fatima = () => {
             - врача-стоматолога, Dental art.`, <br />,`
             - 2019 г. Прямые реставрации фронтальной группы зубов Direct Anterior
             Denting.education.`, <br />,`
-            - 2018 г. The bond- Алгоритмы адгезионных процессов, Hexagon international LTD.`, <br />,`
+            - 2018 г. The bond - Алгоритмы адгезионных процессов, Hexagon international LTD.`, <br />,`
             - 2016 г. Клиника боли лица и челюстей, Mis course.`, <br />,`
             - 2014 г. Современные вопросы применения 3D-технологий в
             современной стоматологической практике, Пикассо.`],
@@ -65,7 +70,7 @@ const Fatima = () => {
                     <p>
                         {Doc.about}
                     </p>
-                    <a href="../DOC/Куашева Фатима Магометовна.zip" download title="test"><button>Документы</button></a>
+                    <a href="#"><button onClick={()=>{onButtonClick()}}>Документы</button></a>
                 </div>
 
             </div>

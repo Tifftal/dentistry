@@ -8,6 +8,11 @@
   /* height: 60vh; */
 }
 
+.admin-panel h2 {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .auth {
   display: flex;
   height: 70vh;
@@ -43,14 +48,15 @@
   margin-bottom: 10px;
 }
 
-.data-list {
-  width: 50vh;
+.btn-list {
+  height: 50vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
-.data-list button {
+.btn-list button {
   margin-top: 2%;
   width: 100%;
   height: 50px;
@@ -62,6 +68,12 @@
   transition: 0.5s;
   font-size: 100%;
   font-weight: 400;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+
 }
 
 .data-list button:hover {

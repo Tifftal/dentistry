@@ -85,7 +85,7 @@ const Pictures = (props) => {
     return (
         <div className="DoPosle">
             <button onClick={() => { props.setBtn('') }} className="back-Btn">Назад</button>
-            <h1>Загрузка</h1>
+            <h1 style={{color:"rgba(0,0,0,0.6)"}}>Загрузка</h1>
             <form onSubmit={handleImageUpload} className="upload-image">
                 <label htmlFor="beforeImage">Изображение ДО:</label>
                 <input className="fileInput"

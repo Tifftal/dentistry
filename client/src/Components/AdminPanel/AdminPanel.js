@@ -23,13 +23,15 @@ const AdminPanel = () => {
     console.log(data);
 
     axios.post("http://45.12.72.31:8082/checkAuth", data)
-    .then(function(response) {
-      setAuth(true);
-      console.log(response.data);
-    })
-    .catch(function (error) {
-      console.log(error)
-    })
+      .then(function (response) {
+        if (response.data.status === "done") {
+          setAuth(true);
+        }
+        console.log(response.data);
+      })
+      .catch(function (error) {
+        console.log(error)
+      })
   }
 
   return (
@@ -45,7 +47,9 @@ const AdminPanel = () => {
         </div>
       ) : (
         <div className="AdminTitle">
+        <div className="header">
           <h2>Панель администратора</h2>
+          </div>
           {btn === 'до/после' ? (
             <Pictures setBtn={setBtn} />
           ) : btn === 'обратный звонок' ? (
@@ -53,10 +57,10 @@ const AdminPanel = () => {
           ) : btn === 'комментарии' ? (
             <AdminComment setBtn={setBtn} />
           ) : btn === '' ? (
-            <div className="data-list" style={{height: "50vh", width:"100%", marginLeft:"auto", marginRight:"auto"}}>
-              <button onClick={() => { setBtn('обратный звонок') }} style={{width:"200px"}}>Обратный звонок</button>
-              <button onClick={() => { setBtn('комментарии') }} style={{width:"200px"}}>Комментарии</button>
-              <button onClick={() => { setBtn('до/после') }} style={{width:"200px"}}>До/После</button>
+            <div className="btn-list">
+              <button onClick={() => { setBtn('обратный звонок') }} style={{ width: "200px" }}>Обратный звонок</button>
+              <button onClick={() => { setBtn('комментарии') }} style={{ width: "200px" }}>Комментарии</button>
+              <button onClick={() => { setBtn('до/после') }} style={{ width: "200px" }}>До/После</button>
             </div>
           ) : null}
         </div>

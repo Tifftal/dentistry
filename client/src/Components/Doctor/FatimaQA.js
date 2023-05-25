@@ -70,7 +70,7 @@ const Fatima = () => {
                     <p>
                         {Doc.about}
                     </p>
-                    <a href="#"><button onClick={()=>{onButtonClick()}}>Документы</button></a>
+                    <a href="../DOC/КуашеваФатимаМагометовна.zip" download><button>Документы</button></a>
                 </div>
 
             </div>

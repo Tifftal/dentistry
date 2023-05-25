@@ -55,13 +55,13 @@
 
 
 .Otz {
-    margin: 0 10% 5% 10%;
+    margin: 0 10% 3% 10%;
     border-top: 3px solid rgba(58, 79, 128, 0.7);
 }
 
 .Otz h1 {
     font-size: 180%;
-    font-weight: 600;
+    font-weight: 800;
     margin: 0;
     padding: 1% 0 0 4%;
     text-align: left;
@@ -69,7 +69,7 @@
 
 .Otz p {
     font-size: 115%;
-    font-weight: 300;
+    font-weight: 400;
     margin: 0;
     padding: 0 4%;
     text-align: left;
@@ -77,10 +77,11 @@
 
 .Otz h2 {
     font-size: 115%;
-    font-weight: 700;
+    font-weight: 900;
     margin: 0;
     padding: 1% 4%;
     text-align: left;
+    color: rgba(0, 0, 0, 0.6);
 }
 
 @media screen and (max-width:900px) {

@@ -29,6 +29,7 @@ const Footer = () => {
                     <a href="/services">Услуги</a>
                     <a href="/about">О компании</a>
                     <a href="/documents">Документы</a>
+                    <a href="/portfolio">Наши работы</a>
                 </div>
 
                 <div className="doci">

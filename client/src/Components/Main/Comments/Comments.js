@@ -76,9 +76,9 @@ const Comments = () => {
                     <a href="#"><button onClick={HandleOpenNote}>Оставить отзыв</button></a>
                 </div>
             </div>
-            <div className="Otz">
+            <div >
                 {comments.map((comment) => (
-                    <div key={comment.id}>
+                    <div className="Otz" key={comment.id}>
                         <h1>{comment.name}</h1>
                         <h2>{comment.date}</h2>
                         <p>{comment.comment}</p>

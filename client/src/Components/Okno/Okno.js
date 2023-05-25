@@ -33,7 +33,7 @@ function Okno(props) {
                 <span className="close" onClick={props.onClose}>&times;</span>
                 <span className="modal-header">
                     <h3>Обратный звонок</h3>
-                    <p>Наши спеециалисты с радостью перезвонят, проконсультируют и при необходимости запишут <h5>Вас на прием течение 5 минут!</h5></p>
+                    <p>Наши специалисты с радостью перезвонят, проконсультируют и при необходимости запишут <h5>Вас на прием течение 5 минут!</h5></p>
                 </span>
                 <form className='formNote' onSubmit={handleSubmitForm}>
                     <input type="text" name="name" placeholder="Имя" id="name" required pattern="[a-zA-Zа-яА-ЯЁё\s]+" title="Введите имя на русском или английском" />

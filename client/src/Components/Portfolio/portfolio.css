@@ -45,7 +45,7 @@ ul.breadcrumbPort li a:hover {
 
 .clinicalCase {
     display: grid;
-    grid-template-columns: 60vw 35%;
+    grid-template-columns: 50vw 40vw;
     /* grid-template-rows: repeat(1, 400px); */
     margin: 5% 5% 5% 0;
     grid-gap: 2%;
@@ -58,7 +58,7 @@ ul.breadcrumbPort li a:hover {
 
 .case img {
     height: auto;
-    width: 30vw;
+    width: 25vw;
     border-radius: 20px;
 }
 
@@ -69,6 +69,7 @@ ul.breadcrumbPort li a:hover {
     color: rgba(0, 0, 0, 0.6);
     margin-bottom: 1%;
     position: relative;
+    width: 30vw;
     margin-left: 5%;
 }
 
@@ -79,20 +80,21 @@ ul.breadcrumbPort li a:hover {
     bottom: -25%;
     width: 20%;
     height: 30%;
-    /* transform: skew(-12deg) translateX(-50%); */
+    transform: skew(-12deg) translateX(0);
     background: rgba(88, 175, 183, 0.5);
     z-index: 0;
     margin-left: 2%;
 }
 
 .case p {
+    word-wrap: break-word;
     font-size: 18px;
     font-weight: 500;
     text-align: left;
     color: rgba(0, 0, 0, 0.6);
-    padding-top: 5%;
+    padding-top: 3%;
     text-align: left;
-    margin-left: 10%;
+    margin-left: 5%;
 }
 
 .caseContainer {

@@ -96,8 +96,11 @@ ul .breadcrumb li a:hover {
     /* grid-row-gap: 5%; */ 
 }
 
+.stick {
+    z-index: 0;
+}
 .stick h1 {
-    z-index: 1;
+    z-index: 0;
     position: fixed;
     top: 40%;
     margin-left: 0%;

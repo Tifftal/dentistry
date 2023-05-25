@@ -59,7 +59,7 @@
     border-top: 3px solid rgba(58, 79, 128, 0.7);
 }
 
-.Otz h1 {
+.Otz h2 {
     /* font-size: 180%; */
     font-weight: 600;
     margin: 0;
@@ -75,7 +75,7 @@
     text-align: left;
 }
 
-.Otz h2 {
+.Otz h6 {
     /* font-size: 115%; */
     font-weight: 700;
     margin: 0;

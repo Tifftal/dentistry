@@ -42,7 +42,7 @@ const Comments = () => {
         const minutes = String(date.getMinutes()).padStart(2, '0');
         const seconds = String(date.getSeconds()).padStart(2, '0');
 
-        return `${hours}:${minutes} ${day} ${month} ${year}г.`;
+        return `${hours}:${minutes} ${day} ${month} ${year} г.`;
     };
 
     // Пример использования в функции fetchData
@@ -94,8 +94,8 @@ const Comments = () => {
             <div >
                 {comments.map((comment) => (
                     <div className="Otz" key={comment.id}>
-                        <h1>{comment.name}</h1>
-                        <h2>{comment.date}</h2>
+                        <h2>{comment.name}</h2>
+                        <h6>{comment.date}</h6>
                         <p>{comment.comment}</p>
                     </div>
                 ))}

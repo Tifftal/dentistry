@@ -122,6 +122,12 @@ ul.breadcrumbAbout li a:hover {
     font-weight: 500;
     padding: 0;
     transition: 0.5s;
+    z-index: 999;
+}
+
+.BtnAbout a {
+    position: relative;
+    z-index: 10;
 }
 
 .BtnAbout button:hover {
@@ -168,5 +174,9 @@ ul.breadcrumbAbout li a:hover {
 
     .emptyBox {
         display: none;
+    }
+
+    .AboutTitle {
+        z-index: 0;
     }
 }

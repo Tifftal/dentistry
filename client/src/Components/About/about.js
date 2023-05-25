@@ -59,7 +59,7 @@ const About = () => {
                     </div>
                     <div className="aboutBtnContainer">
                         <div className="BtnAbout">
-                            <a href="/doctors" style={{zIndex: "9999"}}><button>Сотрудники</button></a>
+                            <a href="/doctors"><button>Сотрудники</button></a>
                         </div>
                         <div className="BtnAbout">
                             <a href="/vacancy"><button>Наши вакансии</button></a>

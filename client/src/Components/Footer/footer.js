@@ -13,13 +13,13 @@ const Footer = () => {
                     </p>
                     <div className='socialBarFooter'>
                         <div className='scBtnFooter'>
-                            <a href="#"><img src="../IMG/free-icon-whatsapp-3670302.png" width="90%" height="90%" /></a>
+                            <a href="https://wa.me/79673170000"><img src="../IMG/free-icon-whatsapp-3670302.png" width="90%" height="90%" /></a>
                         </div>
                         <div className='scBtnFooter'>
-                            <a href="#"><img src="../IMG/free-icon-vkontakte-4494490.png" width="90%" height="90%" /></a>
+                            <a href="https://vk.com/club211575532"><img src="../IMG/free-icon-vkontakte-4494490.png" width="90%" height="90%" /></a>
                         </div>
                         <div className='scBtnFooter'>
-                            <a href="#"><img src="../IMG/free-icon-telegram-2111710.png" width="90%" height="90%" /></a>
+                            <a href="https://t.me/formulaulybki32"><img src="../IMG/free-icon-telegram-2111710.png" width="90%" height="90%" /></a>
                         </div>
                     </div>
                 </div>

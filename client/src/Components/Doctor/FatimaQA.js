@@ -12,6 +12,11 @@ const Fatima = () => {
                 let alink = document.createElement('a');
                 alink.href = fileURL;
                 alink.download = 'КуашеваФатимаМагометовна.zip';
+                alink.addEventListener('click', () => {
+                    setTimeout(() => {
+                        URL.revokeObjectURL(fileURL);
+                    });
+                });
                 alink.click();
             })
         })

@@ -50,5 +50,14 @@
     display: none;
   }
 
-  
+  .publish-button {
+    font-size: 10px;
+    padding: 5px;
+    /* width: 80px; */
+  }
+
+  .delete-button {
+    font-size: 10px;
+    padding: 5px;
+  }
 }

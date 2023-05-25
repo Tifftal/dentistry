@@ -1,5 +1,6 @@
 .backgrDoc {
     background: linear-gradient(rgb(156, 187, 190), white);
+    height: 100vh;
 }
 
 .documents {
@@ -98,14 +99,14 @@ ul.breadcrumb li a:hover {
     transform: rotate(180deg);
 }
 
-.cardDocum {
+/* .cardDocum {
     display: grid;
     grid-template-columns: 27% 23% 23% 23%;
     grid-template-rows: repeat(3, 270px);
     margin: 5% 5% 5% 5%;
     grid-column-gap: 2%;
     grid-row-gap: 5%;
-}
+} */
 
 .noPhoto {
     grid-column-start: 1;

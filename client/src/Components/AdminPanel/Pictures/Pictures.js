@@ -119,8 +119,9 @@ const Pictures = (props) => {
                     <thead>
                         <tr>
                             <th>Заголовок</th>
-                            <th>Картинка ДО</th>
-                            <th>Картинка ПОСЛЕ</th>
+                            <th>Описание</th>
+                            <th className="image-cont">Картинка ДО</th>
+                            <th className="image-cont">Картинка ПОСЛЕ</th>
                             <th>Действие</th>
                         </tr>
                     </thead>
@@ -128,6 +129,7 @@ const Pictures = (props) => {
                         {data.map((image) => (
                             <tr key={image.id}>
                                 <td>{image.title}</td>
+                                <td style={{wordBreak:"break-all"}}>{image.content}</td>
                                 <td className="image-cont">
                                     <img src={image.fileBefore} alt={image.title} className="image" />
                                 </td>

@@ -2,6 +2,21 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./adminComment.css";
 
+const m = {
+  "01" : "января",
+  "02" : "февраля",
+  "03" : "марта",
+  "04" : "апреля",
+  "05" : "мая",
+  "06" : "июня",
+  "07" : "июля",
+  "08" : "августа",
+  "09" : "сентября",
+  "10" : "октября",
+  "11" : "ноября",
+  "12" : "декабря"
+}
+
 const AdminComment = (props) => {
   const [pendingComments, setPendingComments] = useState([]);
   const [publishedComments, setPublishedComments] = useState([]);
@@ -10,13 +25,10 @@ const AdminComment = (props) => {
     const date = new Date(dateTime);
     
     const year = date.getFullYear();
-    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const month = m[String(date.getMonth() + 1).padStart(2, '0')];
     const day = String(date.getDate()).padStart(2, '0');
-    const hours = String(date.getHours()).padStart(2, '0');
-    const minutes = String(date.getMinutes()).padStart(2, '0');
-    const seconds = String(date.getSeconds()).padStart(2, '0');
   
-    return `${hours}:${minutes}:${seconds} ${day}-${month}-${year}`;
+    return `${day} ${month} ${year} г.`;
   };
   
   // Пример использования в функции fetchData
@@ -68,9 +80,9 @@ const AdminComment = (props) => {
         <table className="table-Coms">
           <thead>
             <tr>
-              <th>Дата</th>
+              <th className="number">Дата</th>
               <th>Имя</th>
-              <th>Номер</th>
+              <th className="number">Номер</th>
               <th>Комментарий</th>
               <th>Действие</th>
             </tr>
@@ -78,9 +90,9 @@ const AdminComment = (props) => {
           <tbody>
             {pendingComments.map((comment) => (
               <tr key={comment.id}>
-                <td>{comment.date}</td>
+                <td className="number">{comment.date}</td>
                 <td>{comment.name}</td>
-                <td>{comment.number}</td>
+                <td className="number">{comment.number}</td>
                 <td>{comment.comment}</td>
                 <td>
                   <button

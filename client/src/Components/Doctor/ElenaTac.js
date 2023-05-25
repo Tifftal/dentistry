@@ -74,7 +74,7 @@ const ElenaTac = () => {
                     <p>
                         {Doc.about}
                     </p>
-                    <button onClick={() => {onButtonClick()}}>Документы</button>
+                    <a href="../DOC/Таценко Елена Геннадьевна.zip"><button>Документы</button></a>
                 </div>
 
             </div>

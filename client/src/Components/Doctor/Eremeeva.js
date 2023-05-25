@@ -54,7 +54,7 @@ const Eremeeva = () => {
                     <p>
                         {Doc.about}
                     </p>
-                    <button onClick={()=>{onButtonClick()}}>Документы</button>
+                    <a href="../DOC/Еремеева Екатерина Романовна.zip" download><button>Документы</button></a>
                 </div>
 
             </div>

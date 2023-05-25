@@ -60,7 +60,7 @@ const Smyk = () => {
                     <p>
                         {Doc.about}
                     </p>
-                    <button onClick={()=>{onButtonClick()}}>Документы</button>
+                    <a href="../DOC/Смык Александр Александрович.zip" download><button>Документы</button></a>
                 </div>
 
             </div>

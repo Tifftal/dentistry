@@ -4,14 +4,14 @@ import './Doctor.css';
 const Eremeeva = () => {
     const onButtonClick = () => {
         // using Java Script method to get PDF file
-        fetch('DOC/Еремеева Екатерина Романовна.zip').then(response => {
+        fetch('DOC/Еремеева Екатерина Романовна.rar').then(response => {
             response.blob().then(blob => {
                 // Creating new object of PDF file
                 const fileURL = window.URL.createObjectURL(blob);
                 // Setting various property values
                 let alink = document.createElement('a');
                 alink.href = fileURL;
-                alink.download = 'Еремеева Екатерина Романовна.zip';
+                alink.download = 'Еремеева Екатерина Романовна.rar';
                 alink.click();
             })
         })

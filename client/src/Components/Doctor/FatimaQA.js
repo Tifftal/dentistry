@@ -2,9 +2,9 @@ import React from "react";
 import './Doctor.css';
 
 const Fatima = () => {
-    const onButtonClick = async() => {
+    const onButtonClick = () => {
         // using Java Script method to get PDF file
-        await fetch('DOC/Куашева Фатима Магометовна.zip').then(response => {
+        fetch('DOC/Куашева Фатима Магометовна.zip').then(response => {
             response.blob().then(blob => {
                 // Creating new object of PDF file
                 const fileURL = window.URL.createObjectURL(blob);

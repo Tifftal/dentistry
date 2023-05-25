@@ -5,14 +5,14 @@ const ElenaTac = () => {
 
     const onButtonClick = () => {
         // using Java Script method to get PDF file
-        fetch('DOC/Таценко Елена Геннадьевна.rar').then(response => {
+        fetch('DOC/ТаценкоЕленаГеннадьевна.rar').then(response => {
             response.blob().then(blob => {
                 // Creating new object of PDF file
                 const fileURL = window.URL.createObjectURL(blob);
                 // Setting various property values
                 let alink = document.createElement('a');
                 alink.href = fileURL;
-                alink.download = 'Таценко Елена Геннадьевна.rar';
+                alink.download = 'ТаценкоЕленаГеннадьевна.rar';
                 alink.click();
             })
         })

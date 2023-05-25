@@ -130,4 +130,12 @@
   .image-cont {
     display: none;
   }
+
+  .upload-image {
+    width: 100%;
+  }
+
+  .upload-image button {
+    width: 100px;
+  }
 }

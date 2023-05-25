@@ -3,19 +3,17 @@ import './Doctor.css';
 
 const Smyk = () => {
     const onButtonClick = () => {
-        // using Java Script method to get PDF file
-        fetch('DOC/Смык Александр Александрович.zip').then(response => {
+        fetch('DOC/СмыкАлександрАоександрович.zip').then(response => {
             response.blob().then(blob => {
-                // Creating new object of PDF file
                 const fileURL = window.URL.createObjectURL(blob);
-                // Setting various property values
                 let alink = document.createElement('a');
                 alink.href = fileURL;
-                alink.download = 'Смык Александр Александрович.zip';
+                alink.download = 'Смык.zip';
                 alink.click();
-            })
-        })
-    }
+            });
+        });
+    };
+    
 
     const Doc = {
         id: 3,

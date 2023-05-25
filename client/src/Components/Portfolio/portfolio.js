@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import './portfolio.css';
 import axios from "axios";
 
@@ -23,6 +23,45 @@ const Portfolio = () => {
         }
     }
 
+    const Carousel = () => {
+        const [currentSlide, setCurrentSlide] = useState(0);
+
+        const showPrevSlide = () => {
+            setCurrentSlide((currentSlide - 1 + data.length) % data.length);
+        }
+
+        const showNextSlide = () => {
+            setCurrentSlide((currentSlide + 1) % data.length);
+        }
+
+        return (
+            <div className="carousel">
+                <div className="slides"
+                    style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+                >
+                    {
+                        data?.map(slide => (
+                            <div className="slide">
+                                <img src={slide.fileBefore} className="Before" alt="До" />
+                                <img src={slide.fileAfter} className="After" alt="После" />
+                                <h3>{slide.title}</h3>
+                                <p>{slide.content}</p>
+                            </div>
+                        ))
+                    }
+                </div>
+                <div className="btnPlaceholder">
+                    <button className="prev" onClick={showPrevSlide}>
+                        «
+                    </button>
+                    <button className="next" onClick={showNextSlide}>
+                        »
+                    </button>
+                </div>
+            </div>
+        )
+    }
+
     return (
         <div className="backgrPort">
             <div className="portfolio">
@@ -36,14 +75,15 @@ const Portfolio = () => {
                         <li>Портфолио</li>
                     </ul>
                 </div>
-                {data.map(image => (
+                {window.innerWidth > 900 ? 
+                data.map(image => (
                     <div className="clinicalCase">
                         <div className="caseContainer">
                             <div className="case">
                                 <img src={image.fileBefore} alt={image.title} />
                             </div>
                             <div className="case">
-      
+
                                 <img src={image.fileAfter} alt={image.title} />
                             </div>
                         </div>
@@ -57,6 +97,7 @@ const Portfolio = () => {
                         </div>
                     </div>
                 ))
+                : <Carousel />
                 }
             </div>
         </div>

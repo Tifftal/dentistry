@@ -4,12 +4,12 @@ import './documents.css'
 
 const Documents = () => {
     const onButtonClick = () => {
-        // using Java Script method to get PDF file
+        // Используем метод fetch для получения ZIP-файла
         fetch('DOC/Документы.zip').then(response => {
             response.blob().then(blob => {
-                // Creating new object of PDF file
+                // Создаем новый объект для ZIP-файла
                 const fileURL = window.URL.createObjectURL(blob);
-                // Setting various property values
+                // Устанавливаем различные значения свойств
                 let alink = document.createElement('a');
                 alink.href = fileURL;
                 alink.download = 'Документы.zip';

@@ -1,5 +1,5 @@
 .admin-comment {
-  margin: 20px;
+  /* margin: 20px; */
   padding: 20px;
 }
 
@@ -45,4 +45,10 @@
   .admin-comment{
     width: auto;
   }
+
+  .number {
+    display: none;
+  }
+
+  
 }

@@ -6,10 +6,6 @@ import "./Pictures.css";
 const Pictures = (props) => {
     const [data, setData] = useState([])
 
-    useEffect(() => {
-        fetchExistingImages();
-    }, [])
-
     const fetchExistingImages = async () => {
         try {
             const response = await axios.get("http://45.12.72.31:8082/work/get");
@@ -24,12 +20,9 @@ const Pictures = (props) => {
         }
     };
 
-
-    //id
-    //fileAfter
-    //fileBefore
-    //title
-    //content
+    useEffect(() => {
+        fetchExistingImages();
+    }, [fetchExistingImages])
 
     const handleImageUpload = async (event) => {
         event.preventDefault();
@@ -75,6 +68,7 @@ const Pictures = (props) => {
         };
 
         readerBefore.readAsDataURL(fileBefore);
+        fetchExistingImages();
     };
 
 

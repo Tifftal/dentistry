@@ -39,7 +39,7 @@ const AdminPanel = () => {
           <form onSubmit={handleSubmitForm} className="auth-form">
             <h2>Вход</h2>
             <input className="login" name="login" placeholder="Логин" id="login" required></input>
-            <input className="password" name="password" placeholder="Пароль" id="password" required></input>
+            <input className="password" name="password" placeholder="Пароль" id="password" type="password" required></input>
             <button type="submit">Войти</button>
           </form>
         </div>

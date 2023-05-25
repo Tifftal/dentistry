@@ -107,7 +107,7 @@ const AdminComment = (props) => {
           <thead>
             <tr>
               <th>Имя</th>
-              <th>Номер</th>
+              <th className="number">Номер</th>
               <th>Комментарий</th>
               <th>Действие</th>
             </tr>
@@ -116,7 +116,7 @@ const AdminComment = (props) => {
             {publishedComments.map((comment) => (
               <tr key={comment.id}>
                 <td>{comment.name}</td>
-                <td>{comment.number}</td>
+                <td className="number">{comment.number}</td>
                 <td>{comment.comment}</td>
                 <td>
                   <button

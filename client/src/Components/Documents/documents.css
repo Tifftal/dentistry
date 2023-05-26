@@ -180,8 +180,12 @@ ul.breadcrumb li a:hover {
         font-size: 17px;
     }
 
+    .textDoc button {
+        width: 200px;
+    }
+
     .documBtn button {
-        font-size: 15px
+        font-size: 15px;
     }
 
     .cardDocum {

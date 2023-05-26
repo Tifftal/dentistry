@@ -3,21 +3,6 @@ import './documents.css'
 
 
 const Documents = () => {
-    const onButtonClick = () => {
-        // Используем метод fetch для получения ZIP-файла
-        fetch('DOC/Документы.zip').then(response => {
-            response.blob().then(blob => {
-                // Создаем новый объект для ZIP-файла
-                const fileURL = window.URL.createObjectURL(blob);
-                // Устанавливаем различные значения свойств
-                let alink = document.createElement('a');
-                alink.href = fileURL;
-                alink.download = 'Документы.zip';
-                alink.click();
-            })
-        })
-    }
-
     return (
         <div className="backgrDoc">
             <div className="documents">

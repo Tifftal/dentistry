@@ -6,6 +6,7 @@
     position: sticky;
     top: 0;
     z-index: 90;
+
 }
 
 .NavBarLinks {
@@ -161,16 +162,19 @@
     opacity: 1;
     transform: translate(-2px, -1px);
     background: #232323;
+    overflow: hidden;
 }
 
 
 #menuToggle input:checked~span:nth-last-child(3) {
     opacity: 1;
+    overflow: hidden;
     /* transform: rotate(0deg) scale(0.2, 0.2); */
 }
 
 #menuToggle input:checked~span:nth-last-child(2) {
     opacity: 1;
+    overflow: hidden;
     /* transform: translate(0, -1px); */
 }
 
@@ -210,6 +214,7 @@
 #menuToggle input:checked~ul {
     transform: scale(1.0, 1.0);
     opacity: 1;
+    overflow: hidden;
 }
 
 .priem {

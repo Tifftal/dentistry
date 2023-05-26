@@ -30,6 +30,7 @@
 .BtnOtz {
     display: flex;
     align-items: center;
+    width: 40vw;
 }
 
 .BtnOtz button {
@@ -41,7 +42,6 @@
     font-size: 18px;
     border-radius: 5px;
     height: 7vh;
-    width: 150%;
     letter-spacing: 2px;
     font-weight: 600;
     border: 2px solid rgb(58, 79, 128);

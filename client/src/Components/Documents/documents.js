@@ -35,7 +35,7 @@ const Documents = () => {
                         Уважаемые пациенты, в этом разделе вы можете ознакомиться с основными документами, связанными с работой клиники "Формула Улыбки".
                         Свяжитесь с нами, если у вас возникнут вопросы.
                     </p>
-                    <a href="#"><button onClick={()=>{onButtonClick()}}>Скачать документы</button></a>
+                    <a href="../DOC/Документы.zip" download><button>Скачать документы</button></a>
                 </div>
                 <div className="cardDocum">
                     <div className="noPhoto">

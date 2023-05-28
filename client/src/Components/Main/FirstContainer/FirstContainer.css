@@ -6,6 +6,12 @@
     background-image: url("../../../IMG/young-handsome-physician-in-a-medical-robe-with-stethoscope.jpg");
 }
 
+.firstComponent::after {
+    display: block;
+    z-index: 2;
+    background-color: rgba(0,0,0,0.5);
+}
+
 .WelcomeContainer {
     text-align: left;
     /* margin: 230px 200px 0px 100px; */

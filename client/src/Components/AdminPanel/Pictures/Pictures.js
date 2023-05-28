@@ -175,7 +175,7 @@ const Pictures = (props) => {
       console.log(error);
     }
   };
-  
+
   useEffect(() => {
     fetchExistingImages();
   }, []);
@@ -292,7 +292,6 @@ const Pictures = (props) => {
           type="text"
           id="title"
           placeholder="Заголовок"
-          required
         />
         <textarea
           className="areaInput"

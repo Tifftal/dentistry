@@ -51,7 +51,7 @@ const Fatima = () => {
                     <p>
                         {Doc.about}
                     </p>
-                    <a href="../DOC/Куашева Фатима Магометовна/сертификаты.pdf" download><button>Документы</button></a>
+                    <a href="../DOC/Куашева Фатима Магометовна/сертификаты.pdf" download rel="noopener"><button>Документы</button></a>
                 </div>
 
             </div>

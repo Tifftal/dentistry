@@ -26,7 +26,7 @@ const SecondContainer = () => {
                         </a>
                     </div>
                     <div className="box2">
-                        <img src="../../IMG/DSC02599-2.jpg" />
+                        <img src="../../IMG/DSC02599-2.jpg" alt="Врач"/>
                         <h3>
                             Еремеева Екатерина Романовна
                         </h3>
@@ -38,7 +38,7 @@ const SecondContainer = () => {
                         </p>
                     </div>
                     <div className="box3">
-                        <img src="../../IMG/DSC02747-2.jpg" />
+                        <img src="../../IMG/DSC02747-2.jpg" alt="Врач"/>
                         <h3>
                             Таценко Елена Геннадьевна
                         </h3>
@@ -53,7 +53,7 @@ const SecondContainer = () => {
                         </p>
                     </div>
                     <div className="box4">
-                        <img src="../../IMG/IMG_20230323_214441.jpg" />
+                        <img src="../../IMG/IMG_20230323_214441.jpg" alt="Врач"/>
                         <h3>
                             Смык Александр Александрович
                         </h3>
@@ -62,7 +62,7 @@ const SecondContainer = () => {
                         </p>
                     </div>
                     <div className="box5">
-                        <img src="../../IMG/DSC02705-2.jpg" />
+                        <img src="../../IMG/DSC02705-2.jpg" alt="Врач"/>
                         <h3>
                             Куашева Фатима Магометовна
                         </h3>

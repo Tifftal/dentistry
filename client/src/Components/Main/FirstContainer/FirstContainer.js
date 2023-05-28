@@ -29,12 +29,12 @@ const FirstContainer = () => {
         HandleCloseNote()
 
         axios.post('http://45.12.72.31:8082/callback/send', data)
-            .then(function (response){
+            .then(function (response) {
                 console.log(response.data);
-            }) 
+            })
             .catch(function (error) {
                 console.log(error);
-            }) 
+            })
     }
 
     return (
@@ -44,8 +44,8 @@ const FirstContainer = () => {
                     <div className="modal-content">
                         <span className="close" onClick={HandleCloseNote}>&times;</span>
                         <span className="modal-header">
-                        <h3>Запись на прием</h3>
-                        <p>Наши спеециалисты с радостью перезвонят, проконсультируют и при необходимости запишут <span style={{fontWeight: "600"}}>Вас на прием течение 5 минут!</span></p>
+                            <h3>Запись на прием</h3>
+                            <p>Наши специалисты с радостью перезвонят, проконсультируют и при необходимости запишут <span style={{ fontWeight: "600" }}>Вас на прием течение 5 минут!</span></p>
                         </span>
                         <form className='formNote' onSubmit={handleSubmitForm}>
                             <input type="text" name="name" placeholder="Имя" id="name" required pattern="[a-zA-Zа-яА-ЯЁё\s]+" title="Введите имя на русском или английском" />
@@ -58,15 +58,17 @@ const FirstContainer = () => {
             )}
             <div className="WelcomeContainer">
                 <div className="intro__media">
-                    <video id="video" src="../Video/StomatologyVideo.mp4" className="intro__media-vide" autoPlay muted loop></video>
+                    <video id="video" src="../Video/StomatologyVideo1.mp4" className="intro__media-vide" autoPlay muted loop></video>
                 </div>
                 <div className="intro__content">
-                    <h1>
-                        Мы дарим скидку 10% за отзыв
-                    </h1>
-                    <p>
-                        Наши врачи - профессионалы своего дела
-                    </p>
+                        <span>
+                            <h1>
+                                Мы дарим скидку 10% за отзыв
+                            </h1>
+                            <p style={{fontWeight: "500"}}>
+                                Наши врачи - профессионалы своего дела
+                            </p>
+                        </span>
                     <button onClick={HandleOpenNote}>Записаться на прием</button>
                 </div>
             </div>

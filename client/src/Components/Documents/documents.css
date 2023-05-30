@@ -1,6 +1,6 @@
 .backgrDoc {
     background: linear-gradient(rgb(156, 187, 190), white);
-    height: 100vh;
+    height: auto;
 }
 
 .documents {
@@ -44,6 +44,7 @@ ul.breadcrumb li a:hover {
 
 .textDoc {
     margin: 4% 0 0 0;
+    height: auto;
 }
 
 
@@ -151,13 +152,12 @@ ul.breadcrumb li a:hover {
 }
 
 .textDoc button {
-    margin-top: 20px;
     text-decoration: none;
     border: none;
     background-color: rgb(58, 79, 128);
     outline: none;
     width: 20%;
-    height: 50px;
+    height: 100px;
     border-radius: 5px;
     box-shadow: 0.3em 0.3em 0.6em rgba(49, 109, 103, 0.575);
     color: rgb(255, 255, 255);

@@ -1,6 +1,6 @@
 .contact {
     /* background: linear-gradient(rgb(156, 187, 190), white); */
-    background-color: white;
+    background: linear-gradient(rgb(156, 187, 190), 70%, white);
 }
 
 .titleContact h1 {

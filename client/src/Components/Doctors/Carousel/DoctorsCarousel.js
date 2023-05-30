@@ -14,16 +14,14 @@ const slides = [
     id: 2,
     img: "../../IMG/DSC02747-2.jpg",
     name: "Таценко",
-    link: "Tacenko",
     surname: "Елена",
     patronimic: "Генадьевна",
-    vacancy: "Ортодонт",
+    vacancy: [`Врач общей практики `, <br />, `Кандидат медицинских наук`, <br />, `Терапевт, ортопед, ортодонт`],
   },
   {
     id: 3,
     img: "../../IMG/IMG_20230323_214441.jpg",
     name: "Смык",
-    link: "Smyk",
     surname: "Александр",
     patronimic: "Александрович",
     vacancy: "Хирург-имплантолог",
@@ -31,20 +29,18 @@ const slides = [
   {
     id: 4,
     img: "../../IMG/DSC02599-2.jpg",
-    link: "Eremeeva",
     name: "Еремеева",
     surname: "Екатерина",
     patronimic: "Романовна",
-    vacancy: "Терапевт",
+    vacancy: [`Врач общей практики `, <br />, `Ординатор, ортодонт`],
   },
   {
     id: 5,
     img: "../../IMG/DSC02705-2.jpg",
-    link: "Kuasheva",
     name: "Куашева",
     surname: "Фатима",
     patronimic: "Магометовна",
-    vacancy: "Терапевт",
+    vacancy: [`Врач общей практики `, <br />, `Терапевт, детский стоматолог`],
   }
 ];
 

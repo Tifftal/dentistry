@@ -20,7 +20,7 @@ const Documents = () => {
                         Уважаемые пациенты, в этом разделе вы можете ознакомиться с основными документами, связанными с работой клиники "Формула Улыбки".
                         Свяжитесь с нами, если у вас возникнут вопросы.
                     </p>
-                    <div>
+                    <div className='BtnDown'>
                     <a href="../DOC/ЕГРЮЛ.pdf" download><button>ЕГРЮЛ</button></a>
                     <a href="../DOC/Адреса и телефоны органов исполнительной власти.pdf" download><button>Адреса и телефоны органов ИВ</button></a>
                     <a href="../DOC/Заключение СЭС 2018.pdf" download><button>Заключение СЭС 2018</button></a>
@@ -40,7 +40,7 @@ const Documents = () => {
                     <div className="noPhoto">
                         <div className="stickDocum">
                             <h1>
-                                Документы
+                               
                             </h1>
                         </div>
                     </div>

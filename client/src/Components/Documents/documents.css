@@ -42,11 +42,6 @@ ul.breadcrumb li a:hover {
     text-decoration: none;
 }
 
-.textDoc {
-    margin: 4% 0 0 0;
-    height: auto;
-}
-
 
 .stickDocum h1 {
     user-select: none;
@@ -60,35 +55,46 @@ ul.breadcrumb li a:hover {
     color: rgb(255, 255, 255);
 }
 
-.documBtn {
-    margin: 2% 0 0 15%;
-    text-decoration: none;
-    color: white;
-    text-align: left;
+.BtnDown {
+    z-index: 100;
+    margin-top: 2%;
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    grid-template-rows: repeat(3, 33%);
+    height: 90vh;
 }
 
-.documBtn button {
+.BtnDown a {
+    height: auto;
+    width: auto;
+    padding: 5%;
+}
+
+.BtnDown button {
+    background-color: rgba(92, 163, 169, 0.745);
     text-decoration: none;
     border: none;
-    background-color: rgb(58, 79, 128);
-    outline: none;
-    width: 40%;
-    height: 50px;
-    border-radius: 5px;
-    box-shadow: 0.3em 0.3em 0.6em rgba(49, 109, 103, 0.575);
-    color: rgb(255, 255, 255);
-    font-size: 18px;
-    font-weight: 500;
-    padding: 0;
-    transition: 0.5s;
+    height: 100%;
+    width: 100%;
+    color: white;
+    font-size: 120%;
+    font-weight: 600;
+    text-align: left;
+    padding-left: 10%;
+    padding-right: 5%;
+    border-radius: 30px;
+
+    transition: 1s;
 }
 
-.documBtn button:hover {
-    filter: brightness(1.2);
+.BtnDown button:hover {
+    transform: scale(1.05);
+    text-shadow: 0px 1px 5px rgba(255, 255, 255, 0.7);
 }
+
 
 .stickDocum h1 {
-    z-index: 0;
+    z-index: -1;
     position: fixed;
     top: 30%;
     margin-left: 0%;
@@ -151,21 +157,6 @@ ul.breadcrumb li a:hover {
     font-weight: 800;
 }
 
-.textDoc button {
-    text-decoration: none;
-    border: none;
-    background-color: rgb(58, 79, 128);
-    outline: none;
-    width: 20%;
-    height: 100px;
-    border-radius: 5px;
-    box-shadow: 0.3em 0.3em 0.6em rgba(49, 109, 103, 0.575);
-    color: rgb(255, 255, 255);
-    font-size: 100%;
-    font-weight: 400;
-    padding: 0;
-    transition: 0.5s;
-}
 
 .DOC button:hover {
     filter: brightness(1.2);

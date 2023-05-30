@@ -373,7 +373,7 @@
     #menu {
         height: 110%;
         position: fixed;
-        width: 500px;
+        width: auto;
         margin: -100px 0 0 0;
         padding: 50px;
         padding-top: 125px;

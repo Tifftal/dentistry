@@ -56,6 +56,7 @@ const Services = () => {
                         {/* <a href="/"><button>Заказать услугу</button></a> */}
                     </div>
                     <div className="spisokServ">
+                        <h1 style={{color:"rgba(0,0,0, 0.6)", fontWeight:"700", fontSize:"36px"}}>Основные услуги</h1>
                         <table>
                         <tbody>
                             {/* <caption>Таблица № 1</caption> */}

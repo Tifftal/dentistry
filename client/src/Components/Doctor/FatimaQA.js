@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import './Doctor.css';
 import Modal from "./Modal";
 const Doc = {
@@ -23,8 +23,9 @@ const Doc = {
         - 2018 г. The bond - Алгоритмы адгезионных процессов, Hexagon international LTD.`, <br />, `
         - 2016 г. Клиника боли лица и челюстей, Mis course.`, <br />, `
         - 2014 г. Современные вопросы применения 3D-технологий в
-        современной стоматологической практике, Пикассо.`],
-    about: [`- Умение работать с оптикой (бинокуляры, микроскоп).`, <br />, `- Применение в практике новейших технологий.`],
+        современной стоматологической практике, Пикассо.`
+        ],
+    about: [`- Умение работать с оптикой (бинокуляры, микроскоп).`, <br />, `- Применение в практике новейших технологий.`, <br />, `- Эстетичные и художественные реставрации.`, <br />, `- Индивидуальный подход к нашим самым маленьким и требовательным пациентам.`],
 }
 
 const slides = ["../../DOC/Куашева/Куашева.jpg", "../../DOC/Куашева/Куашева2.jpg", "../../DOC/Куашева/сертифткаты_page-0001.jpg", "../../DOC/Куашева/сертифткаты_page-0002.jpg", "../../DOC/Куашева/сертифткаты_page-0003.jpg", "../../DOC/Куашева/сертифткаты_page-0004.jpg", "../../DOC/Куашева/сертифткаты_page-0005.jpg", "../../DOC/Куашева/сертифткаты_page-0006.jpg", "../../DOC/Куашева/сертифткаты_page-0007.jpg", "../../DOC/Куашева/сертифткаты_page-0008.jpg", "../../DOC/Куашева/сертифткаты_page-0009.jpg", "../../DOC/Куашева/сертифткаты_page-0010.jpg", "../../DOC/Куашева/сертифткаты_page-0011.jpg", "../../DOC/Куашева/сертифткаты_page-0012.jpg", "../../DOC/Куашева/сертифткаты_page-0013.jpg", "../../DOC/Куашева/сертифткаты_page-0014.jpg", "../../DOC/Куашева/сертифткаты_page-0015.jpg"]
@@ -32,6 +33,7 @@ const slides = ["../../DOC/Куашева/Куашева.jpg", "../../DOC/Куа
 const Fatima = () => {
     const [open, setOpen] = useState(false);
     const [currentImage, setCurrentImage] = useState(null);
+    const scrollContainerRef = useRef(null);
 
     const handleOpenModal = (slide) => {
         setCurrentImage(slide);
@@ -43,6 +45,17 @@ const Fatima = () => {
         setOpen(false);
     };
 
+    const handleWheelScroll = (event) => {
+        const deltaY = event.deltaY;
+
+        if (deltaY > 0) {
+            // Scrolling down
+            scrollContainerRef.current.scrollLeft += 20;
+        } else {
+            // Scrolling up
+            scrollContainerRef.current.scrollLeft -= 20;
+        }
+    };
 
     return (
         <div>
@@ -67,16 +80,34 @@ const Fatima = () => {
                         <p>
                             {Doc.about}
                         </p>
-                        <div className="verticalSlider">
-                            {slides.map((slide) => (
-                                <img
-                                    src={slide}
-                                    key={slide}
-                                    onClick={() => handleOpenModal(slide)} // Open the modal on image click
-                                    alt={slide}
-                                />
-                            ))}
-                        </div>
+                        {
+                            window.innerWidth > 900 ? (
+                                <div className="verticalSlider"
+                                    onWheel={handleWheelScroll}
+                                    ref={scrollContainerRef}
+                                >
+                                    {slides.map((slide) => (
+                                        <img
+                                            src={slide}
+                                            key={slide}
+                                            onClick={() => handleOpenModal(slide)} // Open the modal on image click
+                                            alt={slide}
+                                        />
+                                    ))}
+                                </div>
+                            ) : (
+                                <div className="verticalSlider">
+                                    {slides.map((slide) => (
+                                        <img
+                                            src={slide}
+                                            key={slide}
+                                            onClick={() => handleOpenModal(slide)} // Open the modal on image click
+                                            alt={slide}
+                                        />
+                                    ))}
+                                </div>
+                            )
+                        }
                     </div>
 
                 </div>

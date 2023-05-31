@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Modal from "./Modal";
 import './Doctor.css';
 
@@ -32,6 +32,7 @@ const Smyk = () => {
 
     const [open, setOpen] = useState(false);
     const [currentImage, setCurrentImage] = useState(null);
+    const scrollContainerRef = useRef(null);
 
     const handleOpenModal = (slide) => {
         setCurrentImage(slide);
@@ -41,6 +42,18 @@ const Smyk = () => {
     const handleCloseModal = () => {
         setCurrentImage(null);
         setOpen(false);
+    };
+
+    const handleWheelScroll = (event) => {
+        const deltaY = event.deltaY;
+
+        if (deltaY > 0) {
+            // Scrolling down
+            scrollContainerRef.current.scrollLeft += 20;
+        } else {
+            // Scrolling up
+            scrollContainerRef.current.scrollLeft -= 20;
+        }
     };
 
     return (
@@ -66,16 +79,34 @@ const Smyk = () => {
                         <p>
                             {Doc.about}
                         </p>
-                        <div className="verticalSlider">
-                            {slides.map((slide) => (
-                                <img
-                                    src={slide}
-                                    key={slide}
-                                    onClick={() => handleOpenModal(slide)} // Open the modal on image click
-                                    alt={slide}
-                                />
-                            ))}
-                        </div>
+                        {
+                            window.innerWidth > 900 ? (
+                                <div className="verticalSlider"
+                                    onWheel={handleWheelScroll}
+                                    ref={scrollContainerRef}
+                                >
+                                    {slides.map((slide) => (
+                                        <img
+                                            src={slide}
+                                            key={slide}
+                                            onClick={() => handleOpenModal(slide)} // Open the modal on image click
+                                            alt={slide}
+                                        />
+                                    ))}
+                                </div>
+                            ) : (
+                                <div className="verticalSlider">
+                                    {slides.map((slide) => (
+                                        <img
+                                            src={slide}
+                                            key={slide}
+                                            onClick={() => handleOpenModal(slide)} // Open the modal on image click
+                                            alt={slide}
+                                        />
+                                    ))}
+                                </div>
+                            )
+                        }
                     </div>
 
                 </div>

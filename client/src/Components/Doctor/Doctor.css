@@ -55,6 +55,17 @@
     overflow-y: hidden;
 }
 
+.sliderControls {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.sliderControls button {
+    width: 20%;
+}
+
 .verticalSlider img {
     height: 350px;
     width: auto;

@@ -34,6 +34,8 @@ const Eremeeva = () => {
         setOpen(false);
     };
 
+    const [scrollPosition, setScrollPosition] = useState(0);
+
     const handleWheelScroll = (event) => {
         const deltaY = event.deltaY;
 
@@ -44,6 +46,16 @@ const Eremeeva = () => {
             // Scrolling up
             scrollContainerRef.current.scrollLeft -= 20;
         }
+    };
+
+    const handleMoveLeft = () => {
+        scrollContainerRef.current.scrollLeft -= 100;
+        setScrollPosition(scrollContainerRef.current.scrollLeft);
+    };
+
+    const handleMoveRight = () => {
+        scrollContainerRef.current.scrollLeft += 100;
+        setScrollPosition(scrollContainerRef.current.scrollLeft);
     };
 
     return (
@@ -71,18 +83,26 @@ const Eremeeva = () => {
                         </p>
                         {
                             window.innerWidth > 900 ? (
-                                <div className="verticalSlider"
-                                    onWheel={handleWheelScroll}
-                                    ref={scrollContainerRef}
-                                >
-                                    {slides.map((slide) => (
-                                        <img
-                                            src={slide}
-                                            key={slide}
-                                            onClick={() => handleOpenModal(slide)} // Open the modal on image click
-                                            alt={slide}
-                                        />
-                                    ))}
+                                <div>
+                                    <div>
+                                        <div className="verticalSlider"
+                                            onWheel={handleWheelScroll}
+                                            ref={scrollContainerRef}
+                                        >
+                                            {slides.map((slide) => (
+                                                <img
+                                                    src={slide}
+                                                    key={slide}
+                                                    onClick={() => handleOpenModal(slide)} // Open the modal on image click
+                                                    alt={slide}
+                                                />
+                                            ))}
+                                        </div>
+                                        <div className="sliderControls">
+                                            <button onClick={handleMoveLeft}>&larr;</button>
+                                            <button onClick={handleMoveRight}>&rarr;</button>
+                                        </div>
+                                    </div>
                                 </div>
                             ) : (
                                 <div className="verticalSlider">

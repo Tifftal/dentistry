@@ -16,6 +16,7 @@ const slides = [
     name: "Таценко",
     surname: "Елена",
     patronimic: "Генадьевна",
+    link: "Tacenko",
     vacancy: [`Врач общей практики `, <br />, `Кандидат медицинских наук`, <br />, `Терапевт, ортопед, ортодонт`],
   },
   {
@@ -24,6 +25,7 @@ const slides = [
     name: "Смык",
     surname: "Александр",
     patronimic: "Александрович",
+    link: "Smyk",
     vacancy: "Хирург-имплантолог",
   },
   {
@@ -32,6 +34,7 @@ const slides = [
     name: "Еремеева",
     surname: "Екатерина",
     patronimic: "Романовна",
+    link: "Eremeeva",
     vacancy: [`Врач общей практики `, <br />, `Ординатор, ортодонт`],
   },
   {
@@ -40,6 +43,7 @@ const slides = [
     name: "Куашева",
     surname: "Фатима",
     patronimic: "Магометовна",
+    link: "Kuasheva",
     vacancy: [`Врач общей практики `, <br />, `Терапевт, детский стоматолог`],
   }
 ];

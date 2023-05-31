@@ -5,7 +5,7 @@ const Services = () => {
 
     const onButtonClick = () => {
         // using Java Script method to get PDF file
-        fetch('DOC/прайс-лист.pdf').then(response => {
+        fetch('DOC/прайс 2022 СБИС (1).pdf').then(response => {
             response.blob().then(blob => {
                 // Creating new object of PDF file
                 const fileURL = window.URL.createObjectURL(blob);

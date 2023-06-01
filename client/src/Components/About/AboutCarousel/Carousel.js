@@ -3,6 +3,14 @@ import "./aboutCarousel.css";
 
 const advs = [
     {
+        id: 4,
+        img: "../../../IMG/sl4.jpg",
+    },
+    {
+        id: 8,
+        img: "../../../IMG/1685475624962.jpg",
+    },
+    {
         id: 1,
         img: "../../../IMG/sl1.jpg",
     },
@@ -15,10 +23,6 @@ const advs = [
         img: "../../../IMG/sl3.jpg",
     },
     {
-        id: 4,
-        img: "../../../IMG/sl4.jpg",
-    },
-    {
         id: 5,
         img: "../../../IMG/sl5.jpg",
     },
@@ -29,6 +33,22 @@ const advs = [
     {
         id: 7,
         img: "../../../IMG/sl7.jpg",
+    },
+    {
+        id: 9,
+        img: "../../../IMG/1685475624974.jpg",
+    },
+    {
+        id: 10,
+        img: "../../../IMG/1685475624992.jpg",
+    },
+    {
+        id: 11,
+        img: "../../../IMG/1685475625005.jpg",
+    },
+    {
+        id: 12,
+        img: "../../../IMG/1685475625017.jpg",
     },
 ]
 

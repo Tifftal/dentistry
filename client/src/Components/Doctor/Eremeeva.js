@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import './Doctor.css';
 import Modal from "./Modal";
 
@@ -13,8 +13,8 @@ const Doc = {
     education: `- Образование по специальности «Стоматология 31.05.03» в КубГМУ в 2022 году с отличием.`,
     qualification: [`- Обучение в Пикассо по цефалометрическому анализу, работа с КЛКТ-снимками, 2022.`, <br />, `
         - Прошла онлайн-конгресс «Путь начинающего стоматолога», 2023.`, <br />, `
-        - Онлайн-курс «Ортодонтическая подготовка перед протезированием», 2023.`],
-    about: [`- Врач ординатор-ортодонт. `, <br />, `- Владение современными протоколами диагностики.`],
+        - Онлайн-курс «Ортодонтическая подготовка перед протезированием», 2023.`, <br />, `Семинар "Использование скелетной опоры и сегментарных дуг для подготовки к протезированию" Roxana Petcu.`, <br />, `- Вебинары Eurokapp, FlexiLigner`, <br />, `- Вебинары OrthoTalks Нутрдинов Ильяр, Михаил Морозов, Кирилл Зернов.`],
+    about: [`- Врач ординатор-ортодонт. `, <br />, `- Владение современными протоколами диагностики.`, <br />, `- Владение даигностическими методиками с использованием артикулятора и лицевой дуги.`],
 }
 
 const slides = ["../../DOC/Еремеева/Еремеева.jpg", "../../DOC/Еремеева/Еремеева 2.jpg"]
@@ -22,6 +22,7 @@ const slides = ["../../DOC/Еремеева/Еремеева.jpg", "../../DOC/Е
 const Eremeeva = () => {
     const [open, setOpen] = useState(false);
     const [currentImage, setCurrentImage] = useState(null);
+    const scrollContainerRef = useRef(null);
 
     const handleOpenModal = (slide) => {
         setCurrentImage(slide);
@@ -31,6 +32,30 @@ const Eremeeva = () => {
     const handleCloseModal = () => {
         setCurrentImage(null);
         setOpen(false);
+    };
+
+    const [scrollPosition, setScrollPosition] = useState(0);
+
+    const handleWheelScroll = (event) => {
+        const deltaY = event.deltaY;
+
+        if (deltaY > 0) {
+            // Scrolling down
+            scrollContainerRef.current.scrollLeft += 20;
+        } else {
+            // Scrolling up
+            scrollContainerRef.current.scrollLeft -= 20;
+        }
+    };
+
+    const handleMoveLeft = () => {
+        scrollContainerRef.current.scrollLeft -= 100;
+        setScrollPosition(scrollContainerRef.current.scrollLeft);
+    };
+
+    const handleMoveRight = () => {
+        scrollContainerRef.current.scrollLeft += 100;
+        setScrollPosition(scrollContainerRef.current.scrollLeft);
     };
 
     return (
@@ -56,16 +81,42 @@ const Eremeeva = () => {
                         <p>
                             {Doc.about}
                         </p>
-                        <div className="verticalSlider">
-                            {slides.map((slide) => (
-                                <img
-                                    src={slide}
-                                    key={slide}
-                                    onClick={() => handleOpenModal(slide)} // Open the modal on image click
-                                    alt={slide}
-                                />
-                            ))}
-                        </div>
+                        {
+                            window.innerWidth > 900 ? (
+                                <div>
+                                    <div>
+                                        <div className="verticalSlider"
+                                            onWheel={handleWheelScroll}
+                                            ref={scrollContainerRef}
+                                        >
+                                            {slides.map((slide) => (
+                                                <img
+                                                    src={slide}
+                                                    key={slide}
+                                                    onClick={() => handleOpenModal(slide)} // Open the modal on image click
+                                                    alt={slide}
+                                                />
+                                            ))}
+                                        </div>
+                                        <div className="sliderControls">
+                                            <button onClick={handleMoveLeft}>&larr;</button>
+                                            <button onClick={handleMoveRight}>&rarr;</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            ) : (
+                                <div className="verticalSlider">
+                                    {slides.map((slide) => (
+                                        <img
+                                            src={slide}
+                                            key={slide}
+                                            onClick={() => handleOpenModal(slide)} // Open the modal on image click
+                                            alt={slide}
+                                        />
+                                    ))}
+                                </div>
+                            )
+                        }
                     </div>
 
                 </div>

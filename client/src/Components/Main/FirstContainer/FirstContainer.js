@@ -28,7 +28,7 @@ const FirstContainer = () => {
 
         HandleCloseNote()
 
-        axios.post('http://45.12.72.31:8082/callback/send', data)
+        axios.post('http://45.67.56.80:8082/callback/send', data)
             .then(function (response) {
                 console.log(response.data);
             })

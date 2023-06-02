@@ -20,7 +20,7 @@ const AdminPanel = () => {
       password: password,
     }
 
-    axios.post("http://45.12.72.31:8082/checkAuth", data)
+    axios.post("http://45.67.56.80:8082/checkAuth", data)
       .then(function (response) {
         if (response.data.status === "done") {
           setAuth(true);

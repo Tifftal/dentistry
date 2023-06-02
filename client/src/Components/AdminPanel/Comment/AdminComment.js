@@ -34,7 +34,7 @@ const AdminComment = (props) => {
   // Пример использования в функции fetchData
   const fetchData = async () => {
     try {
-      const response = await axios.get("http://45.12.72.31:8082/comments/getAllForAdmin");
+      const response = await axios.get("http://45.67.56.80:8082/comments/getAllForAdmin");
       const comments = response.data;
   
       const formattedComments = comments.map(comment => ({
@@ -55,7 +55,7 @@ const AdminComment = (props) => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.post(`http://45.12.72.31:8082/comments/delete/${id}`);
+      await axios.post(`http://45.67.56.80:8082/comments/delete/${id}`);
       fetchData();
     } catch (error) {
       console.log(error);
@@ -64,7 +64,7 @@ const AdminComment = (props) => {
 
   const handlePublish = async (id) => {
     try {
-      await axios.post(`http://45.12.72.31:8082/comments/publish/${id}`);
+      await axios.post(`http://45.67.56.80:8082/comments/publish/${id}`);
       fetchData();
     } catch (error) {
       console.log(error);

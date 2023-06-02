@@ -45,7 +45,7 @@ const Comments = () => {
     // Пример использования в функции fetchData
     const fetchData = async () => {
         try {
-            const response = await axios.get("http://45.12.72.31:8082/comments/getAllForUser");
+            const response = await axios.get("http://45.67.56.80:8082/comments/getAllForUser");
             const comments = response.data;
 
             const formattedComments = comments.map(comment => ({

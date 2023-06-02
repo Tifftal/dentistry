@@ -8,7 +8,7 @@
 
 //     const fetchExistingImages = async () => {
 //         try {
-//             const response = await axios.get("http://45.12.72.31:8082/work/get");
+//             const response = await axios.get("http://45.67.56.80:8082/work/get");
 //             const data = response.data.map((item) => ({
 //                 ...item,
 //                 fileBefore: item.fileBefore,
@@ -55,7 +55,7 @@
 //                 console.log(data);
 
 //                 axios
-//                     .post("http://45.12.72.31:8082/work/post", data)
+//                     .post("http://45.67.56.80:8082/work/post", data)
 //                     .then(function (response) {
 //                         console.log(response.data);
 //                     })
@@ -75,7 +75,7 @@
 
 //     const handleImageDelete = async (image) => {
 //         try {
-//             await axios.post(`http://45.12.72.31:8082/work/delete/${image.id}`);
+//             await axios.post(`http://45.67.56.80:8082/work/delete/${image.id}`);
 //             fetchExistingImages();
 //         } catch (error) {
 //             console.log(error);
@@ -169,7 +169,7 @@ const Pictures = (props) => {
 
   const fetchExistingImages = async () => {
     try {
-      const response = await axios.get("http://45.12.72.31:8082/work/get");
+      const response = await axios.get("http://45.67.56.80:8082/work/get");
       setData(response.data);
     } catch (error) {
       console.log(error);
@@ -245,7 +245,7 @@ const Pictures = (props) => {
     console.log(data);
 
     axios
-      .post("http://45.12.72.31:8082/work/post", data)
+      .post("http://45.67.56.80:8082/work/post", data)
       .then(function (response) {
         console.log(response.data);
         fetchExistingImages();
@@ -257,7 +257,7 @@ const Pictures = (props) => {
 
   const handleImageDelete = async (image) => {
     try {
-      await axios.post(`http://45.12.72.31:8082/work/delete/${image.id}`);
+      await axios.post(`http://45.67.56.80:8082/work/delete/${image.id}`);
       fetchExistingImages();
     } catch (error) {
       console.log(error);

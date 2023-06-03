@@ -18,7 +18,7 @@ function Okno(props) {
 
         props.onClose();
 
-        axios.post('http://45.67.56.80:8082/callback/send', data)
+        axios.post('https://formulaulybki.ru/api/callback/send', data)
             .then(function (response) {
                 console.log(response.data);
             })

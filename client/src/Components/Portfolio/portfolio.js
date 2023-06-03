@@ -12,7 +12,7 @@ const Portfolio = () => {
 
   const fetchExistingImages = async () => {
     try {
-      const response = await axios.get("http://45.67.56.80:8082/work/get");
+      const response = await axios.get("https://formulaulybki.ru/api/work/get");
       setData(response.data);
       setFlag(true);
     } catch (error) {

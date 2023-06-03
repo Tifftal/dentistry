@@ -36,7 +36,7 @@ const AdminCallBack = (props) => {
   // Пример использования в функции fetchData
   const fetchData = async () => {
     try {
-      const response = await axios.get("http://45.67.56.80:8082/callback/get");
+      const response = await axios.get("https://formulaulybki.ru/api/callback/get");
       const callbackData = response.data;
 
       const formattedData = callbackData.map(callback => ({
@@ -56,7 +56,7 @@ const AdminCallBack = (props) => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.post(`http://45.67.56.80:8082/callback/delete/${id}`);
+      await axios.post(`https://formulaulybki.ru/api/callback/delete/${id}`);
       fetchData();
     } catch (error) {
       console.log(error);

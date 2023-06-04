@@ -17,6 +17,7 @@ import Eremeeva from './Components/Doctor/Eremeeva';
 
 
 function App() {
+  // console.log(process.env)
   return (
     <div className="App">
       <BrowserRouter>

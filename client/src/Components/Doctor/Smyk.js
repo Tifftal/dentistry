@@ -28,7 +28,7 @@ const Smyk = () => {
         about: ``,
     }
 
-    const slides = ["../../DOC/Смык/IMG-20230321-WA0047.jpg", "../../DOC/Смык/IMG-20230321-WA0051.jpg"]
+    const slides = ["../../DOC/Смык/IMG-20230321-WA0047.jpg", "../../DOC/Смык/IMG-20230321-WA0051.jpg", "../../DOC/Смык/рис 1.jpeg", "../../DOC/Смык/рис.jpeg", "../../DOC/Смык/Рисунок 2.jpeg", "../../DOC/Смык/рис 2.jpeg", "../../DOC/Смык/Рисунок 3.jpeg", "../../DOC/Смык/рис 3.jpeg", "../../DOC/Смык/рисунок 4.jpeg", "../../DOC/Смык/рис.jpeg"]
 
     const [open, setOpen] = useState(false);
     const [currentImage, setCurrentImage] = useState(null);

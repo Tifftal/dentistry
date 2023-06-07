@@ -29,6 +29,10 @@
     padding-right: 5%;
     
   }
+
+  .formNote textarea {
+    width: 90%;
+  }
   
   .close:hover,
   .close:focus {
@@ -54,6 +58,10 @@
     border-radius: 5px;
     padding-left: 5%;
     width: 90%;
+  }
+
+  #number {
+    margin-bottom: 4%;
   }
   
   .formNote label {

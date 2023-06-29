@@ -108,7 +108,7 @@ const Pictures = (props) => {
 
   const orderUp = async (id) => {
     try {
-      await axios.post(`https://formulaulybki.ru//api/move/up/${id}`);
+      await axios.post(`https://formulaulybki.ru/api/move/up/${id}`);
     } catch (error) {
       console.log(error);
     }
@@ -116,7 +116,7 @@ const Pictures = (props) => {
 
   const orderDown = async (id) => {
     try {
-      await axios.post(`https://formulaulybki.ru//api/move/down/${id}`);
+      await axios.post(`https://formulaulybki.ru/api/move/down/${id}`);
     } catch (error) {
       console.log(error);
     }

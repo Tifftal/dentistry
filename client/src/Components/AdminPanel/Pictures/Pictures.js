@@ -14,7 +14,6 @@ const Pictures = (props) => {
     try {
       const response = await axios.get("https://formulaulybki.ru/api/work/get");
       setData(response.data);
-      console.log(response.data);
     } catch (error) {
       console.log(error);
     }
@@ -91,7 +90,6 @@ const Pictures = (props) => {
     axios
       .post("https://formulaulybki.ru/api/work/post", data)
       .then(function (response) {
-        console.log(response.data);
         fetchExistingImages();
       })
       .catch(function (error) {

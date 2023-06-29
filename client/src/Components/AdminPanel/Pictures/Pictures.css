@@ -139,3 +139,8 @@
     width: 100px;
   }
 }
+
+.Arrows {
+  display:flex;
+  flex-direction: column;
+}

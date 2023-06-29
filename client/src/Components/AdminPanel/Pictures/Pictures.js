@@ -109,7 +109,7 @@ const Pictures = (props) => {
   const orderUp = async (id) => {
     try {
       await axios.post(`https://formulaulybki.ru//api/move/up/${id}`);
-    } catch(error) {
+    } catch (error) {
       console.log(error);
     }
   }
@@ -117,7 +117,7 @@ const Pictures = (props) => {
   const orderDown = async (id) => {
     try {
       await axios.post(`https://formulaulybki.ru//api/move/down/${id}`);
-    } catch(error) {
+    } catch (error) {
       console.log(error);
     }
   }
@@ -171,12 +171,22 @@ const Pictures = (props) => {
             </tr>
           </thead>
           <tbody>
-            {data.map((image) => (
+            {data.map((image, i) => (
               <tr key={image.id}>
                 <td>
                   <div className="Arrows">
-                    <button onClick={()=>{orderUp(image.id)}}>↑</button>
-                    <button onClick={()=>{orderDown(image.id)}}>↓</button>
+                    {i !== 0 ? (
+                      <button onClick={() => { orderUp(image.id) }}>↑</button>
+                    ) : (
+                      null
+                    )
+                    }
+                    {i !== (data.length-1) ? (
+                    <button onClick={() => { orderDown(image.id) }}>↓</button>
+                    ) : (
+                      null
+                    )
+                    }
                   </div>
                 </td>
                 <td>{image.title}</td>

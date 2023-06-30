@@ -163,6 +163,7 @@ const Pictures = (props) => {
         <table className="existing-images">
           <thead>
             <tr>
+              <th> </th>
               <th>Заголовок</th>
               <th>Описание</th>
               <th className="image-cont">Картинка ДО</th>

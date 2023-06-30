@@ -19,14 +19,10 @@ const Pictures = (props) => {
     }
   };
 
-  useEffect(() => {
-    fetchExistingImages();
-  }, []);
-
   const compressImage = (file) => {
     return new Promise((resolve, reject) => {
-      const maxWidth = 800; // Максимальная ширина изображения
-      const maxHeight = 800; // Максимальная высота изображения
+      const maxWidth = 10000; // Максимальная ширина изображения
+      const maxHeight = 10000; // Максимальная высота изображения
       const image = new Image();
 
       image.onload = () => {
@@ -85,8 +81,6 @@ const Pictures = (props) => {
       content: content,
     };
 
-    console.log(data);
-
     axios
       .post("https://formulaulybki.ru/api/work/post", data)
       .then(function (response) {
@@ -108,19 +102,21 @@ const Pictures = (props) => {
 
   const orderUp = async (id) => {
     try {
-      await axios.post(`https://formulaulybki.ru//api/move/up/${id}`);
+      await axios.post(`https://formulaulybki.ru/api/move/up/${id}`);
+      fetchExistingImages(); // Обновление порядка строк после перемещения вверх
     } catch (error) {
       console.log(error);
     }
-  }
+  };
 
   const orderDown = async (id) => {
     try {
-      await axios.post(`https://formulaulybki.ru//api/move/down/${id}`);
+      await axios.post(`https://formulaulybki.ru/api/move/down/${id}`);
+      fetchExistingImages(); // Обновление порядка строк после перемещения вниз
     } catch (error) {
       console.log(error);
     }
-  }
+  };
 
   return (
     <div className="DoPosle">

@@ -21,8 +21,8 @@ const Pictures = (props) => {
 
   const compressImage = (file) => {
     return new Promise((resolve, reject) => {
-      const maxWidth = 10000; // Максимальная ширина изображения
-      const maxHeight = 10000; // Максимальная высота изображения
+      const maxWidth = 800; // Максимальная ширина изображения
+      const maxHeight = 800; // Максимальная высота изображения
       const image = new Image();
 
       image.onload = () => {

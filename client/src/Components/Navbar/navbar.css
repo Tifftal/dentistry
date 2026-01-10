@@ -9,6 +9,34 @@
 
 }
 
+.brandText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* центр по горизонтали */
+    text-align: center;
+}
+
+.brandTitle {
+    font-size: 50px;
+    font-weight: 600;
+    color: black;
+    text-decoration: none;
+    line-height: 1;
+    /* уменьшает расстояние */
+    margin: 0;
+}
+
+.brandSubtitle {
+    font-size: 15px;
+    font-weight: 400;
+    color: rgb(92, 160, 165);
+    letter-spacing: 0.5px;
+    margin-top: 2px;
+    /* минимальный отступ */
+    line-height: 1;
+}
+
 .NavBarLinks {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -32,8 +60,12 @@
 
 .brandNameNavbar {
     display: flex;
-    flex-direction: row;
-    text-align: center;
+    align-items: center;
+    /* вертикальное центрирование */
+    justify-content: center;
+    /* центр всего блока */
+    gap: 10px;
+    /* расстояние между логотипом и текстом */
 }
 
 .brandNameNavbar h1 {
@@ -327,6 +359,15 @@
 }
 
 @media screen and (max-width: 900px) {
+
+    .brandTitle {
+        font-size: 30px;
+    }
+
+    .brandSubtitle {
+        font-size: 13px;
+    }
+
     .navigationBar {
         display: flex;
         flex-direction: row;
@@ -452,4 +493,143 @@
         font-size: 15px;
         width: 90%;
     }
+}
+
+:root {
+  --cta: rgb(58, 79, 128);
+  --cta2: rgb(41, 58, 102);
+}
+
+/* Premium floating CTA */
+.floating-appointment-btn {
+  position: fixed;
+  right: 26px;
+  bottom: 26px;
+  z-index: 9999;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 16px 22px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+
+  border-radius: 999px;
+
+  background: linear-gradient(135deg, var(--cta) 0%, var(--cta2) 70%);
+  box-shadow:
+    0 16px 35px rgba(0, 0, 0, 0.28),
+    0 0 0 1px rgba(255, 255, 255, 0.14) inset;
+
+  transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+
+  animation: ctaPulse 2.8s ease-in-out infinite;
+}
+
+.floating-appointment-btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: radial-gradient(140px 60px at 25% 18%, rgba(255, 255, 255, 0.28), transparent 60%);
+  opacity: 0.9;
+  transition: opacity 0.18s ease, transform 0.2s ease;
+}
+
+.fab__icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.12) inset;
+  font-size: 15px;
+  line-height: 1;
+}
+
+.floating-appointment-btn:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.06);
+  box-shadow:
+    0 22px 50px rgba(0, 0, 0, 0.32),
+    0 0 0 1px rgba(255, 255, 255, 0.16) inset,
+    0 0 0 10px rgba(58, 79, 128, 0.08);
+}
+
+.floating-appointment-btn:hover::after {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+.floating-appointment-btn:active {
+  transform: translateY(-1px) scale(0.985);
+  animation: none;
+}
+
+.floating-appointment-btn:focus-visible {
+  outline: none;
+  box-shadow:
+    0 22px 50px rgba(0, 0, 0, 0.32),
+    0 0 0 4px rgba(58, 79, 128, 0.35),
+    0 0 0 1px rgba(255, 255, 255, 0.16) inset;
+}
+
+@keyframes ctaPulse {
+  0%, 100% {
+    box-shadow:
+      0 16px 35px rgba(0, 0, 0, 0.28),
+      0 0 0 1px rgba(255, 255, 255, 0.14) inset,
+      0 0 0 0 rgba(58, 79, 128, 0.0);
+  }
+  50% {
+    box-shadow:
+      0 16px 35px rgba(0, 0, 0, 0.28),
+      0 0 0 1px rgba(255, 255, 255, 0.14) inset,
+      0 0 0 14px rgba(58, 79, 128, 0.14);
+  }
+}
+
+/* адаптив: на мобилке — широкая снизу */
+@media (max-width: 900px) {
+  .floating-appointment-btn {
+    left: 14px;
+    right: 14px;
+    bottom: 12px;
+
+    width: calc(100% - 28px);
+    justify-content: center;
+
+    padding: 14px 16px;
+    border-radius: 16px;
+    font-size: 16px;
+
+    animation: none;
+  }
+
+  .fab__icon {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+}
+
+/* твой (max-width: 480px) можно ОСТАВИТЬ, но он уже почти не нужен.
+   Если оставляешь — он будет работать как доп. настройка. */
+@media (prefers-reduced-motion: reduce) {
+  .floating-appointment-btn {
+    animation: none;
+    transition: none;
+  }
 }

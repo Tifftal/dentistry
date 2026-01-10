@@ -1,8 +1,7 @@
-import React from "react";
-import { useState } from "react";
+import "./FirstContainer.css";
 
-import "./FirstContainer.css"
 import axios from "axios";
+import { useState } from "react";
 
 const FirstContainer = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -61,14 +60,15 @@ const FirstContainer = () => {
                     <video id="video" src="../Video/StomatologyVideo1.mp4" className="intro__media-vide" autoPlay muted loop></video>
                 </div>
                 <div className="intro__content">
-                        <span>
-                            <h1>
-                                Мы дарим скидку 10% за отзыв
-                            </h1>
-                            <p style={{fontWeight: "500"}}>
-                                Наши врачи - профессионалы своего дела
-                            </p>
-                        </span>
+                    <span>
+                        <h1>
+                            Оставь отзыв после лечения <br />
+                            <span className="accent">получи скидку 7%</span>
+                        </h1>
+                        <p style={{ fontWeight: "500" }}>
+                            Наши врачи - профессионалы своего дела
+                        </p>
+                    </span>
                     <button onClick={HandleOpenNote}>Записаться на прием</button>
                 </div>
             </div>

@@ -25,7 +25,7 @@ const Services = () => {
                         <li>Услуги</li>
                     </ul>
                 </div>
-                
+
                 <div className="infServ">
                     <div className="textInfServ">
                         <h1>
@@ -40,32 +40,40 @@ const Services = () => {
                             по разумной стоимости.
                         </h1>
                         <h1>
-                            Для ознакомления Вы так же можете скачать полный  
-                            <span onClick={()=>{onButtonClick()}}> Прейскурант ООО ЛАДА от 12.12.2025</span>.
+                            Для ознакомления Вы так же можете скачать полный
+                            <span onClick={() => { onButtonClick() }}> Прейскурант ООО ЛАДА от 12.12.2025</span>.
                             Цены в данном разделе представлены для ознакомления и не являются публичной офертой.
                             Окончательная стоимость лечения определяется после очного осмотра и проведения диагностики.
                         </h1>
                     </div>
                 </div>
 
-                {/* Блок просмотра PDF перенесен в самый низ */}
                 <div className="pdf-viewer-container">
-                    <h1 style={{color:"rgba(0,0,0, 0.6)", fontWeight:"700", fontSize:"36px", textAlign: "left", marginBottom: "20px"}}>
+                    <h1 style={{ color: "rgba(0,0,0, 0.6)", fontWeight: "700", fontSize: "36px", textAlign: "left", marginBottom: "20px" }}>
                         Основные услуги и цены
                     </h1>
-                    <iframe 
-                        src={`${pdfPath}#toolbar=0`} 
-                        width="100%" 
-                        height="800px" 
+
+                    {/* Кнопка, которая видна ТОЛЬКО на мобильных */}
+                    <div className="mobile-pdf-button">
+                        <p>Для удобного просмотра прейскуранта на мобильном устройстве:</p>
+                        <button onClick={() => window.open(pdfPath, '_blank')}>
+                            Открыть прайс в новом окне
+                        </button>
+                    </div>
+
+                    {/* Фрейм, который будет скрыт на маленьких экранах или заменен ссылкой */}
+                    <iframe
+                        src={`${pdfPath}#toolbar=0`}
+                        width="100%"
+                        height="800px"
                         title="Price List"
                         className="pdf-iframe"
                     >
-                        <p>Ваш браузер не поддерживает просмотр PDF. 
-                           <a href={pdfPath} onClick={onButtonClick}>Скачайте файл</a> для ознакомления.</p>
+                        <p>Просмотр недоступен. <a href={pdfPath}>Скачать PDF</a></p>
                     </iframe>
                 </div>
             </div>
-            
+
             {/* Декоративный заголовок сбоку */}
             <div className="ServicesTitle">
                 <h2>Услуги</h2>

@@ -122,3 +122,45 @@ ul.breadcrumbServ li a:hover {
         display: none; /* Скрываем огромную надпись на мобилках */
     }
 }
+
+/* По умолчанию скрываем кнопку открытия */
+.mobile-pdf-button {
+    display: none;
+    text-align: center;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.mobile-pdf-button p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.mobile-pdf-button button {
+    background-color: rgb(58, 79, 128);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: 600;
+}
+
+/* Адаптив для телефонов */
+@media screen and (max-width: 900px) {
+    .mobile-pdf-button {
+        display: block; /* Показываем кнопку на мобилках */
+    }
+
+    .pdf-iframe {
+        display: none; /* Скрываем фрейм, который не работает на мобилках */
+    }
+    
+    .pdf-viewer-container {
+        box-shadow: none;
+        background: transparent;
+        padding: 0;
+    }
+}

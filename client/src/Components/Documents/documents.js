@@ -1,6 +1,6 @@
-import React from 'react'
 import './documents.css'
 
+import React from 'react'
 
 const Documents = () => {
     return (
@@ -34,7 +34,7 @@ const Documents = () => {
                     <a href="../DOC/Сан Эпид закл 2017.pdf" download><button>СЭС Заключение</button></a>
                     <a href="../DOC/Свидетельсво ИФНС 3.pdf" download><button>Свидетельсво ИФНС</button></a>
                     <a href="../DOC/Федеральный закон от 30 марта 1999 г N 52 ФЗ О санитарно эпидемиологическом благ.pdf" download><button>ФЗ "О санитарно-эпидемиологическом благополучии населения"</button></a>
-                    <a href="../DOC/ООО_ЛАДА_Согласие_на_обработку_персональных_данных.docx" download><button>Согласие на обработку персональных данных</button></a>
+                    <a href="../DOC/Положение_о_защите_персональных_данных.pdf" download><button>Положение о защите персональных данных</button></a>
                     </div>
                 </div>
                 <div className="cardDocum">

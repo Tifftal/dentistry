@@ -1,5 +1,7 @@
 .backgrServ {
     background: linear-gradient(rgb(156, 187, 190), white);
+    position: relative; /* Для корректного позиционирования ServicesTitle */
+    overflow: hidden;
 }
 
 .services {
@@ -40,64 +42,26 @@ ul.breadcrumbServ li a {
 
 ul.breadcrumbServ li a:hover {
     color: rgba(0, 0, 0, 0.6);
-    text-decoration: none;
-}
-
-.ServicesTitle h2 {
-    user-select: none;
 }
 
 .infServ {
-    display: grid;
-    grid-template-columns: 40% 60%;
-    grid-template-rows: 100%;
+    display: block; /* Изменили с grid на block для текста */
     margin-top: 2%;
 }
-
-/* .textInfServ {
-    background-color: aqua;
-    border: 1px solid black;
-} */
 
 .textInfServ h1 {
     font-size: 120%;
     font-weight: 400;
     text-align: left;
     line-height: 1.7;
-    margin-bottom: 5%;
+    margin-bottom: 2%;
     color: rgba(0, 0, 0, 0.6);
-    padding-right: 5%;
-}
-
-/* .textInfServ h1 span {
-    color: dodgerblue;
-    
-} */
-
-.textInfServ button {
-    text-decoration: none;
-    border: none;
-    margin-right: 5%;
-    background-color: rgb(58, 79, 128);
-    outline: none;
-    width: 45%;
-    height: 2.5%;
-    border-radius: 5px;
-    box-shadow: 0.3em 0.3em 0.6em rgba(49, 109, 103, 0.575);
-    color: rgb(255, 255, 255);
-    font-size: 90%;
-    font-weight: 500;
-    padding: 0;
-    transition: 0.5s;
-}
-
-.textInfServ button:hover {
-    filter: brightness(1.2);
+    max-width: 80%; /* Чтобы текст не растягивался слишком сильно */
 }
 
 .textInfServ h1 span {
     font-weight: 600;
-    text-decoration: none;
+    text-decoration: underline;
     color: rgb(88, 175, 183);
     cursor: pointer;
 }
@@ -106,78 +70,55 @@ ul.breadcrumbServ li a:hover {
     filter: brightness(0.8);
 }
 
-
-table {
+/* Новые стили для PDF */
+.pdf-viewer-container {
+    margin-top: 50px;
     width: 100%;
-    border-top: 1px solid #69c;
-    border-bottom: 1px solid #69c;
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-sizing: border-box;
 }
 
-.col1 {
-    /* background-color: red; */
-    width: 5%;
-    color: rgb(88, 175, 183);
-    font-weight: 800;
-}
-
-.col2 {
-    /* background-color: green; */
-    width: 60%;
-    text-align: left;
-}
-
-.col3 {
-    /* background-color: yellow; */
-    width: 20%;
-    font-size: 700;
-}
-
-td {
-    border-top: 1px solid rgb(88, 175, 183);
-    padding: 3% 1% 3% 1%;
-    /* background: #ccddff; */
-    font-size: 150%;
-    color: rgba(0, 0, 0, 0.6);
-}
-
-tr:hover td {
-    background: rgba(88, 175, 183, 0.3);
+.pdf-iframe {
+    border: 1px solid #ddd;
+    border-radius: 8px;
 }
 
 .ServicesTitle h2 {
     position: fixed;
     top: 40%;
-    margin-left: 0%;
-    vertical-align: middle;
+    right: 0; /* Прижали к правому краю */
+    z-index: 1;
     font-size: 90px;
     font-weight: 800;
     color: rgba(0, 0, 0, 0.05);
     writing-mode: vertical-lr;
     transform: rotate(180deg);
+    pointer-events: none; /* Чтобы не мешало кликать */
 }
 
+/* Адаптив */
 @media screen and (max-width: 900px) {
     .titleServ h1 {
         font-size: 40px;
     }
 
-    .infServ {
-        display: flex;
-        flex-direction: column;
+    .textInfServ h1 {
+        max-width: 100%;
+        font-size: 16px;
     }
 
-    .textInfServ {
-        margin-bottom: 10px;
+    .pdf-viewer-container {
+        padding: 15px;
     }
 
-    .textInfServ a {
-        height: 1000px;
+    .pdf-iframe {
+        height: 500px;
     }
 
-    .textInfServ a button {
-        height: 100%;
-    }
-    td {
-        font-size: 15px;
+    .ServicesTitle h2 {
+        display: none; /* Скрываем огромную надпись на мобилках */
     }
 }

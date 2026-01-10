@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
 import './Carousel.css';
+
+import { useState } from 'react';
 
 const slides = [
   // {
@@ -16,31 +17,26 @@ const slides = [
     name: "Таценко",
     surname: "Елена",
     patronimic: "Генадьевна",
+    link: "Tacenko",
     vacancy: [`Врач общей практики `, <br />, `Кандидат медицинских наук`, <br />, `Терапевт, ортопед, ортодонт`],
   },
   {
     id: 3,
-    img: "../../IMG/IMG_20230323_214441.jpg",
-    name: "Смык",
-    surname: "Александр",
-    patronimic: "Александрович",
-    vacancy: "Хирург-имплантолог",
-  },
-  {
-    id: 4,
-    img: "../../IMG/DSC02599-2.jpg",
-    name: "Еремеева",
-    surname: "Екатерина",
-    patronimic: "Романовна",
-    vacancy: [`Врач общей практики `, <br />, `Ординатор, ортодонт`],
-  },
-  {
-    id: 5,
     img: "../../IMG/DSC02705-2.jpg",
     name: "Куашева",
     surname: "Фатима",
     patronimic: "Магометовна",
+    link: "Kuasheva",
     vacancy: [`Врач общей практики `, <br />, `Терапевт, детский стоматолог`],
+  },
+  {
+    id: 4,
+    img: "../../IMG/Мосесова А.С.jpg",
+    name: "Анжелика",
+    surname: "Мосесова",
+    patronimic: "Сержевна",
+    link: "Mosesova",
+    vacancy: [`Стоматолог-имплантолог`, <br />, `Стоматолог-хирург, Гнатолог`],
   }
 ];
 

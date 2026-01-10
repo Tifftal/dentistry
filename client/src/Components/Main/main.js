@@ -1,19 +1,18 @@
-import React from "react";
+import './main.css';
 
-import './main.css'
+import Comments from "./Comments/Comments";
+import FifthContainer from "./FifthContainer/FifthContainer";
 import FirstContainer from "./FirstContainer/FirstContainer";
+import FourthContainer from "./FourthContainer/FourthContainer";
 import SecondContainer from "./SecondContainer/SecondContainer";
 import ThirdContainer from "./ThirdContainer/ThirdContainer";
-import FourthContainer from "./FourthContainer/FourthContainer";
-import FifthContainer from "./FifthContainer/FifthContainer";
 import Way from "./Way/way";
-import Comments from "./Comments/Comments";
 
-const Main = () => {
+const Main = ({ onOpenModal }) => {
 
     return (
         <div className="containerMain">
-            <FirstContainer />
+            <FirstContainer onOpen={onOpenModal} />
             <SecondContainer />
             <ThirdContainer />
             <FourthContainer />

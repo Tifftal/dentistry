@@ -1,6 +1,4 @@
-import React from "react";
-
-import "./Doctor.css"
+import "./Doctor.css";
 
 const Modal = ({ image, handleClose }) => {
   return (

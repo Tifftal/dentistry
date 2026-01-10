@@ -1,26 +1,15 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './navbar.css'
-
-import React, { useState } from 'react';
+import './navbar.css';
 
 import Okno from '../Okno/Okno';
 
-const Navbar = () => {
-    const [isOpen, setIsOpen] = useState(false);
-
-    const HandleOpenNote = () => {
-        setIsOpen(true)
-    }
-
-    const HandleCloseNote = () => {
-        setIsOpen(false)
-    }
+const Navbar = ({ isOpen, onOpen, onClose }) => {
 
     return (
         <>
             <div className="navigationBar">
                 {isOpen && (
-                    <Okno onClose={HandleCloseNote} setIsOpen={setIsOpen} />
+                    <Okno onClose={onClose} setIsOpen={onClose} />
                 )}
 
                 <div className='kebabMenu'>
@@ -52,7 +41,7 @@ const Navbar = () => {
                                 </div>
                             </div>
                             <div className='lastInf'>
-                                <button onClick={HandleOpenNote}>Записаться на прием</button>
+                                <button onClick={onOpen}>Записаться на прием</button>
                                 <div className='socialBar'>
                                     <div></div>
                                     <div className='scBtn'>
@@ -84,7 +73,7 @@ const Navbar = () => {
                 <div className="contactInfoNavbar">
                     <div className="contactBar1">
                         <p>+7 (967) 317-00-00</p>
-                        <button onClick={HandleOpenNote}>Заказать обратный звонок</button>
+                        <button onClick={onOpen}>Заказать обратный звонок</button>
                     </div>
                     <div className="contactBar2">
                         <a href="/#map" style={{ whiteSpace: "pre-wrap", textDecoration: "none", cursor: "pointer", color: "black" }}>г. Краснодар, {`\n`}ул. Ставропольская, д. 83</a>
@@ -94,7 +83,7 @@ const Navbar = () => {
 
             {
                 !isOpen && (
-                    <button className="floating-appointment-btn" onClick={HandleOpenNote} aria-label="Записаться на приём">
+                    <button className="floating-appointment-btn" onClick={onOpen} aria-label="Записаться на приём">
                         <span className="fab__icon" aria-hidden="true">🦷</span>
                         <span className="fab__text">Записаться</span>
                     </button>

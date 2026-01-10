@@ -1,5 +1,5 @@
-import React from 'react';
-import './Okno.css'
+import './Okno.css';
+
 import axios from "axios";
 
 function Okno(props) {
@@ -33,7 +33,7 @@ function Okno(props) {
                 <span className="close" onClick={props.onClose}>&times;</span>
                 <span className="modal-header">
                     <h3>Обратный звонок</h3>
-                    <p>Наши специалисты с радостью перезвонят, проконсультируют и при необходимости запишут <span style={{fontWeight: "600"}}>Вас на прием в течение 5 минут!</span></p>
+                    <p>Наши специалисты с радостью перезвонят, проконсультируют и при необходимости запишут <span style={{ fontWeight: "600" }}>Вас на прием в течение 5 минут!</span></p>
                 </span>
                 <form className='formNote' onSubmit={handleSubmitForm}>
                     <input type="text" name="name" placeholder="Имя" id="name" required pattern="[a-zA-Zа-яА-ЯЁё\s]+" title="Введите имя на русском или английском" />

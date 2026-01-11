@@ -14,7 +14,7 @@ const Doctors = observer(() => {
     const doctors = [
         {
             id: 1,
-            img: "../../IMG/DSC02747-2.jpg",
+            img: "../../IMG/DSC02747-2.webp",
             surname: "Таценко",
             name: "Елена",
             patronimic: "Генадьевна",
@@ -49,7 +49,7 @@ const Doctors = observer(() => {
         },
         {
             id: 2,
-            img: "../../IMG/DSC02705-2.jpg",
+            img: "../../IMG/DSC02705-2.webp",
             name: "Фатима",
             surname: "Куашева",
             patronimic: "Магометовна",
@@ -75,7 +75,7 @@ const Doctors = observer(() => {
         },
         {
             id: 3,
-            img: "../../IMG/Мосесова А.С.jpg",
+            img: "../../IMG/Мосесова А.С.webp",
             name: "Анжелика",
             surname: "Мосесова",
             patronimic: "Сержевна",

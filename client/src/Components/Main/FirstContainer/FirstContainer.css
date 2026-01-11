@@ -3,7 +3,7 @@
     margin: 0;
     height: 750px;
     background-size: cover;
-    background-image: url("../../../IMG/young-handsome-physician-in-a-medical-robe-with-stethoscope.jpg");
+    background-image: url("../../../IMG/young-handsome-physician-in-a-medical-robe-with-stethoscope.webp");
 }
 
 /* .firstComponent::after {
@@ -30,7 +30,7 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background-color: #ccc url("../../../IMG/young-handsome-physician-in-a-medical-robe-with-stethoscope.jpg") no-repeat center center;
+    background-color: #ccc url("../../../IMG/young-handsome-physician-in-a-medical-robe-with-stethoscope.webp") no-repeat center center;
     background-size: cover;
 }
 

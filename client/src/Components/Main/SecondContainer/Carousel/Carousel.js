@@ -13,7 +13,7 @@ const slides = [
   // },
   {
     id: 2,
-    img: "../../IMG/DSC02747-2.jpg",
+    img: "../../IMG/DSC02747-2.webp",
     name: "Таценко",
     surname: "Елена",
     patronimic: "Генадьевна",
@@ -22,7 +22,7 @@ const slides = [
   },
   {
     id: 3,
-    img: "../../IMG/DSC02705-2.jpg",
+    img: "../../IMG/DSC02705-2.webp",
     name: "Куашева",
     surname: "Фатима",
     patronimic: "Магометовна",
@@ -31,7 +31,7 @@ const slides = [
   },
   {
     id: 4,
-    img: "../../IMG/Мосесова А.С.jpg",
+    img: "../../IMG/Мосесова А.С.webp",
     name: "Анжелика",
     surname: "Мосесова",
     patronimic: "Сержевна",

@@ -1,6 +1,5 @@
 import "./KidsPage.css";
 
-import { Link } from "react-router-dom";
 
 const KidsPage = () => {
     // ✅ сюда подставишь свои медиа
@@ -102,7 +101,7 @@ const KidsPage = () => {
                             <div className="kidsMiniImg">
                                 <img src={aboutImg} alt="Атмосфера для детей" loading="lazy" />
                             </div>
-                            <br/>
+                            <br />
                             <h2>Покажем, объясним, договоримся</h2>
                             <p>
                                 Детям важно понимать, что происходит. Мы используем подход
@@ -114,7 +113,7 @@ const KidsPage = () => {
                                 Лучше сохранить доверие, чем добиться результата через стресс.
                             </p>
 
-                    
+
                         </div>
                     </div>
                 </div>

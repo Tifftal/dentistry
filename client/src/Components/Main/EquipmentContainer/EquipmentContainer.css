@@ -1,0 +1,196 @@
+.equipmentSection {
+    background: linear-gradient(180deg, #ffffff 0%, #f4f8f9 50%, #ffffff 100%);
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+}
+.title {
+    text-align: center;
+}
+
+.title h1 {
+    font-size: 45px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: rgba(0,0,0,0.8);
+    margin-bottom: 60px;
+}
+.equipmentHeader {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+/* Новая надпись синего цвета */
+.blueTag {
+    color: rgb(58, 79, 128); /* Тот самый синий */
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.equipmentHeader h1 {
+    font-size: 45px;
+    font-weight: 800;
+    color: rgba(0,0,0,0.8); /* Убрали серый, сделали темнее и чётче */
+}
+
+.outerContainer {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 120px; /* Увеличили отступ для безопасности текста */
+    position: relative;
+}
+
+.equipSlideContent {
+    display: grid;
+    grid-template-columns: 35% 60%; /* Еще немного уменьшили ширину текста */
+    gap: 5%;
+    align-items: center;
+    min-height: 400px;
+}
+
+.equipInfo {
+    text-align: left;
+}
+
+.equipInfo h2 {
+    font-size: 32px;
+    color: rgb(58, 79, 128);
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.equipInfo p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: rgba(0,0,0,0.7); /* Текст описания чуть контрастнее */
+}
+
+/* Галерея */
+.equipGallery {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 15px;
+}
+
+.subPhotos {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.equipImgBox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+}
+
+.box-main { height: 400px; }
+.subPhotos .equipImgBox { height: 192px; }
+
+/* Кастомные стрелки - вынесли максимально широко */
+.custom-prev, .custom-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    color: rgb(88, 175, 183);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 22px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    z-index: 20;
+    transition: all 0.3s ease;
+}
+
+.custom-prev:hover, .custom-next:hover {
+    background-color: rgb(88, 175, 183);
+    color: white;
+}
+
+.custom-prev { left: 30px; } /* Прижали к самому краю */
+.custom-next { right: 30px; }
+
+/* Адаптив */
+@media (max-width: 1200px) {
+    .outerContainer { padding: 0 80px; }
+    .equipSlideContent { grid-template-columns: 1fr; }
+    .equipInfo { text-align: center; margin-bottom: 30px; }
+}
+
+@media (max-width: 1100px) {
+    .outerContainer { 
+        padding: 0 50px; /* Уменьшаем боковые поля */
+    }
+    .equipSlideContent { 
+        grid-template-columns: 1fr; /* Текст над фото */
+        gap: 20px;
+    }
+    .equipInfo { 
+        text-align: center; 
+    }
+}
+
+@media (max-width: 600px) {
+    .outerContainer { 
+        padding: 0 10px; 
+    }
+    
+    /* Скрываем стрелки на мобилках, чтобы не мешали (пользователи свайпают пальцем) */
+    .custom-prev, .custom-next { 
+        display: none; 
+    }
+
+    .title h1 { 
+        font-size: 28px; 
+        margin-top: 30px; 
+    }
+
+    /* Уменьшаем высоту галереи */
+    .equipGallery { 
+        grid-template-columns: 1fr; /* Все фото в колонку */
+        gap: 10px;
+    }
+
+    .box-main { 
+        height: 200px; /* Значительно уменьшаем главное фото */
+    }
+
+    /* Скрываем второстепенные фото на мобильных, чтобы не забивать экран, 
+       ЛИБО делаем их очень маленькими в ряд */
+    .subPhotos {
+        flex-direction: row; /* Маленькие фото теперь в ряд под основным */
+        height: 80px;
+        gap: 10px;
+    }
+
+    .subPhotos .equipImgBox {
+        height: 100%; /* Высота 80px как у родителя */
+        flex: 1;
+    }
+
+    .equipInfo h2 {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    .equipInfo p {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    .equipmentSwiper {
+        padding-bottom: 50px !important; /* Меньше места под точки */
+    }
+}
+

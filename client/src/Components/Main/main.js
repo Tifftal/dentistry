@@ -1,6 +1,7 @@
 import './main.css';
 
 import Comments from "./Comments/Comments";
+import EquipmentContainer from './EquipmentContainer/EquipmentContainer';
 import FifthContainer from "./FifthContainer/FifthContainer";
 import FirstContainer from "./FirstContainer/FirstContainer";
 import FourthContainer from "./FourthContainer/FourthContainer";
@@ -15,6 +16,7 @@ const Main = ({ onOpenModal }) => {
             <FirstContainer onOpen={onOpenModal} />
             <SecondContainer />
             <ThirdContainer />
+            <EquipmentContainer />
             <FourthContainer />
             <FifthContainer />
             <Way />

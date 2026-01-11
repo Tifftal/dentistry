@@ -1,22 +1,24 @@
-import React from "react";
 import "./Comments.css"
-import { useState, useEffect } from 'react';
+
+import { useEffect, useState } from 'react';
+
 import Comment from '../../Comment/Comment';
+import React from "react";
 import axios from "axios";
 
 const m = {
-    "01" : "января",
-    "02" : "февраля",
-    "03" : "марта",
-    "04" : "апреля",
-    "05" : "мая",
-    "06" : "июня",
-    "07" : "июля",
-    "08" : "августа",
-    "09" : "сентября",
-    "10" : "октября",
-    "11" : "ноября",
-    "12" : "декабря"
+    "01": "января",
+    "02": "февраля",
+    "03": "марта",
+    "04": "апреля",
+    "05": "мая",
+    "06": "июня",
+    "07": "июля",
+    "08": "августа",
+    "09": "сентября",
+    "10": "октября",
+    "11": "ноября",
+    "12": "декабря"
 }
 
 const Comments = () => {
@@ -43,25 +45,25 @@ const Comments = () => {
     };
 
     // Пример использования в функции fetchData
-    const fetchData = async () => {
-        try {
-            const response = await axios.get("https://formulaulybki.ru/api/comments/getAllForUser");
-            const comments = response.data;
-
-            const formattedComments = comments.map(comment => ({
-                ...comment,
-                date: formatDateTime(comment.date),
-            }));
-
-            setComments(formattedComments);
-        } catch (error) {
-            console.log(error);
-        }
-    };
-
     useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await axios.get("https://formulaulybki.ru/api/comments/getAllForUser");
+                const comments = response.data;
+
+                const formattedComments = comments.map(comment => ({
+                    ...comment,
+                    date: formatDateTime(comment.date),
+                }));
+
+                setComments(formattedComments);
+            } catch (error) {
+                console.log(error);
+            }
+        };
+
         fetchData();
-    }, [fetchData]);
+    }, []); // Массив пуст, запрос выполнится 1 раз при монтировании
 
     return (
         <div className="comments">

@@ -68,14 +68,14 @@ const EquipmentContainer = () => {
 
                                 <div className="equipGallery">
                                     <div className="equipImgBox box-main">
-                                        <img src={item.images[0]} alt={item.title} loading="lazy"/>
+                                        <img src={item.images[0]} alt={item.title}/>
                                     </div>
                                     <div className="subPhotos">
                                         <div className="equipImgBox">
-                                            <img src={item.images[1]} alt={item.title} loading="lazy"/>
+                                            <img src={item.images[1]} alt={item.title}/>
                                         </div>
                                         <div className="equipImgBox">
-                                            <img src={item.images[2]} alt={item.title} loading="lazy"/>
+                                            <img src={item.images[2]} alt={item.title}/>
                                         </div>
                                     </div>
                                 </div>

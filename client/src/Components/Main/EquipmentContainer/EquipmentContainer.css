@@ -88,6 +88,11 @@
     object-fit: cover;
     border-radius: 20px;
     box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+
+    /* Эти свойства включают аппаратное ускорение и предотвращают мерцание */
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    will-change: transform;
 }
 
 .box-main { height: 400px; }

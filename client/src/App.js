@@ -16,6 +16,7 @@ import Portfolio from './Components/Portfolio/portfolio';
 import Services from './Components/Services/services';
 import Vacancy from './Components/Vacancy/vacancy';
 import { useState } from 'react';
+import KidsPage from './Components/Kids/KidsPage';
 
 function App() {
   // console.log(process.env)
@@ -33,6 +34,7 @@ function App() {
         />
         <Routes>
           <Route exact path="/" element={<Main onOpenModal={handleOpen} />}></Route>
+          <Route path="/kids" element={<KidsPage />}></Route>
           <Route path="/about" element={<About />}></Route>
           <Route path="/services" element={<Services />}></Route>
           <Route path="/doctors" element={<Doctors />}></Route>

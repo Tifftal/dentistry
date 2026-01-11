@@ -1,0 +1,163 @@
+.kidsSection {
+  background: linear-gradient(180deg, #ffffff 0%, #f4f8f9 50%, #ffffff 100%);
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.kidsOuter {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 120px;
+}
+
+.kidsGrid {
+  display: grid;
+  grid-template-columns: 55% 40%;
+  gap: 5%;
+  align-items: center;
+}
+
+.kidsBlueTag {
+  color: rgb(58, 79, 128);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 14px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.kidsInfo h1 {
+  font-size: 45px;
+  font-weight: 800;
+  color: rgba(0, 0, 0, 0.85);
+  margin: 0 0 20px 0;
+}
+
+.kidsInfo p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: rgba(0, 0, 0, 0.7);
+  margin: 0 0 28px 0;
+}
+
+.kidsBtn {
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 14px 22px;
+  border-radius: 14px;
+  background-color: rgb(88, 175, 183);
+  color: white;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.10);
+  transition: all 0.25s ease;
+}
+
+.kidsBtn:hover {
+  transform: translateY(-2px);
+  filter: brightness(0.96);
+}
+
+.kidsPhotoBox {
+  height: 420px;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+}
+
+.kidsPhotoBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 15%;
+}
+
+/* адаптив как у вас */
+@media (max-width: 1200px) {
+  .kidsOuter { padding: 0 80px; }
+  .kidsGrid { grid-template-columns: 1fr; gap: 24px; }
+  .kidsPhotoBox { height: 360px; }
+  .kidsInfo { text-align: center; }
+}
+@media (max-width: 1200px) {
+  .kidsOuter { padding: 0 80px; }
+
+  .kidsGrid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .kidsPhotoBox {
+    height: auto;              /* убираем фиксированную высоту */
+    aspect-ratio: 1 / 1;       /* 👈 КВАДРАТ */
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .kidsInfo {
+    text-align: center;
+  }
+}
+@media (max-width: 600px) {
+  .kidsGrid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .kidsBlueTag {
+    order: 1;
+    margin-bottom: 12px;
+  }
+
+  .kidsPhotoBox {
+    order: 2;
+    aspect-ratio: 1 / 1;
+    max-width: 260px;
+    margin: 0 auto 16px;
+    border-radius: 18px;
+  }
+
+  .kidsInfo h1 {
+    order: 3;
+    font-size: 28px;
+    margin-bottom: 12px;
+  }
+
+  .kidsInfo p {
+    order: 4;
+  }
+
+  .kidsBtn {
+    order: 5;
+    width: 100%;
+  }
+
+  /* ВАЖНО: чтобы order работал внутри kidsInfo */
+  .kidsInfo {
+    display: contents;
+    text-align: center;
+  }
+
+  .kidsPhotoBox img {
+    object-position: center 12%;
+  }
+}
+
+.kidsBtn {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 14px 22px;
+  border-radius: 14px;
+  background-color: rgb(88, 175, 183);
+  color: white;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.10);
+  transition: all 0.25s ease;
+}

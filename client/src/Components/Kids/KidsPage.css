@@ -1,0 +1,475 @@
+.kidsPage {
+    background: #fff;
+}
+
+/* общие контейнеры */
+.kidsWrap {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 120px;
+}
+.kidsAbout {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+.kidsTag {
+    color: rgb(58, 79, 128);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 14px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+/* HERO */
+.kidsHero {
+    background: linear-gradient(180deg, #ffffff 0%, #f4f8f9 55%, #ffffff 100%);
+    padding: 90px 0 60px;
+    overflow: hidden;
+}
+
+.kidsHeroGrid {
+    display: grid;
+    grid-template-columns: 55% 40%;
+    gap: 5%;
+    align-items: center;
+}
+
+.kidsHeroInfo h1 {
+    font-size: 48px;
+    font-weight: 800;
+    color: rgba(0, 0, 0, 0.85);
+    margin: 0 0 18px 0;
+}
+
+.kidsHeroInfo p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: rgba(0, 0, 0, 0.7);
+    margin: 0 0 26px 0;
+}
+
+.kidsHeroActions {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 22px;
+}
+
+.kidsBtnPrimary, .kidsBtnGhost {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 14px 22px;
+    border-radius: 14px;
+    transition: all 0.25s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.10);
+}
+
+.kidsBtnPrimary {
+    background-color: rgb(88, 175, 183);
+    color: white;
+}
+
+.kidsBtnPrimary:hover {
+    transform: translateY(-2px);
+    filter: brightness(0.96);
+}
+
+.kidsBtnGhost {
+    background: white;
+    color: rgba(0, 0, 0, 0.75);
+}
+
+.kidsBtnGhost:hover {
+    transform: translateY(-2px);
+    filter: brightness(0.98);
+}
+
+.kidsTrustRow {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-top: 10px;
+}
+
+.kidsTrustItem {
+    background: white;
+    border-radius: 18px;
+    padding: 14px 16px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+}
+
+.kidsTrustNum {
+    font-weight: 800;
+    color: rgba(0, 0, 0, 0.85);
+    margin-bottom: 4px;
+}
+
+.kidsTrustText {
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+/* медиа */
+.kidsHeroImg {
+    height: 460px;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+.kidsHeroImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+}
+
+/* секции */
+.kidsSection {
+    padding: 85px 0;
+}
+
+.kidsAlt {
+    background: linear-gradient(180deg, #ffffff 0%, #f4f8f9 50%, #ffffff 100%);
+}
+
+.kidsSectionTitle {
+    text-align: center;
+    margin-bottom: 46px;
+}
+
+.kidsSectionTitle h2 {
+    font-size: 42px;
+    font-weight: 800;
+    color: rgba(0, 0, 0, 0.85);
+    margin: 0;
+}
+
+/* карточки */
+.kidsCards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.kidsCards2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.kidsCard {
+    background: white;
+    border-radius: 22px;
+    padding: 22px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+}
+
+.kidsCard h3 {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    color: rgb(58, 79, 128);
+    font-weight: 800;
+}
+
+.kidsCard p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.6;
+    color: rgba(0, 0, 0, 0.68);
+}
+
+/* 2 колонки видео + текст */
+.kidsTwoCol {
+    display: grid;
+    grid-template-columns: 55% 40%;
+    gap: 5%;
+    align-items: start;
+}
+
+.kidsVideoBox {
+    background: white;
+    border-radius: 22px;
+    padding: 14px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+}
+
+.kidsVideo {
+    width: 100%;
+    border-radius: 18px;
+    display: block;
+}
+
+.kidsVideoHint {
+    margin-top: 10px;
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.6);
+    text-align: center;
+}
+
+.kidsAbout h2 {
+    font-size: 42px;
+    font-weight: 800;
+    color: rgba(0, 0, 0, 0.85);
+    margin: 0 0 14px 0;
+}
+
+.kidsAbout p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: rgba(0, 0, 0, 0.7);
+    margin: 0 0 12px 0;
+}
+
+.kidsNote {
+    background: rgba(88, 175, 183, 0.10);
+    border-radius: 18px;
+    padding: 14px 16px;
+}
+
+.kidsMiniImg {
+    margin: 20px auto 0;   /* 👈 ВАЖНО */
+    aspect-ratio: 4 / 3;
+    max-width: 520px;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+}
+
+.kidsMiniImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+}
+
+/* steps */
+.kidsSteps {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.kidsStep {
+    background: white;
+    border-radius: 22px;
+    padding: 18px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+    display: flex;
+    gap: 14px;
+}
+
+.kidsStepNum {
+    width: 44px;
+    height: 44px;
+    border-radius: 14px;
+    background: rgba(58, 79, 128, 0.10);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    color: rgb(58, 79, 128);
+}
+
+.kidsStepBody h3 {
+    margin: 0 0 6px 0;
+    font-size: 18px;
+    font-weight: 800;
+    color: rgba(0, 0, 0, 0.85);
+}
+
+.kidsStepBody p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.6;
+    color: rgba(0, 0, 0, 0.68);
+}
+
+/* faq */
+.kidsFaq {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    gap: 12px;
+}
+
+.kidsFaqItem {
+    background: white;
+    border-radius: 22px;
+    padding: 16px 18px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+}
+
+.kidsFaqItem summary {
+    cursor: pointer;
+    font-weight: 800;
+    color: rgba(0, 0, 0, 0.85);
+}
+
+.kidsFaqItem p {
+    margin: 10px 0 0 0;
+    color: rgba(0, 0, 0, 0.68);
+    line-height: 1.6;
+}
+
+/* CTA */
+.kidsCta {
+    padding: 70px 0;
+    background: linear-gradient(180deg, #ffffff 0%, #f4f8f9 55%, #ffffff 100%);
+}
+
+.kidsCtaBox {
+    background: white;
+    border-radius: 26px;
+    padding: 26px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.08);
+    display: grid;
+    grid-template-columns: 60% 35%;
+    gap: 5%;
+    align-items: center;
+}
+
+.kidsCtaText h2 {
+    margin: 0 0 10px 0;
+    font-size: 34px;
+    font-weight: 900;
+    color: rgba(0, 0, 0, 0.85);
+}
+
+.kidsCtaText p {
+    margin: 0;
+    color: rgba(0, 0, 0, 0.68);
+    line-height: 1.6;
+}
+
+.kidsCtaActions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+/* адаптив */
+@media (max-width: 1200px) {
+    .kidsWrap {
+        padding: 0 80px;
+    }
+
+    .kidsHeroGrid, .kidsTwoCol {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .kidsHeroImg {
+        height: 360px;
+    }
+
+    .kidsCards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .kidsSteps {
+        grid-template-columns: 1fr;
+    }
+
+    .kidsCtaBox {
+        grid-template-columns: 1fr;
+    }
+
+    .kidsCtaActions {
+        justify-content: center;
+    }
+
+    .kidsHeroInfo, .kidsAbout {
+        text-align: center;
+    }
+
+    .kidsHeroActions {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .kidsMiniImg {
+        aspect-ratio: 1 / 1;
+        max-width: 280px;
+        margin: 16px auto 0;
+        border-radius: 18px;
+    }
+
+    .kidsWrap {
+        padding: 0 10px;
+    }
+
+    .kidsHero {
+        padding: 70px 0 40px;
+    }
+
+    .kidsHeroInfo h1 {
+        font-size: 30px;
+    }
+
+    .kidsSectionTitle h2 {
+        font-size: 28px;
+    }
+
+    .kidsAbout h2 {
+        font-size: 28px;
+    }
+
+    .kidsHeroImg {
+        height: auto;
+        aspect-ratio: 1 / 1;
+        max-width: 300px;
+        margin: 0 auto;
+        border-radius: 18px;
+    }
+
+    .kidsHeroImg img {
+        object-position: center 12%;
+    }
+
+    .kidsCards {
+        grid-template-columns: 1fr;
+    }
+
+    .kidsCards2 {
+        grid-template-columns: 1fr;
+    }
+
+    .kidsBtnPrimary, .kidsBtnGhost {
+        width: 100%;
+    }
+
+    .kidsTrustRow {
+        grid-template-columns: 1fr;
+    }
+
+    .kidsCtaBox {
+        padding: 18px;
+    }
+}
+
+/* one-column версия блока */
+.kidsTwoColSingle {
+    grid-template-columns: 1fr;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* чуть спокойнее trust-блок */
+.kidsTrustNum {
+    font-weight: 800;
+    font-size: 15px;
+    color: rgb(58, 79, 128);
+}
+
+.kidsTrustText {
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.6);
+}

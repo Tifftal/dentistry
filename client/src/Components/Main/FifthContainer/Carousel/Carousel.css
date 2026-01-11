@@ -1,0 +1,121 @@
+.advCarousel {
+  background: rgb(156, 187, 190);
+  padding: 60px 0 70px;
+  position: relative;
+  overflow: hidden;
+}
+
+.advCarousel__outer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 80px;           /* чтобы стрелки не налезали на контент */
+  position: relative;
+}
+
+.advCarousel__swiper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.advCarousel__slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.advCarousel__imgBox {
+  width: 100%;
+  height: 360px;             /* фиксируем высоту — не ломает сайт */
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+  background: rgba(255,255,255,0.18);
+}
+
+.advCarousel__imgBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+.advCarousel__title {
+  margin: 0;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  padding: 0 10px;
+}
+
+/* КАСТОМНЫЕ СТРЕЛКИ (как в equipment) */
+.advCarousel__prev,
+.advCarousel__next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  color: rgb(88, 175, 183);
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  font-size: 22px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  z-index: 20;
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+.advCarousel__prev:hover,
+.advCarousel__next:hover {
+  background-color: rgb(88, 175, 183);
+  color: white;
+}
+
+.advCarousel__prev { left: 20px; }
+.advCarousel__next { right: 20px; }
+
+/* Пагинация */
+.advCarousel__pagination {
+  margin-top: 18px;
+  display: flex;
+  justify-content: center;
+}
+
+/* адаптив */
+@media (max-width: 600px) {
+  .advCarousel__outer {
+    padding: 0 12px;
+  }
+
+  /* как у тебя в equipment: на мобилках скрываем стрелки */
+  .advCarousel__prev,
+  .advCarousel__next {
+    display: none;
+  }
+
+  .advCarousel__imgBox {
+    height: 220px;
+  }
+
+  .advCarousel__title {
+    font-size: 16px;
+  }
+
+  /* место под точки */
+  .advCarousel__swiper {
+    padding-bottom: 40px !important;
+  }
+}

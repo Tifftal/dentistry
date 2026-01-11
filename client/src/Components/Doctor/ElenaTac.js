@@ -1,6 +1,12 @@
-import React, { useState, useRef } from "react";
-import Modal from "./Modal";
+import "swiper/css";
+import "swiper/css/navigation";
 import './Doctor.css';
+
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import Modal from "./Modal";
+import { useState } from "react";
 
 const ElenaTac = () => {
 
@@ -43,11 +49,9 @@ const ElenaTac = () => {
 
     const [open, setOpen] = useState(false);
     const [currentImage, setCurrentImage] = useState(null);
-    const scrollContainerRef = useRef(null);
-    const [scrollPosition, setScrollPosition] = useState(0);
 
-    const handleOpenModal = (slide) => {
-        setCurrentImage(slide);
+    const handleOpenModal = (src) => {
+        setCurrentImage(src);
         setOpen(true);
     };
 
@@ -56,99 +60,58 @@ const ElenaTac = () => {
         setOpen(false);
     };
 
-    const handleWheelScroll = (event) => {
-        const deltaY = event.deltaY;
-
-        if (deltaY > 0) {
-            // Scrolling down
-            scrollContainerRef.current.scrollLeft += 20;
-        } else {
-            // Scrolling up
-            scrollContainerRef.current.scrollLeft -= 20;
-        }
-    };
-
-    const handleMoveLeft = () => {
-        scrollContainerRef.current.scrollLeft -= 100;
-        setScrollPosition(scrollContainerRef.current.scrollLeft);
-    };
-
-    const handleMoveRight = () => {
-        scrollContainerRef.current.scrollLeft += 100;
-        setScrollPosition(scrollContainerRef.current.scrollLeft);
-    };
-
     return (
-        <div>
-            <div className="doctorContainer">
-                <h1>
-                    {Doc.surname} {Doc.name} {Doc.patronimic}
-                </h1>
-                <div className="DoctorCard">
-                    <div>
-                        <img src={Doc.img} alt={Doc.surname} />
-                    </div>
-                    <div>
-                        <h2>Образование</h2>
-                        <p>
-                            {Doc.education}
-                        </p>
-                        <h2>Квалификация</h2>
-                        <p>
-                            {Doc.qualification}
-                        </p>
-                        <h2>О стоматологе</h2>
-                        <p>
-                            {Doc.about}
-                        </p>
-                        {
-                            window.innerWidth > 900 ? (
-                                <div>
-                                    <div className="verticalSlider"
-                                        onWheel={handleWheelScroll}
-                                        ref={scrollContainerRef}
-                                    >
-                                        {slides.map((slide) => (
-                                            <img
-                                                src={slide}
-                                                key={slide}
-                                                onClick={() => handleOpenModal(slide)} // Open the modal on image click
-                                                alt={slide}
-                                            />
-                                        ))}
-                                    </div>
-                                    <div className="sliderControls">
-                                        <button onClick={handleMoveLeft}>&larr;</button>
-                                        <button onClick={handleMoveRight}>&rarr;</button>
-                                    </div>
-                                </div>
-                            ) : (
-                                <div className="verticalSlider">
-                                    {slides.map((slide) => (
-                                        <img
-                                            src={slide}
-                                            key={slide}
-                                            onClick={() => handleOpenModal(slide)} // Open the modal on image click
-                                            alt={slide}
-                                        />
-                                    ))}
-                                </div>
-                            )
-                        }
-                    </div>
+        <div className="doctorContainer">
+            <h1>{Doc.surname} {Doc.name} {Doc.patronimic}</h1>
 
+            <div className="DoctorCard">
+                <div className="DoctorPhoto">
+                    <img className="DoctorPhotoImg" src={Doc.img} alt={Doc.surname} />
+                </div>
+
+                <div className="DoctorInfo">
+                    <h2>Образование</h2>
+                    <p>{Doc.education}</p>
+
+                    <h2>Квалификация</h2>
+                    <p>{Doc.qualification}</p>
+
+                    <h2>О стоматологе</h2>
+                    <p>{Doc.about}</p>
+
+                    <div className="docSliderWrap">
+                        <Swiper
+                            modules={[Navigation, Pagination, Autoplay]}
+                            navigation={true}
+                            slidesPerView={3}
+                            slidesPerGroup={1}
+                            spaceBetween={12}
+                            loop={true}
+                            allowTouchMove={true}   // ✅ если хочешь ТОЛЬКО стрелками
+                            breakpoints={{
+                                0: { slidesPerView: 1 },
+                                520: { slidesPerView: 2 },
+                                900: { slidesPerView: 3 },
+                            }}
+                            autoplay={{
+                                delay: 3000,
+                                disableOnInteraction: false
+                            }}
+                            className="docSwiper"
+                        >
+                            {slides.map((src) => (
+                                <SwiperSlide key={src} className="docSlide">
+                                    <img src={src} alt="" onClick={() => handleOpenModal(src)} />
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
+                    </div>
                 </div>
             </div>
-            {
-                open && (
-                    <Modal
-                        image={currentImage}
-                        handleClose={handleCloseModal}
-                    />
-                )
-            }
-        </div >
-    )
+
+            {open && <Modal image={currentImage} handleClose={handleCloseModal} />}
+        </div>
+    );
 };
 
 export default ElenaTac;

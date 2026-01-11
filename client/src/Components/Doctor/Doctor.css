@@ -1,144 +1,300 @@
-.doctorContainer {
-    margin: 3% 3% 8% 5%;
+/* ===============================
+   ЛЕЧИМ “БЕСКОНЕЧНУЮ ШИРИНУ” (grid overflow)
+================================ */
+.DoctorInfo,
+.docSliderWrap,
+.docSwiper {
+  min-width: 0;      /* КЛЮЧЕВОЕ: grid-item теперь может сжиматься */
+  max-width: 100%;
 }
 
-.DoctorCard {
-    margin-top: 3%;
-    display: grid;
-    grid-template-columns: 30% 60%;
+/* на всякий случай убираем горизонтальный скролл страницы */
+.doctorContainer {
+  margin: 3% 3% 8% 5%;
+  overflow-x: hidden;
 }
 
 .doctorContainer h1 {
-    font-size: 250%;
-    font-weight: 700;
-    text-align: left;
-    color: rgba(0, 0, 0, 0.6);
+  font-size: 250%;
+  font-weight: 700;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.6);
 }
 
-.DoctorCard p {
-    margin-left: 5%;
-    text-align: left;
-    font-size: 110%;
+/* ===============================
+   Карточка врача
+================================ */
+.DoctorCard {
+  margin-top: 3%;
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 32px;
+  align-items: start;
 }
 
-.DoctorCard h2 {
-    margin-left: 7%;
-    font-size: 180%;
-    font-weight: 700;
-    text-align: left;
-    color: rgba(0, 0, 0, 0.6);
+.DoctorPhoto {
+  width: 100%;
 }
 
-.DoctorCard button {
-    margin-top: 3%;
-    text-decoration: none;
-    border: none;
-    background-color: rgb(58, 79, 128);
-    outline: none;
-    width: 45%;
-    height: 50px;
-    border-radius: 5px;
-    box-shadow: 0.3em 0.3em 0.6em rgba(49, 109, 103, 0.575);
-    color: rgb(255, 255, 255);
-    font-size: 100%;
-    font-weight: 500;
-    padding: 0;
-    transition: 0.5s;
+.DoctorPhotoImg {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 18px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.10);
 }
 
-.verticalSlider {
-    display: flex;
-    flex-direction: row;
-    overflow-x: scroll;
-    /* scroll-behavior: smooth; */
-    width: 100%;
-    overflow-y: hidden;
+/* ===============================
+   Информация
+================================ */
+.DoctorInfo h2 {
+  font-size: 180%;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.6);
+  margin: 24px 0 10px;
 }
 
-.sliderControls {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
+.DoctorInfo p {
+  font-size: 110%;
+  margin: 0 0 12px;
+  line-height: 1.45;
 }
 
-.sliderControls button {
-    width: 20%;
+/* ===============================
+   Swiper slider
+================================ */
+.docSliderWrap {
+  position: relative;
+  margin-top: 22px;
+  width: 100%;
 }
 
-.verticalSlider img {
-    height: 350px;
-    width: auto;
-    margin-right: 10px;
-    -webkit-transition: 0.3s ease; /* Safari and Chrome */
-    -moz-transition: 0.3s ease; /* Firefox 4 */
-    -o-transition: 0.3s ease; /* Opera */
+/* ВАЖНО: swiper должен быть ограничен */
+.docSwiper {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;      /* чтобы показывало ровно 3 */
+  padding: 10px 60px;    /* место под стрелки */
+  box-sizing: border-box;
 }
 
-.verticalSlider img:hover {
-    transition: 0.3s linear;
-    transform: scale(1.05);
+/* если где-то глобально перебили swiper styles — возвращаем базу */
+.docSwiper .swiper-wrapper {
+  display: flex;
 }
 
-.verticalSlider::-webkit-scrollbar {
-    width: 0;
-    height: 0;
+.docSwiper .swiper-slide {
+  box-sizing: border-box;
+  height: auto;
+  display: flex;
+  justify-content: center;
 }
 
+/* изображения */
+.docSwiper .swiper-slide img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 14px;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease;
+  display: block;
+}
+
+.docSwiper .swiper-slide img:hover {
+  transform: scale(1.03);
+}
+
+/* ===============================
+   Стрелки Swiper — делаем заметными
+================================ */
+.docSwiper .swiper-button-prev,
+.docSwiper .swiper-button-next {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 50;
+}
+
+/* фиксируем их внутри слайдера */
+.docSwiper .swiper-button-prev { left: 10px; }
+.docSwiper .swiper-button-next { right: 10px; }
+
+/* красим стандартные SVG-стрелки */
+.docSwiper .swiper-button-prev,
+.docSwiper .swiper-button-next {
+  color: rgb(58, 79, 128);
+}
+
+.docSwiper .swiper-button-prev:hover,
+.docSwiper .swiper-button-next:hover {
+  background: rgb(58, 79, 128);
+  color: #fff;
+}
+
+.docSwiper .swiper-button-disabled {
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+/* ===============================
+   Модалка
+================================ */
 .modalContainer {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 9999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.55);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .modalContent {
-    position: relative;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 90%;
-    max-height: 90%;
+  position: relative;
+  padding: 20px;
+  max-width: 92vw;
+  max-height: 92vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .modalContent img {
-    width: auto;
-    height: 100vh;
+  max-width: 92vw;
+  max-height: 92vh;
+  width: auto;
+  height: auto;
+  border-radius: 14px;
 }
 
 .closeButton {
-    position: absolute;
-    top: 0px;
-    right: -100px;
-    cursor: pointer;
-    font-size: 72px;
-    color: #000;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  cursor: pointer;
+  font-size: 46px;
+  color: #fff;
+  line-height: 1;
 }
 
-@media screen and (max-width: 900px) {
-    .DoctorCard {
-        display: flex;
-        flex-direction: column;
-    }
+/* ===============================
+   Адаптив
+================================ */
+@media (max-width: 900px) {
+  .doctorContainer {
+    margin: 18px 14px 60px;
+  }
 
-    .modalContent img{
-        width: 100vw;
-        height: auto;
-    }
+  .DoctorCard {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
 
-    .closeButton {
-        position: absolute;
-        top: 0px;
-        right: -10px;
-        cursor: pointer;
-        font-size: 48px;
-        color: #000;
-    }
+  .DoctorPhotoImg {
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  .docSwiper {
+    padding: 10px 46px;
+  }
+
+  .docSwiper .swiper-slide img {
+    height: 160px;
+  }
+
+  .docSwiper .swiper-button-prev,
+  .docSwiper .swiper-button-next {
+    width: 44px;
+    height: 44px;
+  }
+}
+/* ===============================
+   ТЕКСТ — ВСЕГДА ВЛЕВО
+================================ */
+.DoctorInfo,
+.DoctorInfo p,
+.DoctorInfo h2 {
+  text-align: left !important;
+}
+
+/* если вдруг где-то на адаптиве центрировалось */
+@media (max-width: 900px) {
+  .DoctorInfo,
+  .DoctorInfo p,
+  .DoctorInfo h2 {
+    text-align: left !important;
+  }
+}
+
+/* ===============================
+   СТРЕЛКИ — КАК В EQUIPMENT
+   (белый круг + rgb(88,175,183))
+================================ */
+
+/* чтобы стрелки не перекрывали контент */
+.docSwiper {
+  padding: 10px 80px !important; /* шире место под стрелки, как у тебя было */
+}
+
+/* сами кнопки */
+.docSwiper .swiper-button-prev,
+.docSwiper .swiper-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  color: rgb(88, 175, 183);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 22px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  z-index: 20;
+  transition: all 0.3s ease;
+}
+
+/* hover как было */
+.docSwiper .swiper-button-prev:hover,
+.docSwiper .swiper-button-next:hover {
+  background-color: rgb(88, 175, 183);
+  color: #fff;
+}
+
+/* прижимаем ближе к краю (как custom-prev/next) */
+.docSwiper .swiper-button-prev { left: 30px; }
+.docSwiper .swiper-button-next { right: 30px; }
+
+/* делаем иконку Swiper (svg) наследующей цвет */
+.docSwiper .swiper-button-prev svg,
+.docSwiper .swiper-button-next svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* disabled состояние */
+.docSwiper .swiper-button-disabled {
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+/* на мобилке скрываем (как у тебя) */
+@media (max-width: 600px) {
+  .docSwiper {
+    padding: 10px 0 !important;
+  }
+  .docSwiper .swiper-button-prev,
+  .docSwiper .swiper-button-next {
+    display: none !important;
+  }
 }

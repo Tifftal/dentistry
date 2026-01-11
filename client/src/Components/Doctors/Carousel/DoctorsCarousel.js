@@ -1,15 +1,14 @@
-import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import "swiper/css";
+import "swiper/css/pagination";
+import "./Carousel.css";
+
+import { Autoplay, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import { Link } from "react-router-dom";
+import { useRef } from "react";
 
 const slides = [
-  // {
-  //   id: 1,
-  //   img: "../../IMG/DSC02687-2.jpg",
-  //   name: "Еремеева",
-  //   surname: "Екатерина",
-  //   patronimic: "Романовна",
-  //   vacancy: "Терапевт",
-  // },
   {
     id: 2,
     img: "../../IMG/DSC02747-2.jpg",
@@ -17,7 +16,13 @@ const slides = [
     surname: "Елена",
     patronimic: "Генадьевна",
     link: "Tacenko",
-    vacancy: [`Врач общей практики `, <br />, `Кандидат медицинских наук`, <br />, `Терапевт, ортопед, ортодонт`],
+    vacancy: (
+      <>
+        Врач общей практики <br />
+        Кандидат медицинских наук <br />
+        Терапевт, ортопед, ортодонт
+      </>
+    ),
   },
   {
     id: 3,
@@ -26,7 +31,12 @@ const slides = [
     surname: "Фатима",
     patronimic: "Магометовна",
     link: "Kuasheva",
-    vacancy: [`Врач общей практики `, <br />, `Терапевт, детский стоматолог`],
+    vacancy: (
+      <>
+        Врач общей практики <br />
+        Терапевт, детский стоматолог
+      </>
+    ),
   },
   {
     id: 4,
@@ -35,45 +45,83 @@ const slides = [
     surname: "Мосесова",
     patronimic: "Сержевна",
     link: "Mosesova",
-    vacancy: [`Стоматолог-имплантолог`, <br />, `Стоматолог-хирург, Гнатолог`],
-  }
+    vacancy: (
+      <>
+        Стоматолог-имплантолог <br />
+        Стоматолог-хирург, Гнатолог
+      </>
+    ),
+  },
 ];
 
 const Carousel = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  const showPrevSlide = () => {
-    setCurrentSlide((currentSlide - 1 + slides.length) % slides.length);
-  };
-
-  const showNextSlide = () => {
-    setCurrentSlide((currentSlide + 1) % slides.length);
-  };
+  const swiperRef = useRef(null);
 
   return (
-    <div className="carousel">
-      <div className="slides"
-        style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-      >
-        {slides?.map((slide) => (
-          <Link to={`/doctors/${slide.link}`} key={slide.id} className="slide" style={{ textDecoration: "none", color: "black" }}>
-            <img src={slide.img} alt={`Slide ${slide.id}`} />
-            <h5>{slide.name} {slide.surname} {slide.patronimic}</h5>
-            <p>{slide.vacancy}</p>
-          </Link>
-        ))}
-      </div>
-      <div className="btnPlaceholder">
-        <button className="prev" onClick={showPrevSlide}>
-          «
+    <>
+    <br/>
+      <div className="doctorsCarousel">
+        {/* кастомные стрелки */}
+        <button
+          className="dc-prev"
+          type="button"
+          aria-label="Предыдущий слайд"
+          onClick={() => swiperRef.current?.slidePrev()}
+        >
+          ❮
         </button>
-        <button className="next" onClick={showNextSlide}>
-          »
+
+        <button
+          className="dc-next"
+          type="button"
+          aria-label="Следующий слайд"
+          onClick={() => swiperRef.current?.slideNext()}
+        >
+          ❯
         </button>
+
+        <Swiper
+          onBeforeInit={(swiper) => (swiperRef.current = swiper)}
+          modules={[Pagination, Autoplay]}
+          slidesPerView={1}
+          spaceBetween={24}
+          loop
+          autoplay={{
+            delay: 8000,
+            disableOnInteraction: false,
+          }}
+          pagination={{
+            clickable: true,
+            el: ".dc-pagination",
+          }}
+          className="dc-swiper"
+        >
+          {slides.map((slide) => (
+            <SwiperSlide key={slide.id}>
+              <Link
+                to={`/doctors/${slide.link}`}
+                className="dc-slide"
+                style={{ textDecoration: "none", color: "black" }}
+              >
+                <div className="dc-imgBox">
+                  <img src={slide.img} alt={`${slide.name} ${slide.surname}`} />
+                </div>
+
+                <h5 className="dc-title">
+                  {slide.name} {slide.surname} {slide.patronimic}
+                </h5>
+
+                <p className="dc-text">{slide.vacancy}</p>
+              </Link>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+
+        {/* точки */}
+        <div className="dc-pagination" />
       </div>
-    </div>
+    </>
   );
 };
 
 export default Carousel;
-

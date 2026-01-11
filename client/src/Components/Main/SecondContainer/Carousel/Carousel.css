@@ -1,46 +1,82 @@
-.carousel {
+.carousel-container {
   position: relative;
-  overflow: hidden;
   width: 100%;
-  height: 100%;
+  padding: 0 60px; /* Отступы по бокам, чтобы стрелки не наезжали на фото */
+  box-sizing: border-box;
 }
 
-.slides {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
+.slide-item {
+  text-align: center;
+  padding: 20px 0;
 }
 
-.slide {
-  flex-shrink: 0;
+.slide-img-wrapper img {
   width: 100%;
-  padding: 20px 20px 0 20px;
-}
-
-img {
-  width: 100%;
+  max-width: 450px; /* Ограничиваем ширину фото врача, чтобы оно не было огромным */
   height: auto;
   border-radius: 40px;
+  margin: 0 auto;
+  display: block;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
-.btnPlaceholder {
+.slide-item h5 {
+  margin-top: 20px;
+  font-size: 22px;
+  color: #333;
+}
+
+.vacancy-text {
+  margin-top: 10px;
+  color: #666;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* СТИЛЬ СТРЕЛОЧЕК ИЗ КОМПОНЕНТА ОБОРУДОВАНИЕ */
+.carousel-prev, .carousel-next {
+  position: absolute;
+  top: 40%; /* Центрируем относительно фотографии */
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  color: rgb(88, 175, 183); /* Ваш бирюзовый акцент */
+  border-radius: 50%;
   display: flex;
-  flex-direction: row;
-  width: 100%;
-  justify-content: space-between;
-  padding-left: 50px;
-  padding-right: 50px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 22px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  z-index: 20;
+  transition: all 0.3s ease;
+  user-select: none;
 }
 
-.btnPlaceholder .next {
-  background-color: transparent;
-  border: none;
-  font-size: 40px;
-  cursor: pointer;
+.carousel-prev:hover, .carousel-next:hover {
+  background-color: rgb(88, 175, 183);
+  color: white;
+  box-shadow: 0 6px 20px rgba(88, 175, 183, 0.3);
 }
 
-.btnPlaceholder .prev {
-  background-color: transparent;
-  border: none;
-  font-size: 40px;
-  cursor: pointer;
+.carousel-prev {
+  left: 10px;
+}
+
+.carousel-next {
+  right: 10px;
+}
+
+/* Адаптив для мобильных */
+@media (max-width: 600px) {
+  .carousel-container {
+    padding: 0 15px;
+  }
+  .carousel-prev, .carousel-next {
+    display: none; /* На мобильных листаем пальцем */
+  }
+  .slide-img-wrapper img {
+    border-radius: 25px;
+  }
 }

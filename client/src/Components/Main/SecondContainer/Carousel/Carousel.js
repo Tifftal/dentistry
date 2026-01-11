@@ -1,83 +1,65 @@
+import 'swiper/css';
 import './Carousel.css';
 
-import { useState } from 'react';
+import { Autoplay, Navigation } from 'swiper/modules';
+import React, { useRef } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 const slides = [
-  // {
-  //   id: 1,
-  //   img: "../../IMG/DSC02687-2.jpg",
-  //   name: "Еремеева",
-  //   surname: "Екатерина",
-  //   patronimic: "Романовна",
-  //   vacancy: "Терапевт",
-  // },
   {
     id: 2,
     img: "../../IMG/DSC02747-2.webp",
-    name: "Таценко",
-    surname: "Елена",
-    patronimic: "Генадьевна",
-    link: "Tacenko",
+    name: "Таценко Елена Генадьевна",
     vacancy: [`Врач общей практики `, <br />, `Кандидат медицинских наук`, <br />, `Терапевт, ортопед, ортодонт`],
   },
   {
     id: 3,
     img: "../../IMG/DSC02705-2.webp",
-    name: "Куашева",
-    surname: "Фатима",
-    patronimic: "Магометовна",
-    link: "Kuasheva",
+    name: "Куашева Фатима Магометовна",
     vacancy: [`Врач общей практики `, <br />, `Терапевт, детский стоматолог`],
   },
   {
     id: 4,
     img: "../../IMG/Мосесова А.С.webp",
-    name: "Анжелика",
-    surname: "Мосесова",
-    patronimic: "Сержевна",
-    link: "Mosesova",
+    name: "Анжелика Мосесова Сержевна",
     vacancy: [`Стоматолог-имплантолог`, <br />, `Стоматолог-хирург, Гнатолог`],
   }
 ];
 
 const Carousel = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  const showPrevSlide = () => {
-    setCurrentSlide((currentSlide - 1 + slides.length) % slides.length);
-  };
-
-  const showNextSlide = () => {
-    setCurrentSlide((currentSlide + 1) % slides.length);
-  };
+  const swiperRef = useRef(null);
 
   return (
-    <div className="carousel">
-      <div className="slides"
-        style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+    <div className="carousel-container">
+      {/* Стрелочки вынесены наружу для точного позиционирования */}
+      <div className="carousel-prev" onClick={() => swiperRef.current?.slidePrev()}>❮</div>
+      <div className="carousel-next" onClick={() => swiperRef.current?.slideNext()}>❯</div>
+
+      <Swiper
+        onBeforeInit={(swiper) => {
+          swiperRef.current = swiper;
+        }}
+        modules={[Navigation, Autoplay]}
+        spaceBetween={30}
+        slidesPerView={1}
+        loop={true}
+        autoplay={{ delay: 5000, disableOnInteraction: false }}
+        className="mySwiper"
       >
         {slides.map((slide) => (
-          <div
-            className="slide"
-            key={slide.id}
-          >
-            <img src={slide.img} alt={`Slide ${slide.id}`} />
-            <h5>{slide.name} {slide.surname} {slide.patronimic}</h5>
-            <p>{slide.vacancy}</p>
-          </div>
+          <SwiperSlide key={slide.id}>
+            <div className="slide-item">
+              <div className="slide-img-wrapper">
+                <img src={slide.img} alt={slide.name} loading="lazy" />
+              </div>
+              <h5>{slide.name}</h5>
+              <p className="vacancy-text">{slide.vacancy}</p>
+            </div>
+          </SwiperSlide>
         ))}
-      </div>
-      <div className="btnPlaceholder">
-        <button className="prev" onClick={showPrevSlide}>
-          «
-        </button>
-        <button className="next" onClick={showNextSlide}>
-          »
-        </button>
-      </div>
+      </Swiper>
     </div>
   );
 };
 
 export default Carousel;
-

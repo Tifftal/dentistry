@@ -76,6 +76,7 @@ const Navbar = ({ isOpen, onOpen, onClose }) => {
         <Offcanvas.Body className="navOffcanvasBody">
           <a className="offLink" href="/doctors" onClick={closeMenu}>Команда</a>
           <a className="offLink" href="/services" onClick={closeMenu}>Услуги</a>
+          <a className="offLink" href="/kids" onClick={closeMenu}>Для детей</a>
           <a className="offLink" href="/about" onClick={closeMenu}>О компании</a>
           <a className="offLink" href="/documents" onClick={closeMenu}>Документы</a>
           <a className="offLink" href="/portfolio" onClick={closeMenu}>Наши работы</a>
